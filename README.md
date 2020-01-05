@@ -8,7 +8,6 @@
 6. [Creating the first test](#first-test)
 7. [Installation of `Babel` to use JavaScript ES6 syntax](#babel)
 8. [Running the first test](#first-test-run)
-9. [Adding more tests](#more-tests)
 10. [Configuring Allure reporter](#allure)
 11. [Installation of `chai` module](#chai)
 12. [Adding Smoke suite](#smoke)
@@ -38,22 +37,18 @@ https://developer.apple.com/xcode/
 #### 1.5. Install Python 2.7.
 https://www.python.org/downloads/release/python-2716/
 
+===
+
+### Optional (but desired):
+#### 1.6. Install VS Code.
+https://code.visualstudio.com
+
 <a name="creating-project"></a>
 ## 2. Creating project
-#### 2.1. Create `project` folder:
-Open terminal and navigate to desired folder where you're going to store all of your projects. For example `projects` folder:
-````
-cd projects
-````
-Create a folder for automation project. For example, `automation-webdriverio`:
-````
-mkdir test-automation-webdriverio
-````
-And navigate to the created folder:
-````
-cd test-automation-webdriverio
-````
+#### 2.1. Create a project folder:
+First, create a folder for storing all projects, e.g. `projects`. Navigate to the created folder and create a folder for automation project. For example, `automation-webdriverio`.
 #### 2.2. Initialize your project:
+Open the created folder (automation-webdriverio) with VS Code, open the Terminal and tun the following code:
 ````
 npm init -y
 ````
@@ -74,169 +69,82 @@ npm i @wdio/cli
 ./node_modules/.bin/wdio config
 ````
 This script runs WDIO Configuration Helper which will help you to create configuration file.
-````
-Where should your tests be launched
-> local
-**click Enter**
-````
-````
-Shall I install the runner plugin for you?
-> type Y
-**click Enter**
-````
-````
-Where is your automation backend located?
-> On my local machine
-**click Enter**
-````
-````
-Which framework do you want to use?
-> mocha
-**click Enter**
-````
-````
-Shall I install the framework adapter for you?
-> type Y
-**click Enter**
-````
-````
-Do you want to run WebdriverIO commands synchronous or asynchronous?
-> sync
-**click Enter**
-````
-````
-Where are your test specs located?
-> type ./test/*.js
-**click Enter**
-````
-````
-Which reporter do you want to use?
-> dot (select by pressing Space)
-> spec (select by pressing Space)
-> allure (select by pressing Space)
-**click Enter**
-````
-````
-Shall I install the reporter library for you?
-> type Y
-**click Enter**
-````
-````
-Do you want to add a service to your test setup?
-> selenium-standalone (select by pressing Space)
-**click Enter**
-````
-````
-Shall I install the services for you?
-> type Y
-**click Enter**
-````
-````
-Level of logging verbosity
-> silent
-**click Enter**
-````
-````
-What is the base url?
-> type https://reactbugtracker.com
-**click Enter**
-````
+Select the answers based on the following info:
+1. Your tests should be launched `locally`.
+2. We'll use `mocha` framework.
+3. Commands should run `synchronous`.
+4. Test specs are located in `./test/specs/*.js`.
+5. Reporters we're going to use are `spec` and `allure`.
+6. Service needed is `selenium-standalone`.
+7. Base URL is `http://qa.intgames.org/`
+
 Wait till the end of the installation process.
 
 <a name="wdio-configuration"></a>
 ## 4. Update WebDriver I/O configuration:
-Open configuration file:
+Open configuration file `wdio.conf.js` and update the following data:
 ````
-open wdio.conf.js
+capabilities: [{
+  maxInstances: 1,
+  browserName: 'chrome',
+}],
 ````
-#### 4.1. Configure browser:
 ````
-maxInstances: 1,
-browserName: 'chrome'
+logLevel: 'silent',
 ````
+````
+ mochaOpts: {
+  ui: 'bdd',
+  timeout: 60000,
+  compilers: ['js:@babel/register']
+},
+````
+
 <a name="test-scripts"></a>
 ## 5. Modify test script:
-Open `package.json`:
-````
-open package.json
-````
-and modify `test` script to get the following:
+Open `package.json` and modify `test` script to get the following:
 ````
 "test": "wdio wdio.conf.js"
 ````
+
 <a name="first-test"></a>
 ## 6. Creating the first test
-#### 6.1. Create `test` folder and open it:
-````
-mkdir test
-cd test
-````
-
-#### 6.2. Create `test.js` file and open it:
-````
-touch test.js
-open test.js
-cd ..
-````
+#### 6.1. Create `test` folder, then `specs` folder inside and open it.
+#### 6.2. Create `test.js` file and open it.
 #### 6.3. Add the first test:
 ````
 import assert from 'assert';
 
-describe('Client', function () { //define suite title by passing a string
+describe('Client', function () { //Suite
 
-  describe('Page Level', function () { //define sub-suite title by passing a string
-
-    it('Get title', function () { //define test title by passing a string
-      browser.url('/'); //open baseUrl + string passed in .url() function
-      let title = browser.getTitle(); //get page title and assign it to the "title" variable
-      browser.pause(2000); //just pause to visually see that something is happening on the page
-      assert.equal(title, 'Bug Tracker'); //compare {title} (actual) and "Bug Tracker" (expected)
-    })
-
-  });
+  it('Get title', function () { //Test
+    browser.url('/');
+    let title = browser.getTitle();
+    browser.pause(2000); //Pause
+    assert.equal(title, 'Intellectual Games Club');
+  })
 
 });
 ````
 
 <a name="babel"></a>
 ## 7. Instal `Babel` to use JavaScript ES6 syntax
-#### 7.1. Go back to the root folder and install necessary modules:
+#### 7.1. Install necessary modules:
 ````
 npm install @babel/core @babel/cli @babel/preset-env @babel/register
 ````
-#### 7.2. Create and open Babel Configuration file:
-````
-touch babel.config.js
-open babel.config.js
-````
-#### 7.3. Paste the following code:
+#### 7.2. Create and open Babel Configuration file - `babel.config.js`.
+#### 7.3. Paste the following code into the file:
 ````
 module.exports = {
-    presets: [
-        ['@babel/preset-env', {
-            targets: {
-                node: 8
-            }
-        }]
-    ]
+  presets: [
+    ['@babel/preset-env', {
+        targets: {
+          node: 12
+        }
+    }]
+  ]
 }
-````
-#### 7.5 Update WebDriver I/O configuration adding Babel configuration:
-Open configuration file:
-````
-open wdio.conf.js
-````
-And add the following line to the `mochaOpts` objest:
-````
-compilers: ['js:@babel/register']
-````
-It should look like this at the end:
-````
-mochaOpts: {
-        ui: 'bdd',
-        timeout: 60000,
-        compilers: ['js:@babel/register']
-    },
 ````
 
 <a name="first-test-run"></a>
@@ -249,113 +157,10 @@ Wait until test is finished.
 You should see the message with one suite, one sub-suite, and one test passed:
 ````
 [chrome #0-0] Client
-[chrome #0-0]     Page Level
-[chrome #0-0]        ✓ Get title
+[chrome #0-0]      ✓ Get title
 [chrome #0-0]
 [chrome #0-0] 1 passing (3.4s)
 ````
-
-<a name="more-tests"></a>
-## 9. Adding more tests:
-#### 9.1. Rename `test.js` to make it more clear:
-````
-cd test
-mv test.js client.js
-open client.js
-````
-Replace the old code by the following one in `client.js`:
-````
-import assert from 'assert';
-
-describe('Client', function () {
-
-  describe('Page Level', function () {
-
-    it('Get title', function () {
-      browser.url('/');
-      let title = browser.getTitle();
-      assert.equal(title, 'Bug Tracker');
-    })
-
-    it('Favicon', function () {
-      browser.url('/favicon.ico');
-      let icon = $('img');
-      let width = icon.getCSSProperty('width').parsed.value;
-      let height = icon.getCSSProperty('height').parsed.value;
-      let size = `${width}x${height}`;
-      assert.equal(size, '256x256');
-    })
-
-  });
-
-  describe('Elements exist', function () {
-
-    it('Header', function () {
-      browser.url('/');
-      let header = $('.custom-header').isDisplayed();
-      assert.equal(header, true);
-    })
-
-    it('App', function () {
-      let header = $('.site-content').isDisplayed();
-      assert.equal(header, true);
-    })
-
-    it('Footer', function () {
-      let header = $('.custom-footer').isDisplayed();
-      assert.equal(header, true);
-    })
-
-  });
-
-});
-````
-#### 9.2. Create one more test file `login.js`:
-````
-touch login.js
-open login.js
-cd ..
-````
-#### 9.3. Copy and paste the following code to `login.js`:
-````
-import assert from 'assert';
-let maxLenght = 45;
-
-describe('Login', function () {
-
-  describe('Email', function () {
-
-    it('Max Characters', function () {
-      browser.url('/');
-      let input = $('#email');
-      input.addValue('j'.repeat(maxLenght));
-      let actual = input.getValue().length;
-      input.clearValue();
-      assert.equal(actual, maxLenght);
-    })
-
-    it('Max Characters + 1', function () {
-      let input = $('#email');
-      input.addValue('j'.repeat(maxLenght + 1));
-      let actual = input.getValue().length;
-      assert.equal(actual, maxLenght);
-    })
-
-  });
-
-});
-````
-#### 9.4. Edit the configuration including `login.js` and updating `client.js`:
-Open `wdio.conf.js` and update the `specs` array:
-````
-    specs: [
-        './test/client.js',
-        './test/login.js'
-    ],
-````
-Now your code testing Client and Login suites.
-More info regarding Webdriver I/O commands you can find here:
-https://webdriver.io/docs/api.html
 
 <a name="allure"></a>
 ## 10. Configuring Allure reporter:

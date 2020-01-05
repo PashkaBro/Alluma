@@ -19,6 +19,7 @@
   ],
   "author": "Arthur Senko",
   "license": "ISC",
+  "repository": "https://ReactWebDevelopment@dev.azure.com/ReactWebDevelopment/IntGames/_git/Automation",
   "dependencies": {
     "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.7",
@@ -29,10 +30,11 @@
   },
   "devDependencies": {
     "@wdio/allure-reporter": "^5.16.16",
-    "@wdio/local-runner": "^5.18.0",
+    "@wdio/local-runner": "^5.18.4",
     "@wdio/mocha-framework": "^5.16.15",
-    "@wdio/selenium-standalone-service": "^5.16.10",
     "@wdio/spec-reporter": "^5.16.11",
-    "@wdio/sync": "^5.17.0"
+    "@wdio/sync": "^5.17.0",
+    "chromedriver": "^79.0.0",
+    "wdio-chromedriver-service": "^5.0.2"
   }
 }
