@@ -1,19 +1,4 @@
 # WebDriver I/O v.5 from scratch
-## Table of Contents
-1. [Prerequisites](#prerequisites)
-2. [Creating project](#creating-project)
-3. [Modules installation and configuration](#modules)
-4. [Updating WebDriver I/O configuration](#wdio-configuration)
-5. [Modifying test script](#test-scripts)
-6. [Creating the first test](#first-test)
-7. [Installation of `Babel` to use JavaScript ES6 syntax](#babel)
-8. [Running the first test](#first-test-run)
-10. [Configuring Allure reporter](#allure)
-11. [Installation of `chai` module](#chai)
-12. [Adding Smoke suite](#smoke)
-13. [Working with Git](#git)
-
-===
 
 <a name="prerequisites"></a>
 ## 1. Prerequisites
