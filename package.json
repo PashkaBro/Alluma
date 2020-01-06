@@ -4,7 +4,9 @@
   "description": "Test Automation Framework | WebDriver I/O | Node.js | JavaScript | Mocha | Chai | Selenium",
   "main": "wdio.conf.js",
   "scripts": {
-    "test": "wdio wdio.conf.js"
+    "test": "npm run clean && npm run temp && wdio wdio.conf.js",
+    "clean": "rm -rf temp",
+    "temp": "mkdir temp temp/screenshots"
   },
   "keywords": [
     "Test",
@@ -26,6 +28,7 @@
     "@babel/preset-env": "^7.7.7",
     "@babel/register": "^7.7.7",
     "@wdio/cli": "^5.18.0",
+    "chai": "^4.2.0",
     "webdriverio": "^5.18.0"
   },
   "devDependencies": {
