@@ -2,12 +2,12 @@ export default {
     logoAlign: 'center',
     logoHeight: '256px',
 
-    
+
     remTextAlign: 'center',
     remTextSize: 1,
     remTextColor: '#212529',
     remText: "Your temporary password was automatically generated. Use 'Remind Password' to get it. You will be able to change your password in your account.",
-    
+
     usernamePlaceholder: 'Username *',
     passPlaceholder: 'Password *',
 

@@ -12,7 +12,7 @@ class Fun {
         return rand
     }
 
-    loginReg(){
+    loginReg() {
         let username = 'test';
         let pas = 'test@1234';
         $(sel.email).setValue(username);
@@ -20,7 +20,7 @@ class Fun {
         $(sel.loginButton).click();
     }
 
-    loginModer(){
+    loginModer() {
         let username = 'moderator';
         let pas = 'moder@1234';
         $(sel.email).setValue(username);
@@ -28,7 +28,7 @@ class Fun {
         $(sel.loginButton).click();
     }
 
-    loginNegative(){
+    loginNegative() {
         let username = this.random(15);
         let pas = this.random(15);
         $(sel.email).setValue(username);

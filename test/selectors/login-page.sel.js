@@ -4,7 +4,7 @@ export default {
     reminderTxt: '#info-text',
     email: '#email',
     pass: '#pass',
-    
+
     loginButton: '#btn-login',
     reminderBtn: '#btn-forgot',
 

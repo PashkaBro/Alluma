@@ -1,142 +1,142 @@
 import sel from '../selectors/login-page.sel';
 import exp from '../expected/login.exp';
-import {assert} from 'chai';
+import { assert } from 'chai';
 
 class Login {
-    
-    open(){
+
+    open() {
         browser.url('/');
         $(sel.logo).waitForDisplayed();
     }
 
-    logoDisplayed(){
+    logoDisplayed() {
         $(sel.logo).isDisplayed();
     }
 
-    formDisplayed(){
+    formDisplayed() {
         $(sel.form).isDisplayed();
     }
 
-    reminderTxtDisplayed(){
+    reminderTxtDisplayed() {
         $(sel.reminderTxt).isDisplayed();
     }
 
-    logoAlignment(){
+    logoAlignment() {
         let textAlign = $(sel.logo).getCSSProperty('text-align');
         assert.equal(textAlign.value, exp.logoAlign);
     }
 
-    logoHeight(){
+    logoHeight() {
         let height = $(sel.logo).getCSSProperty('height');
         assert.equal(height.value, exp.logoHeight);
     }
 
-    remindTxtAlgn(){
+    remindTxtAlgn() {
         let align = $('#info-text').getCSSProperty('text-align').value;
         assert.equal(align, exp.remTextAlign);
     }
 
-    remindTxtSize(){
-        let size = $('#info-text').getCSSProperty('font-size').parsed.value/16;
+    remindTxtSize() {
+        let size = $('#info-text').getCSSProperty('font-size').parsed.value / 16;
         assert.equal(size, exp.remTextSize);
     }
 
-    remindTxtColor(){
+    remindTxtColor() {
         let color = $('#info-text').getCSSProperty('color').parsed.hex;
         assert.equal(color, exp.remTextColor);
     }
 
-    remindTxt(){
+    remindTxt() {
         let txt = `${$('#info-text :first-child').getHTML(false)} ${$('#info-text :nth-child(2)').getHTML(false)} ${$('#info-text :nth-child(3)').getHTML(false)}`;
         assert.equal(txt, exp.remText);
     }
 
 
-    usernameDisplayed(){
+    usernameDisplayed() {
         $(sel.logo).waitForDisplayed(10000);
         let email = $(sel.email).isDisplayed();
         assert.isTrue(email);
     }
 
-    passDisplayed(){
+    passDisplayed() {
         $(sel.logo).waitForDisplayed(10000);
         let pass = $(sel.pass).isDisplayed();
         assert.isTrue(pass);
     }
 
-    loginButtonDisplayed(){
+    loginButtonDisplayed() {
         $(sel.logo).waitForDisplayed(10000);
         let btnLogin = $(sel.btnLogin).isDisplayed();
         assert.isTrue(btnLogin);
     }
 
-    reminderBtnDisplayed(){
+    reminderBtnDisplayed() {
         $(sel.logo).waitForDisplayed(10000);
         let btnReminder = $(sel.btnReminder).isDisplayed();
         assert.isTrue(btnReminder);
     }
 
-    usernamePlaceholder(){
+    usernamePlaceholder() {
         let placeholder = $(sel.email).getProperty('placeholder');
         assert.equal(placeholder, exp.usernamePlaceholder);
     }
 
-    passPlaceholder(){
+    passPlaceholder() {
         let placeholder = $(sel.pass).getProperty('placeholder');
         assert.equal(placeholder, exp.passPlaceholder);
     }
 
-    loginBtnBackground(){
+    loginBtnBackground() {
         $(sel.logo).waitForDisplayed(10000);
         let bgColor = $(sel.btnLogin).getCSSProperty('background-color').parsed.hex;
         assert.equal(bgColor, exp.btnLoginBg);
     }
 
-    loginBtnText(){
+    loginBtnText() {
         let text = $(sel.btnLogin).getHTML(false);
         assert.equal(text, exp.btnLoginTxt);
     }
 
-    loginBtnColor(){
+    loginBtnColor() {
         let color = $(sel.btnLogin).getCSSProperty('color').parsed.hex;
         assert.equal(color, exp.btnLoginClr);
     }
 
-    remindBtnBackground(){
+    remindBtnBackground() {
         let bgColor = $(sel.btnReminder).getCSSProperty('background-color').parsed.hex;
         assert.equal(bgColor, exp.btnRemindBg);
     }
 
-    remindBtnText(){
+    remindBtnText() {
         $(sel.btnReminder).waitForDisplayed(10000);
         let text = $(sel.btnReminder).getHTML(false);
         assert.equal(text, exp.btnRemindTxt);
     }
 
-    remindBtnColor(){
+    remindBtnColor() {
         let color = $(sel.btnReminder).getCSSProperty('color').parsed.hex;
         assert.equal(color, exp.btnRemindClr);
     }
 
-    errorUsernameEmpty(){
+    errorUsernameEmpty() {
         $(sel.btnLogin).click();
         let error = $(sel.errorText).isDisplayed();
         assert.isTrue(error);
     }
 
-    errorPassEmpty(){
+    errorPassEmpty() {
         $(sel.btnLogin).click();
         let error = $(sel.errorText).isDisplayed();
         assert.isTrue(error);
     }
 
-    errorAlign(){
+    errorAlign() {
         $(sel.btnLogin).click();
         let error = $(sel.errorText).getCSSProperty('text-align').value;
         assert.equal(error, exp.errorAlign);
     }
 
-    errorLocated(){
+    errorLocated() {
         $(sel.btnLogin).click();
         let pass = $(sel.pass).getLocation('y');
         let login = $(sel.btnLogin).getLocation('y');
@@ -144,26 +144,26 @@ class Login {
         assert.isTrue(login > error) || assert.isTrue(error > pass);
     }
 
-    errorSize(){
+    errorSize() {
         $(sel.btnLogin).click();
         let error = $(sel.errorText).getCSSProperty('font-size').parsed.value / 16
         assert.equal(error, exp.errorSize);
     }
 
-    errorFont(){
+    errorFont() {
         $(sel.btnLogin).click();
         let error = $(sel.errorText).getCSSProperty('font-family').parsed.value[2];
         assert.equal(error, exp.errorFont);
     }
 
-    usernameMaxField(){
+    usernameMaxField() {
         let randomStr = helpers.random(105);
         $(sel.email).setValue(randomStr);
         let len = $(sel.email).getValue().length;
         assert.equal(len, exp.usernameMaxLength);
     }
 
-    passMaxField(){
+    passMaxField() {
         browser.refresh();
         let randomStr = helpers.random(105);
         $(sel.pass).setValue(randomStr);
@@ -171,22 +171,22 @@ class Login {
         assert.equal(len, exp.passMaxLength);
     }
 
-    userNotExistDisplayed(){
+    userNotExistDisplayed() {
         browser.refresh();
         helpers.loginNegative();
         $(sel.errorText).waitForDisplayed();
         assert.isTrue($(sel.errorText).isDisplayed());
     }
 
-    userNotExistText(){
+    userNotExistText() {
         assert.equal($(sel.errorText).getHTML(false), exp.userNotExistText);
     }
 
-    userNotExistColor(){
+    userNotExistColor() {
         assert.equal($(sel.errorText).getCSSProperty('color').parsed.rgba, exp.userNotExistColor);
     }
 
-    passIncorrect(){
+    passIncorrect() {
         browser.refresh();
         let username = 'admin';
         let pas = helpers.random(15);
@@ -197,26 +197,26 @@ class Login {
         assert.isTrue($(sel.errorText).isDisplayed());
     }
 
-    passIncorrectText(){
+    passIncorrectText() {
         assert.equal($(sel.errorText).getHTML(false), exp.passIncorrectText);
     }
 
-    passIncorrectColor(){
+    passIncorrectColor() {
         assert.equal($(sel.errorText).getCSSProperty('color').parsed.rgba, exp.passIncorrectColor);
     }
 
-    usernameChange(){
+    usernameChange() {
         $(sel.email).setValue("1");
         assert.isNotTrue($(sel.errorText).isDisplayed());
     }
 
-    passChange(){
+    passChange() {
         browser.refresh();
         helpers.loginNegative();
         $(sel.errorText).waitForDisplayed();
         $(sel.email).setValue("1");
         assert.isNotTrue($(sel.errorText).isDisplayed());
-    }   
+    }
 
 
 }
