@@ -1,4 +1,7 @@
-import data from '../test/data/login.username'
+import data from '../test/data/login.username';
+import loginSel from '../test/selectors/login-page.sel';
+import headSel from '../test/selectors/header.sel';
+
 class Base {
 
     openBase(){
@@ -10,21 +13,21 @@ class Base {
 }
 
     moderLogin(){
-        $('#email').setValue(data.moderLogin); //existing email
-        $('#pass').setValue(data.moderPass); //correct pass
-        $('.btn-primary').click();
-        $('#btn-logout').waitForExist(3000); //no code exist for login functionality. I NEED THIS FOR MY TESTS!!!!!!
+        $(loginSel.email).setValue(data.moderLogin); //existing email
+        $(loginSel.pass).setValue(data.moderPass); //correct pass
+        $(loginSel.loginButton).click();
+        $(headSel.logOutBtn).waitForExist(3000); //no code exist for login functionality. I NEED THIS FOR MY TESTS!!!!!!
     }
 
     loginBtnKlick(){
-        $('.btn-primary').click();
+        $(loginSel.loginButton).click();
     }
 
     userLogin(login, pass){
-        $('#email').setValue(login); //existing email
-        $('#pass').setValue(pass); //correct pass
-        $('.btn-primary').click();
-        $('#btn-logout').waitForExist(3000);
+        $(loginSel.email).setValue(login); //you need to enter your login existing email
+        $(loginSel.pass).setValue(pass); //correct pass
+        $(loginSel.loginButton).click();
+        $(headSel.logOutBtn).waitForExist(3000);
     }
 
 }
