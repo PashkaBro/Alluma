@@ -46,8 +46,8 @@ class Header{
     }
 
     loginBtnFont(){
-        let fontSize = $(sel.loginBtn).getCSSProperty('font-family').parsed.string;
-        assert.equal(fontSize.split(', ')[2], exp.loginBtnFont);
+        let fontSize = $(sel.loginBtn).getCSSProperty('font-family').parsed.value[2];
+        assert.equal(fontSize, exp.loginBtnFont);
     }
 
     loginClickRedirect(){
@@ -87,8 +87,8 @@ class Header{
     }
 
     allPlayersBtnFont(){
-        let font = $(sel.allPlayerBtn).getCSSProperty('font-family').parsed.string;
-        assert.equal(font.split(', ')[2], exp.allPlayerBtnFont);
+        let font = $(sel.allPlayerBtn).getCSSProperty('font-family').parsed.value[2];
+        assert.equal(font, exp.allPlayerBtnFont);
     }
 
     allPlayersBtnRedirect() {

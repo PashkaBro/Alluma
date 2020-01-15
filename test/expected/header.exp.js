@@ -7,14 +7,14 @@ export default {
     loginBtnText: 'Login',
     loginBtnTextColor: '#ffffff',
     loginBtnFontSize: '14px',
-    loginBtnFont: '"segoe ui"',
+    loginBtnFont: 'segoe ui',
 
     allPlayerBtnBgColor: '#17a2b8',
     allPlayerBtnText: 'All Players',
     allPlayerBtnTextColor: '#ffffff',
     allPlayerBtnFontSize: '14px',
-    allPlayerBtnFont: '"segoe ui"',
-    
+    allPlayerBtnFont: 'segoe ui',
+
     redirectUrl: 'http://qa.intgames.org/users',
     baseUrl: 'http://qa.intgames.org/'
 }
