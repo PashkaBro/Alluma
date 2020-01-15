@@ -31,8 +31,31 @@ class Login {
         assert.equal(height.value, exp.logoHeight);
     }
 
-    
+    userName(){
+        $(sel.email).isDisplayed();
+    }
 
+    passField(){
+        $(sel.pass).isDisplayed();
+    }
+    loginBtn(){
+        $(sel.loginButton).isDisplayed();
+    }
+
+    remindPassBtn(){
+        $(sel.reminderBtn).isDisplayed();
+    }
+
+    userPlaceholder(){
+        browser.url('/')
+       let uPlace = $(sel.email).getAttribute('placeholder');
+        assert.equal(uPlace, exp.usernamePlaceholder);
+    }
+    PassPlaceholder(){
+        let pPlace = $(sel.pass).getAttribute('placeholder');
+        assert.equal(pPlace, exp.passPlaceholder);  
+    }
+   
 }
 
 export default new Login();
