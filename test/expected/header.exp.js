@@ -11,5 +11,6 @@ export default {
     allPlayerBtnFontSize: '14px',
     allPlayerBtnFont: '"segoe ui"',
     headerLocation: '0',
-    redirectUrl: 'https://mafia-sacramento-client-qa.herokuapp.com/users'
+    redirectUrl: 'https://mafia-sacramento-client-qa.herokuapp.com/users',
+    baseUrl: 'https://mafia-sacramento-client-qa.herokuapp.com'
 }

@@ -1,6 +1,7 @@
 import sel from '../selectors/header.sel';
 import exp from '../expected/header.exp';
 import {assert} from 'chai';
+import base from '../base';
 
 class header{
 
@@ -46,6 +47,10 @@ class header{
     loginBtnFont(){
         let fontSize = $(sel.loginBtn).getCSSProperty('font-family').parsed.string;
         assert.equal(fontSize.split(', ')[2], exp.loginBtnFont);
+    }
+
+    loginClickRedirect(){
+       assert.equal(browser.getUrl(),exp.redirectUrl)
     }
 
     loginBtnNotExist(){

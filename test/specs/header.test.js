@@ -12,20 +12,56 @@ describe('Header', function () {
       header.headerBgColor();
     })
 
-    it('Login-batotton-text', function () {
+    it('Login-butotton-text', function () {
       header.loginBtnText();
     })
 
-    it('Reminder-text-displayed', function () {
-      login.reminderTxtDisplayed();
+    it('Login-button-background-color', function () {
+      header.loginBtnBgColor();
     })
 
-    it('Logo-is-center-aligned', function () {
-      login.logoAlignment();
+    it('Login-button-text-color', function () {
+      header.loginBtnTextColor();
     })
 
-    it('Logo-height', function () {
-      login.logoHeight();
+    it('Login-button-font-size', function () {
+      header.loginBtnFontSize();
+    })
+
+    it('Login-button-font-family', function () {
+      header.loginBtnFont();
+    })
+
+    it('Login-button-redirect', function () {
+      header.loginClickRedirect()
+    })
+
+    it('Login-button-not-exist', function () {
+      header.loginBtnNotExist();
+    })
+
+    it('AllPlayer-butotton-text', function () {
+      header.allPlayersBtnText();
+    })
+
+    it('AllPlayer-button-background-color', function () {
+      header.allPlayerBtnBgColor();
+    })
+
+    it('AllPlayer-button-text-color', function () {
+      header.allPlayersBtnTextColor();
+    })
+
+    it('AllPlayer-button-font-size', function () {
+      header.allPlayersBtnFontSize();
+    })
+
+    it('AllPlayer-button-font-family', function () {
+      header.allPlayersBtnFont();
+    })
+
+    it('AllPlayer-button-redirect', function () {
+      header.allPlayersBtnRedirect()
     })
 
 });

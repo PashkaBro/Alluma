@@ -26,5 +26,6 @@ class base {
         $('.btn-primary').click();
         $('#btn-logout').waitForExist(3000);
     }
+
 }
 export default new Base();
