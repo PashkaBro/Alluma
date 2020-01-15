@@ -31,6 +31,9 @@ class Login {
         assert.equal(height.value, exp.logoHeight);
     }
 
+    
+
 }
 
 export default new Login();
+
