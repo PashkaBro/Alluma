@@ -1,15 +1,14 @@
 export default {
     logo: '#logo',
     form: '.login-form',
-    reminderTxt: '#info-text',
+    remindTxt: '#info-text',
     email: '#email',
     pass: '#pass',
     
     loginButton: '#btn-login',
-    reminderBtn: '#btn-forgot',
-
-    btnLogin: '#btn-login',
-    btnReminder: '#btn-forgot',
+    loginButton1: '.btn-primary',
+    remindButton: '#btn-forgot',
+    remindButton1: '.btn-warning',
 
     errorText: '#error-text'
 }

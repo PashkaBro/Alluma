@@ -18,7 +18,7 @@ class Login {
     }
 
     reminderTxtDisplayed(){
-        $(sel.reminderTxt).isDisplayed();
+        $(sel.remindText).isDisplayed();
     }
 
     logoAlignment(){
@@ -43,7 +43,7 @@ class Login {
     }
 
     remindPassBtn(){
-        $(sel.reminderBtn).isDisplayed();
+        $(sel.remindButton).isDisplayed();
     }
 
     userPlaceholder(){
@@ -55,7 +55,38 @@ class Login {
         let pPlace = $(sel.pass).getAttribute('placeholder');
         assert.equal(pPlace, exp.passPlaceholder);  
     }
+
+    loginBtnBgc(){
+        let bgc = $(sel.loginButton).getCSSProperty('background-color');
+        assert.equal(bgc.value, exp.btnLoginBg2);
+    }
    
+    loginBtnText(){
+        let lbt = $(sel.loginButton).getText();
+        assert.equal(lbt, exp.btnLoginTxt);
+    }
+
+    loginBtnTextColor(){
+        let textColor = $(sel.loginButton1).getCSSProperty('color');
+        assert.equal(textColor.value, exp.btnLoginClr2);
+    }
+
+    RemindPassBtnBgc(){
+        let bgc = $(sel.remindButton).getCSSProperty('background-color');
+        assert.equal(bgc.value, exp.btnRemindBg2);
+    }
+
+
+    RemindBtnText(){
+        let rbt = $(sel.remindButton).getText();
+        assert.equal(rbt, exp.btnRemindTxt);
+    }
+
+    RemindBtnTextColor(){
+        let textColor = $(sel.remindButton1).getCSSProperty('color');
+        assert.equal(textColor.value, exp.btnRemindClr1);
+    }
+
 }
 
 export default new Login();

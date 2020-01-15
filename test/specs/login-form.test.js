@@ -20,15 +20,37 @@ describe('Login-form', function () {
     login.remindPassBtn();
      })
 
-     it('User-placeholder-correct', function () {
-        login.userPlaceholder();
-         })
+    it('User-placeholder-correct', function () {
+    login.userPlaceholder();
+    })
 
         
-     it('Password-placeholder-correct', function () {
-     login.PassPlaceholder();
-     })
-        
-             
+    it('Password-placeholder-correct', function () {
+    login.PassPlaceholder();
+    })
+      
+    it('Login-button-background-color', function () {
+    login.loginBtnBgc();
+    })
+      
+    it('Login-button-text', function () {
+    login.loginBtnText();
+    }) 
+
+    it('Login-button-text-color', function () {
+    login.loginBtnTextColor();
+    }) 
+
+    it('Remind-button-background-color', function () {
+    login.RemindPassBtnBgc();
+    })
+
+    it('Login-button-text', function () {
+        login.RemindBtnText();
+        }) 
+
+    it('Remind-button-text-color', function () {
+        login.RemindBtnTextColor();
+        }) 
 
 });

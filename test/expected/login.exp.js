@@ -12,12 +12,16 @@ export default {
     passPlaceholder: 'Password *',
 
     btnLoginBg: '#007bff',
+    btnLoginBg2: 'rgba(0,123,255,1)',
     btnLoginTxt: 'Login',
     btnLoginClr: '#ffffff',
+    btnLoginClr2:'rgba(255,255,255,1)',
 
     btnRemindBg: '#ffc107',
+    btnRemindBg2: 'rgba(255,193,7,1)',
     btnRemindTxt: 'Remind Password',
     btnRemindClr: '#212529',
+    btnRemindClr1: 'rgba(33,37,41,1)',
 
     errorAlign: 'center',
     errorSize: 1,
