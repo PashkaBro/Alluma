@@ -1,5 +1,5 @@
 import data from '../test/data/login.username'
-class base {
+class Base {
 
     openBase(){
         browser.url('/');

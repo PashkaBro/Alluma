@@ -3,7 +3,7 @@ import exp from '../expected/header.exp';
 import {assert} from 'chai';
 import base from '../base';
 
-class header{
+class Header{
 
         //header
     headerLocation(){
@@ -15,7 +15,7 @@ class header{
         let bColor = $(sel.header).getCSSProperty('background-color');
         assert.equal(bColor.value, exp.headerBgColor);
     }
-        //all player btn
+        //Login player btn
 
     loginBtnAlign(){
         let headerLeft = $(se.header).getSize('width') / 2;
@@ -27,6 +27,7 @@ class header{
     loginBtnBgColor(){
         let elem = $(sel.loginBtn).getCSSProperty('background-color').parsed.hex;
         assert.equal(elem, exp.loginBtnBgColor);
+       
     }
 
     loginBtnText(){
@@ -50,13 +51,15 @@ class header{
     }
 
     loginClickRedirect(){
-       assert.equal(browser.getUrl(),exp.redirectUrl)
+        $(sel.loginBtn).click();
+       assert.equal(browser.getUrl(),exp.baseUrl)
     }
 
     loginBtnNotExist(){
         let elem = $(sel.loginBtn).isExisting()
         assert.isFalse(elem);
     }
+    // All Player Button
 
     allPlayerBtnAlign(){
         let elem = $(sel.allPlayerBtn).getCSSProperty('text-align');
