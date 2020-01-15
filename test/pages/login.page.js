@@ -1,5 +1,6 @@
 import sel from '../selectors/login-page.sel';
 import exp from '../expected/login.exp';
+import helpers from '../helpers/helpers.js';
 import { assert } from 'chai';
 
 class Login {
@@ -50,7 +51,6 @@ class Login {
         let txt = `${$('#info-text :first-child').getHTML(false)} ${$('#info-text :nth-child(2)').getHTML(false)} ${$('#info-text :nth-child(3)').getHTML(false)}`;
         assert.equal(txt, exp.remText);
     }
-
 
     usernameDisplayed() {
         $(sel.logo).waitForDisplayed(10000);
