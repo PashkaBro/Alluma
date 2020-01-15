@@ -1,3 +1,4 @@
+import data from '../test/data/login.username'
 class base {
 
     openBase(){
@@ -9,8 +10,8 @@ class base {
 }
 
     moderLogin(){
-        $('#email').setValue('moderator'); //existing email
-        $('#pass').setValue('moder@1234'); //correct pass
+        $('#email').setValue(data.moderLogin); //existing email
+        $('#pass').setValue(data.moderPass); //correct pass
         $('.btn-primary').click();
         $('#btn-logout').waitForExist(3000); //no code exist for login functionality. I NEED THIS FOR MY TESTS!!!!!!
     }
