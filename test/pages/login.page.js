@@ -5,125 +5,6 @@ import { assert } from 'chai';
 
 class Login {
 
-    open() {
-        browser.url('/');
-        $(sel.logo).waitForDisplayed();
-    }
-
-    logoDisplayed() {
-        $(sel.logo).isDisplayed();
-    }
-
-    formDisplayed() {
-        $(sel.form).isDisplayed();
-    }
-
-    reminderTxtDisplayed() {
-        $(sel.reminderTxt).isDisplayed();
-    }
-
-    logoAlignment() {
-        let textAlign = $(sel.logo).getCSSProperty('text-align');
-        assert.equal(textAlign.value, exp.logoAlign);
-    }
-
-    logoHeight() {
-        let height = $(sel.logo).getCSSProperty('height');
-        assert.equal(height.value, exp.logoHeight);
-    }
-
-    remindTxtAlgn() {
-        let align = $('#info-text').getCSSProperty('text-align').value;
-        assert.equal(align, exp.remTextAlign);
-    }
-
-    remindTxtSize() {
-        let size = $('#info-text').getCSSProperty('font-size').parsed.value / 16;
-        assert.equal(size, exp.remTextSize);
-    }
-
-    remindTxtColor() {
-        let color = $('#info-text').getCSSProperty('color').parsed.hex;
-        assert.equal(color, exp.remTextColor);
-    }
-
-    remindTxt() {
-        let txt = `${$('#info-text :first-child').getHTML(false)} ${$('#info-text :nth-child(2)').getHTML(false)} ${$('#info-text :nth-child(3)').getHTML(false)}`;
-        assert.equal(txt, exp.remText);
-    }
-
-    usernameDisplayed() {
-        $(sel.logo).waitForDisplayed();
-        let email = $(sel.email).isDisplayed();
-        assert.isTrue(email);
-    }
-
-    passDisplayed() {
-        $(sel.logo).waitForDisplayed();
-        let pass = $(sel.pass).isDisplayed();
-        assert.isTrue(pass);
-    }
-
-    loginButtonDisplayed() {
-        $(sel.logo).waitForDisplayed();
-        let btnLogin = $(sel.btnLogin).isDisplayed();
-        assert.isTrue(btnLogin);
-    }
-
-    reminderBtnDisplayed() {
-        $(sel.logo).waitForDisplayed();
-        let btnReminder = $(sel.btnReminder).isDisplayed();
-        assert.isTrue(btnReminder);
-    }
-
-    usernamePlaceholder() {
-        let placeholder = $(sel.email).getProperty('placeholder');
-        assert.equal(placeholder, exp.usernamePlaceholder);
-    }
-
-    passPlaceholder() {
-        let placeholder = $(sel.pass).getProperty('placeholder');
-        assert.equal(placeholder, exp.passPlaceholder);
-    }
-
-    loginBtnBackground() {
-        $(sel.logo).waitForDisplayed();
-        let bgColor = $(sel.btnLogin).getCSSProperty('background-color').parsed.hex;
-        assert.equal(bgColor, exp.btnLoginBg);
-    }
-
-    loginBtnText() {
-        let text = $(sel.btnLogin).getHTML(false);
-        assert.equal(text, exp.btnLoginTxt);
-    }
-
-    loginBtnColor() {
-        let color = $(sel.btnLogin).getCSSProperty('color').parsed.hex;
-        assert.equal(color, exp.btnLoginClr);
-    }
-
-    remindBtnBackground() {
-        let bgColor = $(sel.btnReminder).getCSSProperty('background-color').parsed.hex;
-        assert.equal(bgColor, exp.btnRemindBg);
-    }
-
-    remindBtnText() {
-        $(sel.btnReminder).waitForDisplayed();
-        let text = $(sel.btnReminder).getHTML(false);
-        assert.equal(text, exp.btnRemindTxt);
-    }
-
-    remindBtnColor() {
-        let color = $(sel.btnReminder).getCSSProperty('color').parsed.hex;
-        assert.equal(color, exp.btnRemindClr);
-    }
-
-    errorUsernameEmpty() {
-        $(sel.btnLogin).click();
-        let error = $(sel.errorText).isDisplayed();
-        assert.isTrue(error);
-    }
-
     errorPassEmpty() {
         $(sel.btnLogin).click();
         let error = $(sel.errorText).isDisplayed();
@@ -217,7 +98,6 @@ class Login {
         $(sel.email).setValue("1");
         assert.isNotTrue($(sel.errorText).isDisplayed());
     }
-
 
 }
 
