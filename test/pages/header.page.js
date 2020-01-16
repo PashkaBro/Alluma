@@ -25,7 +25,8 @@ class Header extends Base{
     loginBtnAlign() {
         let headerLeft = $(se.header).getSize('width') / 2;
         let elem = $(sel.loginBtn).getLocation('x');
-        let btnAlign = (headerLeft - elem) > 0;
+        let btnSize = $(sel.loginBtn).getSize('width') / 2;
+        let btnAlign = (headerLeft - elem - btnSize) > 0;
         assert.isTrue(btnAlign)
     }
 
