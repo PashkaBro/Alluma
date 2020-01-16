@@ -141,7 +141,6 @@ class Login {
         let pass = $(sel.pass).getLocation('y');
         let login = $(sel.btnLogin).getLocation('y');
         let error = $(sel.errorText).getLocation('y');
-        console.log(login, error, pass),
         assert.isTrue(login > error && error > pass);
     }
 
