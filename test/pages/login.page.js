@@ -53,25 +53,25 @@ class Login {
     }
 
     usernameDisplayed() {
-        $(sel.logo).waitForDisplayed(10000);
+        $(sel.logo).waitForDisplayed();
         let email = $(sel.email).isDisplayed();
         assert.isTrue(email);
     }
 
     passDisplayed() {
-        $(sel.logo).waitForDisplayed(10000);
+        $(sel.logo).waitForDisplayed();
         let pass = $(sel.pass).isDisplayed();
         assert.isTrue(pass);
     }
 
     loginButtonDisplayed() {
-        $(sel.logo).waitForDisplayed(10000);
+        $(sel.logo).waitForDisplayed();
         let btnLogin = $(sel.btnLogin).isDisplayed();
         assert.isTrue(btnLogin);
     }
 
     reminderBtnDisplayed() {
-        $(sel.logo).waitForDisplayed(10000);
+        $(sel.logo).waitForDisplayed();
         let btnReminder = $(sel.btnReminder).isDisplayed();
         assert.isTrue(btnReminder);
     }
@@ -87,7 +87,7 @@ class Login {
     }
 
     loginBtnBackground() {
-        $(sel.logo).waitForDisplayed(10000);
+        $(sel.logo).waitForDisplayed();
         let bgColor = $(sel.btnLogin).getCSSProperty('background-color').parsed.hex;
         assert.equal(bgColor, exp.btnLoginBg);
     }
@@ -108,7 +108,7 @@ class Login {
     }
 
     remindBtnText() {
-        $(sel.btnReminder).waitForDisplayed(10000);
+        $(sel.btnReminder).waitForDisplayed();
         let text = $(sel.btnReminder).getHTML(false);
         assert.equal(text, exp.btnRemindTxt);
     }
@@ -141,7 +141,8 @@ class Login {
         let pass = $(sel.pass).getLocation('y');
         let login = $(sel.btnLogin).getLocation('y');
         let error = $(sel.errorText).getLocation('y');
-        assert.isTrue(login > error) || assert.isTrue(error > pass);
+        console.log(login, error, pass),
+        assert.isTrue(login > error && error > pass);
     }
 
     errorSize() {
@@ -192,7 +193,7 @@ class Login {
         let pas = helpers.random(15);
         $(sel.email).setValue(username);
         $(sel.pass).setValue(pas);
-        $(sel.loginButton).click();
+        $(sel.btnLogin).click();
         $(sel.errorText).waitForDisplayed();
         assert.isTrue($(sel.errorText).isDisplayed());
     }

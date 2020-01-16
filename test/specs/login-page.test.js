@@ -26,7 +26,7 @@ describe('Login-page', function () {
     login.logoHeight();
   })
 
-  it('Remind-pass-algn', function () {
+  it('Remind-pass-aligned', function () {
     login.reminderTxtDisplayed();
   })
 
@@ -102,8 +102,8 @@ describe('Login-page', function () {
     login.errorAlign();
   })
 
-  it('Error-size', function () {
-    login.errorSize();
+  it('Error-located', function () {
+    login.errorLocated();
   })
 
   it('Error-size', function () {

@@ -17,7 +17,7 @@ class Fun {
         let pas = 'test@1234';
         $(sel.email).setValue(username);
         $(sel.pass).setValue(pas);
-        $(sel.loginButton).click();
+        $(sel.btnLogin).click();
     }
 
     loginModer(){
@@ -25,7 +25,7 @@ class Fun {
         let pas = 'moder@1234';
         $(sel.email).setValue(username);
         $(sel.pass).setValue(pas);
-        $(sel.loginButton).click();
+        $(sel.btnLogin).click();
     }
 
     loginNegative(){
@@ -33,7 +33,7 @@ class Fun {
         let pas = this.random(15);
         $(sel.email).setValue(username);
         $(sel.pass).setValue(pas);
-        $(sel.loginButton).click();
+        $(sel.btnLogin).click();
     }
 
 }

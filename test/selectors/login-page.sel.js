@@ -5,9 +5,6 @@ export default {
     email: '#email',
     pass: '#pass',
 
-    loginButton: '#btn-login',
-    reminderBtn: '#btn-forgot',
-
     btnLogin: '#btn-login',
     btnReminder: '#btn-forgot',
 
