@@ -1,6 +1,6 @@
-import data from '../test/data/login.username';
-import loginSel from '../test/selectors/login-page.sel';
-import headSel from '../test/selectors/header.sel';
+import data from '../data/login.username';
+import loginSel from '../selectors/login-page.sel';
+import headSel from '../selectors/header.sel';
 
 class Base {
 
@@ -38,4 +38,8 @@ class Base {
         return str
     }
 }
+<<<<<<< HEAD:test/base.js
 export default Base()
+=======
+export default Base;
+>>>>>>> e73c9adf01012ec5a2073fb0731a599a42f9effe:test/pages/base.js

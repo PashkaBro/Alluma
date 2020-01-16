@@ -11,6 +11,10 @@ describe('Header', function () {
     header.headerBgColor();
   })
 
+  it('Header-Has-Two-Button', function () {
+    header.headerHasTwoBtn();
+  })
+
   it('Login-butotton-text', function () {
     header.loginBtnText();
   })

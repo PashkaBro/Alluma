@@ -1,7 +1,7 @@
 import sel from '../selectors/header.sel';
 import exp from '../expected/header.exp';
 import { assert } from 'chai';
-import Base from '../base';
+import Base from './base';
 
 class Header extends Base{
 
@@ -14,6 +14,11 @@ class Header extends Base{
     headerBgColor() {
         let bColor = $(sel.header).getCSSProperty('background-color');
         assert.equal(bColor.value, exp.headerBgColor);
+    }
+
+    headerHasTwoBtn() {
+        let length = $(sel.header).$$('button').length
+        assert.equal(length, 2);
     }
     //Login player btn
 
