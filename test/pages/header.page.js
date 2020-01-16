@@ -36,7 +36,7 @@ class Header extends Base{
     }
 
     loginBtnText() {
-        let textHTML = $(sel.loginBtn).getHTML(false);
+        let textHTML = $(sel.loginBtn).getText();
         assert.equal(textHTML, exp.loginBtnText);
     }
 
@@ -77,7 +77,7 @@ class Header extends Base{
     }
 
     allPlayersBtnText() {
-        let text = $(sel.allPlayerBtn).getHTML(false);
+        let text = $(sel.allPlayerBtn).getText();
         assert.equal(text, exp.allPlayerBtnText);
     }
 
