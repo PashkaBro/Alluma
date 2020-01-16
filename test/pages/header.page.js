@@ -1,9 +1,9 @@
 import sel from '../selectors/header.sel';
 import exp from '../expected/header.exp';
 import { assert } from 'chai';
-import base from '../base';
+import Base from './base';
 
-class Header {
+class Header extends Base{
 
     //header
     headerLocation() {

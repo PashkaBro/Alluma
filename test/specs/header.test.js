@@ -1,10 +1,9 @@
 import header from '../pages/header.page';
-import base from '../base';
 
 describe('Header', function () {
 
   it('Header-displayed', function () {
-    base.openForgot();
+    header.openForgot();
     header.headerLocation();
   })
 
