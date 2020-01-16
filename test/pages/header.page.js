@@ -23,7 +23,7 @@ class Header extends Base{
     //Login player btn
 
     loginBtnAlign() {
-        let headerLeft = $(se.header).getSize('width') / 2;
+        let headerLeft = $(sel.header).getSize('width') / 2;
         let elem = $(sel.loginBtn).getLocation('x');
         let btnSize = $(sel.loginBtn).getSize('width') / 2;
         let btnAlign = (headerLeft - elem - btnSize) > 0;
@@ -67,10 +67,10 @@ class Header extends Base{
     // All Player Button
 
     allPlayerBtnAlign() {
-        let headerCenter = $(se.header).getSize('width') / 2;
+        let headerCenter = $(sel.header).getSize('width') / 2;
         let elem = $(sel.allPlayerBtn).getLocation('x');
         let btnSize = $(sel.allPlayerBtn).getSize('width') / 2;
-        let btnAlign = (headerLeft -  btnSize) === elem;
+        let btnAlign = (headerCenter -  btnSize) === Math.ceil(elem);
         assert.isTrue(btnAlign)
     }
 

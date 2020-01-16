@@ -34,6 +34,9 @@ describe('Header', function () {
   it('Login-button-font-family', function () {
     header.loginBtnFont();
   })
+  it('Login-button-alignment', function () {
+    header.loginBtnAlign();
+  })
 
   it('Login-button-redirect', function () {
     header.loginClickRedirect()
@@ -41,6 +44,10 @@ describe('Header', function () {
 
   it('Login-button-not-exist', function () {
     header.loginBtnNotExist();
+  })
+  
+  it('AllPlayer-button-alignment', function () {
+    header.allPlayerBtnAlign()
   })
 
   it('AllPlayer-butotton-text', function () {
