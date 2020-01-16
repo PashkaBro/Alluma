@@ -1,5 +1,5 @@
 export default {
-    
+
     header: '#header',
 
     loginBtn: '.btn-secondary',
@@ -9,5 +9,6 @@ export default {
     newPlayerBtn: '#btn-new',
     newGameBtn: '#btn-game',
     continueGameBtn: '#btn-continue',
-    logOutBtn: '#btn-logout'
+    logOutBtn: '#btn-logout',
+    allBtnTag: 'button'
 }

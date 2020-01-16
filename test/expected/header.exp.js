@@ -2,6 +2,7 @@ export default {
 
     headerLocation: '0',
     headerBgColor: 'rgba(0,0,0,0.03)',
+    numberOfBtn: 2,
 
     loginBtnBgColor: '#6c757d',
     loginBtnText: 'Login',

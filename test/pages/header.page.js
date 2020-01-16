@@ -17,8 +17,8 @@ class Header extends Base{
     }
 
     headerHasTwoBtn() {
-        let length = $(sel.header).$$('button').length
-        assert.equal(length, 2);
+        let length = $(sel.header).$$(sel.allBtnTag).length
+        assert.equal(length, exp.numberOfBtn);
     }
     //Login player btn
 
