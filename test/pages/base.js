@@ -37,5 +37,9 @@ class Base {
         }
         return str
     }
+
+    allPlayersBtnRedirect() {
+        $(sel.allPlayerBtn).click();
+    }
 }
 export default Base;
