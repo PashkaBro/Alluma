@@ -67,8 +67,11 @@ class Header extends Base{
     // All Player Button
 
     allPlayerBtnAlign() {
-        let elem = $(sel.allPlayerBtn).getCSSProperty('text-align');
-        assert.equal(elem.value, exp.allPlayerBtnAlign);
+        let headerCenter = $(se.header).getSize('width') / 2;
+        let elem = $(sel.allPlayerBtn).getLocation('x');
+        let btnSize = $(sel.allPlayerBtn).getSize('width') / 2;
+        let btnAlign = (headerLeft -  btnSize) === elem;
+        assert.isTrue(btnAlign)
     }
 
     allPlayerBtnBgColor() {
