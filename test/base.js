@@ -38,4 +38,4 @@ class Base {
         return str
     }
 }
-export default new Base();
+export default Base()
