@@ -1,92 +1,91 @@
 import sel from '../selectors/header.sel';
 import exp from '../expected/header.exp';
-import {assert} from 'chai';
+import { assert } from 'chai';
 import base from '../base';
 
-class Header{
+class Header {
 
-        //header
-    headerLocation(){
-       let headerLoc = $(sel.header).getLocation('y');
+    //header
+    headerLocation() {
+        let headerLoc = $(sel.header).getLocation('y');
         assert.equal(headerLoc, exp.headerLocation);
     }
 
-    headerBgColor(){
+    headerBgColor() {
         let bColor = $(sel.header).getCSSProperty('background-color');
         assert.equal(bColor.value, exp.headerBgColor);
     }
-        //Login player btn
+    //Login player btn
 
-    loginBtnAlign(){
+    loginBtnAlign() {
         let headerLeft = $(se.header).getSize('width') / 2;
         let elem = $(sel.loginBtn).getLocation('x');
         let btnAlign = (headerLeft - elem) > 0;
         assert.isTrue(btnAlign)
     }
 
-    loginBtnBgColor(){
+    loginBtnBgColor() {
         let elem = $(sel.loginBtn).getCSSProperty('background-color').parsed.hex;
         assert.equal(elem, exp.loginBtnBgColor);
-       
     }
 
-    loginBtnText(){
+    loginBtnText() {
         let textHTML = $(sel.loginBtn).getHTML(false);
         assert.equal(textHTML, exp.loginBtnText);
     }
 
-    loginBtnTextColor(){
+    loginBtnTextColor() {
         let elem = $(sel.loginBtn).getCSSProperty('color').parsed.hex;
         assert.equal(elem, exp.loginBtnTextColor);
     }
 
-    loginBtnFontSize(){
+    loginBtnFontSize() {
         let fontSize = $(sel.loginBtn).getCSSProperty('font-size').value;
         assert.equal(fontSize, exp.loginBtnFontSize);
     }
 
-    loginBtnFont(){
+    loginBtnFont() {
         let fontSize = $(sel.loginBtn).getCSSProperty('font-family').parsed.value[2];
         assert.equal(fontSize, exp.loginBtnFont);
     }
 
-    loginClickRedirect(){
+    loginClickRedirect() {
         $(sel.loginBtn).click();
-       assert.equal(browser.getUrl(),exp.baseUrl)
+        assert.equal(browser.getUrl(), exp.baseUrl);
     }
 
-    loginBtnNotExist(){
-        let elem = $(sel.loginBtn).isExisting()
+    loginBtnNotExist() {
+        let elem = $(sel.loginBtn).isExisting();
         assert.isFalse(elem);
     }
     // All Player Button
 
-    allPlayerBtnAlign(){
+    allPlayerBtnAlign() {
         let elem = $(sel.allPlayerBtn).getCSSProperty('text-align');
         assert.equal(elem.value, exp.allPlayerBtnAlign);
-}
+    }
 
-    allPlayerBtnBgColor(){
+    allPlayerBtnBgColor() {
         let elem = $(sel.allPlayerBtn);
         assert.equal(elem.getCSSProperty('background-color').parsed.hex, exp.allPlayerBtnBgColor);
     }
 
-    allPlayersBtnText(){
+    allPlayersBtnText() {
         let text = $(sel.allPlayerBtn).getHTML(false);
         assert.equal(text, exp.allPlayerBtnText);
     }
 
-    allPlayersBtnTextColor(){
+    allPlayersBtnTextColor() {
         let elem = $(sel.allPlayerBtn).getCSSProperty('color').parsed.hex;
         assert.equal(elem, exp.allPlayerBtnTextColor);
     }
 
-    allPlayersBtnFontSize(){
+    allPlayersBtnFontSize() {
         let fontSize = $(sel.allPlayerBtn).getCSSProperty('font-size').value;
         assert.equal(fontSize, exp.allPlayerBtnFontSize);
     }
 
-    allPlayersBtnFont(){
+    allPlayersBtnFont() {
         let font = $(sel.allPlayerBtn).getCSSProperty('font-family').parsed.value[2];
         assert.equal(font, exp.allPlayerBtnFont);
     }

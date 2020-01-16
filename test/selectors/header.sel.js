@@ -1,5 +1,7 @@
-export default{
+export default {
+    
     header: '#header',
+
     loginBtn: '.btn-secondary',
     welcomeText: '.text-welcome',
     allPlayerBtn: '#btn-all',

@@ -1,5 +1,5 @@
 export default {
-    
+
     headerLocation: '0',
     headerBgColor: 'rgba(0,0,0,0.03)',
 

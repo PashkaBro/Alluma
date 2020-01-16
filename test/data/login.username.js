@@ -1,4 +1,4 @@
-export default{
+export default {
 
     moderLogin: 'moderator',
     moderPass: 'moder@1234',
