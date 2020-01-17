@@ -33,7 +33,7 @@ class Base {
     randomString(max) { //you need to set value for string length
         let str = '';
         for (let i = 1; i <= max; i++) {
-            str += String.fromCharCode(Math.random() * (127 - 32) + 32)
+            str += String.fromCharCode(Math.random() * (126 - 35) + 35)
         }
         return str
     }
