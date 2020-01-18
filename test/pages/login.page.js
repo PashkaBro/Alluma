@@ -1,8 +1,9 @@
 import sel from '../selectors/login-page.sel';
 import exp from '../expected/login.exp';
 import {assert} from 'chai';
+import Base from './base';
 
-class Login {
+class Login extends Base{
     
     open(){
         browser.url('/');
