@@ -19,7 +19,7 @@ class Login extends Base{
     }
 
     reminderTxtDisplayed(){
-        $(sel.reminderText).isDisplayed();
+        $(sel.reminderTxt).isDisplayed();
     }
 
     logoAlignment(){
@@ -79,7 +79,7 @@ class Login extends Base{
 
 
     RemindBtnText(){
-        let rbt = $(sel.remindButton).getText();
+        let rbt = $(sel.remindButton1).getText();
         assert.equal(rbt, exp.btnRemindTxt);
     }
 
