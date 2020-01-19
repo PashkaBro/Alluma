@@ -26,4 +26,8 @@ describe('Login-page', function () {
       login.logoHeight();
     })
 
+    it('Reminder-text-is-center-aligned', function () {
+      login.logoAlignment();
+    })
+
 });

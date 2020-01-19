@@ -32,6 +32,11 @@ class Login extends Base{
         assert.equal(height.value, exp.logoHeight);
     }
 
+    reminderTxtAlignment(){
+        let reminderTxtAlign = $(sel.reminderTxt).getCSSProperty('text-align');
+        assert.equal(reminderTxtAlign.value, exp.reminderTxtAlign);
+    }
+
 }
 
 export default new Login();
