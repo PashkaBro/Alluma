@@ -70,7 +70,7 @@ class Header extends Base{
         let headerCenter = $(sel.header).getSize('width') / 2;
         let elem = $(sel.allPlayerBtn).getLocation('x');
         let btnSize = $(sel.allPlayerBtn).getSize('width') / 2;
-        let btnAlign = (headerCenter -  btnSize) === Math.ceil(elem);
+        let btnAlign = Math.ceil(headerCenter -  btnSize) === Math.ceil(elem);
         assert.isTrue(btnAlign)
     }
 
