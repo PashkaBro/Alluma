@@ -16,7 +16,7 @@ describe('Login-form', function () {
      })
 
 
-    it('RemPass-button-displayed', function () {
+    it('Remind-Password-button-displayed', function () {
     login.remindPassBtn();
      })
 
@@ -45,12 +45,12 @@ describe('Login-form', function () {
     login.RemindPassBtnBgc();
     })
 
-    it('Login-button-text', function () {
-        login.RemindBtnText();
-        }) 
+    it('Remind-button-text', function () {
+    login.RemindBtnText();
+     }) 
 
     it('Remind-button-text-color', function () {
-        login.RemindBtnTextColor();
-        }) 
+    login.RemindBtnTextColor();
+     }) 
 
 });
