@@ -3,7 +3,7 @@ import login from '../pages/login.page';
 describe('Login-form', function () {
 
     it('UserName-field-displayed', function () {
-    login.userName();
+    login.userNameDisplayed();
     })
 
 

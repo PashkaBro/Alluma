@@ -1,8 +1,9 @@
 import sel from '../selectors/login-page.sel';
 import exp from '../expected/login.exp';
 import {assert} from 'chai';
+import Base from './base';
 
-class Login {
+class Login extends Base{
     
     open(){
         browser.url('/');
@@ -18,7 +19,7 @@ class Login {
     }
 
     reminderTxtDisplayed(){
-        $(sel.remindText).isDisplayed();
+        $(sel.reminderText).isDisplayed();
     }
 
     logoAlignment(){
@@ -31,7 +32,7 @@ class Login {
         assert.equal(height.value, exp.logoHeight);
     }
 
-    userName(){
+    userNameDisplayed(){
         $(sel.email).isDisplayed();
     }
 
