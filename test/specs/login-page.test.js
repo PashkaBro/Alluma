@@ -26,19 +26,19 @@ describe('Login-page', function () {
     login.logoHeight();
   })
 
-  it('Remind-pass-aligned', function () {
+  it('Remind-password-aligned', function () {
     login.reminderTxtDisplayed();
   })
 
-  it('Remind-pass-size', function () {
+  it('Remind-password-size', function () {
     login.remindTxtSize();
   })
 
-  it('Remind-pass-color', function () {
+  it('Remind-password-color', function () {
     login.remindTxtColor();
   })
 
-  it('Remind-pass-text', function () {
+  it('Remind-password-text', function () {
     login.remindTxt();
   })
 
@@ -62,7 +62,7 @@ describe('Login-page', function () {
     login.usernamePlaceholder();
   })
 
-  it('Pass-placeholder', function () {
+  it('Password-placeholder', function () {
     login.passPlaceholder();
   })
 
@@ -134,11 +134,11 @@ describe('Login-page', function () {
     login.userNotExistColor();
   })
 
-  it('Pass-is-incorrect', function () {
+  it('Password-is-incorrect', function () {
     login.passIncorrect();
   })
 
-  it('Pass-is-incorrect-text', function () {
+  it('Password-is-incorrect-text', function () {
     login.passIncorrectText();
   })
 
