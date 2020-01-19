@@ -1,13 +1,14 @@
 import loginSel from '../selectors/login-page.sel';
 import sel from '../selectors/pass-reminder.page.sel';
-import {assert} from 'chai';
+import exp from '../expected/pass-reminder.exp';
+import { assert } from 'chai';
 //import Base from './base';
 
-class Reminder  {
-    
-    goToPage(){
+class Reminder {
+
+    goToPage() {
         $(loginSel.forgotBtn).click();
-       // browser.pause(5000);
+        // browser.pause(5000);
     }
 
     clickRemindPass() {
@@ -20,19 +21,19 @@ class Reminder  {
 
     errorTextColor() {
         let textColor = $(sel.errorText).getCSSProperty('color')['parsed']['hex'];
-        assert.equal(textColor, '#ff0000');
+        assert.equal(textColor, exp.errorColor);
     }
 
     errorText() {
         let textError = $(sel.errorText).getText();
-        assert.equal(textError, 'Please specify email');
+        assert.equal(textError, exp.errorEmpty);
     }
 
     errorTextLocate() {          //Error message should be located between e-mail form and remind button
         let emailPos = $(sel.emailForm).getLocation('y') + ($(sel.emailForm).getCSSProperty('height')['parsed']['value'] / 2);
         let errorTextPos = $(sel.errorText).getLocation('y') + ($(sel.errorText).getCSSProperty('font-size')['parsed']['value'] / 2);
         let btnRemindPos = $(sel.remindBtn).getLocation('y') + ($(sel.remindBtn).getCSSProperty('height')['parsed']['value'] / 2);
-        let res =  (errorTextPos > emailPos && errorTextPos < btnRemindPos);
+        let res = (errorTextPos > emailPos && errorTextPos < btnRemindPos);
         assert.equal(res, true);
     }
 
@@ -65,7 +66,7 @@ class Reminder  {
 
     wrongEmailMsg() {
         let textError = $(sel.errorText).getText();
-        assert.equal(textError, 'User with this email does not exist');
+        assert.equal(textError, exp.errorWrong);
     }
 
     addChargEmail() {
@@ -77,36 +78,34 @@ class Reminder  {
     }
 
     inputCorrectEmail() {
-        $(sel.emailForm).setValue('Alik@mail.ru');
+        $(sel.emailForm).setValue(exp.emailExist);
     }
 
     correctEmailMsgColor() {
         let textColor = $(sel.errorText).getCSSProperty('color')['parsed']['hex'];
-        assert.equal(textColor, '#008000');
+        assert.equal(textColor, exp.correctColor);
     }
 
     correctEmailMsgText() {
         let textError = $(sel.errorText).getText();
-        assert.equal(textError, 'Password reminder sent');
+        assert.equal(textError, exp.remindMessage);
     }
 
     spinnerDisplayed() {
-        
-        setTimeout( function() {
-            if(browser.getUrl() === sel.forgot){
+
+        setTimeout(function () {
+            if (browser.getUrl() === sel.forgot) {
                 assert.equal($(sel.spinner).isDisplayed(), true);
-                console.log('spinner');
-                }else console.log('else')
+            }
         }, 500);
     }
 
     redirectPage() {
-        setTimeout( function() {
-            console.log('got back');
-            assert.equal(browser.getUrl(), sel.home);
+        setTimeout(function () {
+            assert.equal(browser.getUrl(), exp.homeUrl);
         }, 2500);
     }
- }
- 
+}
+
 
 export default new Reminder();
