@@ -33,8 +33,8 @@ class Login extends Base{
     }
 
     reminderTxtAlignment(){
-        let reminderTxtAlign = $(sel.reminderTxt).getCSSProperty('text-align');
-        assert.equal(reminderTxtAlign.value, exp.reminderTxtAlign);
+        let remTxtAlign = $(sel.reminderTxt).getCSSProperty('text-align');
+        assert.equal(remTxtAlign.value, exp.remTxtAlign);
     }
 
 }
