@@ -2,13 +2,12 @@ import loginSel from '../selectors/login-page.sel';
 import sel from '../selectors/pass-reminder.page.sel';
 import exp from '../expected/pass-reminder.exp';
 import { assert } from 'chai';
-//import Base from './base';
+import Base from './base';
 
-class Reminder {
+class Reminder extends Base{
 
     goToPage() {
         $(loginSel.btnReminder).click();
-        // browser.pause(5000);
     }
 
     clickRemindPass() {
@@ -40,14 +39,6 @@ class Reminder {
     errorTextAlign() {
         let errorTextPos = $(sel.errorText).getLocation('x') + ($(sel.errorText).getSize('width') / 2);
         assert.equal(browser.getWindowSize()['width'] / 2, Math.ceil(errorTextPos) + 8)
-    }
-
-    randomString(max) { //you need to set value for string length
-        let str = '';
-        for (let i = 1; i <= max; i++) {
-            str += String.fromCharCode(Math.random() * (126 - 35) + 35);
-        }
-        return str;
     }
 
     emailFieldMax() {
