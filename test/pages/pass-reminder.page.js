@@ -7,7 +7,7 @@ import { assert } from 'chai';
 class Reminder {
 
     goToPage() {
-        $(loginSel.forgotBtn).click();
+        $(loginSel.btnReminder).click();
         // browser.pause(5000);
     }
 

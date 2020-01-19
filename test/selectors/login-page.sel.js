@@ -2,5 +2,11 @@ export default {
     logo: '#logo',
     form: '.login-form',
     reminderTxt: '#info-text',
-    forgotBtn: '#btn-forgot'
+    email: '#email',
+    pass: '#pass',
+
+    btnLogin: '#btn-login',
+    btnReminder: '#btn-forgot',
+
+    errorText: '#error-text'
 }
