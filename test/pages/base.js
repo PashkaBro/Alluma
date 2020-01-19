@@ -27,7 +27,7 @@ class Base {
         $(loginSel.email).setValue(login); //you need to enter your login existing email
         $(loginSel.pass).setValue(pass); //correct pass
         $(loginSel.loginButton).click();
-        $(headSel.logOutBtn).waitForExist(3000);
+        $(headSel.logOutBtn).waitForDisplayed(3000);
     }
 
     randomString(max) { //you need to set value for string length
