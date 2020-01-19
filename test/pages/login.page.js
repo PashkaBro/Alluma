@@ -39,6 +39,7 @@ class Login extends Base{
     passField(){
         $(sel.pass).isDisplayed();
     }
+    
     loginBtn(){
         $(sel.loginButton).isDisplayed();
     }
@@ -52,6 +53,7 @@ class Login extends Base{
        let uPlace = $(sel.email).getAttribute('placeholder');
         assert.equal(uPlace, exp.usernamePlaceholder);
     }
+    
     PassPlaceholder(){
         let pPlace = $(sel.pass).getAttribute('placeholder');
         assert.equal(pPlace, exp.passPlaceholder);  

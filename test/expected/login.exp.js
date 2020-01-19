@@ -1,7 +1,6 @@
 export default {
     logoAlign: 'center',
     logoHeight: '256px',
-
     
     remTextAlign: 'center',
     remTextSize: 1,
