@@ -1,11 +1,39 @@
 import sel from '../selectors/login-page.sel';
 import exp from '../expected/login.exp';
-import helpers from '../helpers/helpers.js';
 import { assert } from 'chai';
+import Base from './base';
 
-class Login {
+class Login extends Base {
 
-    errorPassEmpty() {
+    open() {
+        browser.url('/');
+        $(sel.logo).waitForDisplayed();
+    }
+
+    logoDisplayed() {
+        $(sel.logo).isDisplayed();
+    }
+
+    formDisplayed() {
+        $(sel.form).isDisplayed();
+    }
+
+    reminderTxtDisplayed() {
+        $(sel.reminderTxt).isDisplayed();
+    }
+
+    logoAlignment() {
+        let textAlign = $(sel.logo).getCSSProperty('text-align');
+        assert.equal(textAlign.value, exp.logoAlign);
+    }
+
+    logoHeight() {
+        let height = $(sel.logo).getCSSProperty('height');
+        assert.equal(height.value, exp.logoHeight);
+    }
+
+    errorEmpty() {
+        browser.url('/');
         $(sel.btnLogin).click();
         let error = $(sel.errorText).isDisplayed();
         assert.isTrue(error);
@@ -38,7 +66,7 @@ class Login {
     }
 
     usernameMaxField() {
-        let randomStr = helpers.random(105);
+        let randomStr = this.randomString(105);
         $(sel.email).setValue(randomStr);
         let len = $(sel.email).getValue().length;
         assert.equal(len, exp.usernameMaxLength);
@@ -46,7 +74,7 @@ class Login {
 
     passMaxField() {
         browser.refresh();
-        let randomStr = helpers.random(105);
+        let randomStr = this.randomString(105);
         $(sel.pass).setValue(randomStr);
         let len = $(sel.pass).getValue().length;
         assert.equal(len, exp.passMaxLength);
@@ -54,7 +82,11 @@ class Login {
 
     userNotExistDisplayed() {
         browser.refresh();
-        helpers.loginNegative();
+        let username = this.randomString(15);
+        let pas = this.randomString(15);
+        $(sel.email).setValue(username);
+        $(sel.pass).setValue(pas);
+        $(sel.btnLogin).click();
         $(sel.errorText).waitForDisplayed();
         assert.isTrue($(sel.errorText).isDisplayed());
     }
@@ -70,7 +102,7 @@ class Login {
     passIncorrect() {
         browser.refresh();
         let username = 'admin';
-        let pas = helpers.random(15);
+        let pas = this.randomString(15);
         $(sel.email).setValue(username);
         $(sel.pass).setValue(pas);
         $(sel.btnLogin).click();
@@ -92,10 +124,14 @@ class Login {
     }
 
     passChange() {
-        browser.refresh();
-        helpers.loginNegative();
+        $(sel.errorText).waitForDisplayed(5000, true);
+        let username = this.randomString(15);
+        let pas = this.randomString(15);
+        $(sel.email).setValue(username);
+        $(sel.pass).setValue(pas);
+        $(sel.btnLogin).click();
         $(sel.errorText).waitForDisplayed();
-        $(sel.email).setValue("1");
+        $(sel.pass).setValue("1");
         assert.isNotTrue($(sel.errorText).isDisplayed());
     }
 
