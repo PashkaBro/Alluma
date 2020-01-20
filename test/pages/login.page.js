@@ -26,7 +26,7 @@ class Login extends Base{
         let textAlign = $(sel.logo).getCSSProperty('text-align');
         assert.equal(textAlign.value, exp.logoAlign);
     }
-
+    
     logoHeight(){
         let height = $(sel.logo).getCSSProperty('height');
         assert.equal(height.value, exp.logoHeight);

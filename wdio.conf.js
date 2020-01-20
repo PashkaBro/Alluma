@@ -2,8 +2,7 @@ exports.config = {
     runner: 'local',
     path: '/',
     specs: [
-       // './test/specs/*.js'
-        './test/specs/pagination_section.test.js'
+        './test/specs/*.js'
     ],
     exclude: [
 
