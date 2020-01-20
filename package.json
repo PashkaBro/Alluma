@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run clean && npm run temp && wdio wdio.conf.js",
     "clean": "rm -rf temp",
-    "temp": "mkdir temp temp/screenshots"
+    "temp": "mkdir temp temp\\screenshots"
   },
   "keywords": [
     "Test",
