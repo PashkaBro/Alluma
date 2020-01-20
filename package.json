@@ -6,6 +6,7 @@
   "scripts": {
     "test": "npm run clean && npm run temp && wdio wdio.conf.js",
     "tm": "npm run clean && npm run temp-mac && wdio wdio.conf.js",
+    "azure": "npm run temp && wdio wdio.conf.js",
     "clean": "rm -rf temp",
     "temp": "mkdir temp\\screenshots",
     "temp-mac": "mkdir temp temp/screenshots"
