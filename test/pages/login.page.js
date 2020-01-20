@@ -32,7 +32,7 @@ class Login extends Base{
         assert.equal(height.value, exp.logoHeight);
     }
 
-    userNameDisplayed(){
+    usernameDisplayed(){
         $(sel.email).isDisplayed();
     }
 
@@ -79,7 +79,6 @@ class Login extends Base{
         assert.equal(bgc.value, exp.btnRemindBg);
     }
 
-
     RemindBtnText(){
         let rbt = $(sel.remindButton1).getText();
         assert.equal(rbt, exp.btnRemindTxt);
@@ -93,4 +92,3 @@ class Login extends Base{
 }
 
 export default new Login();
-

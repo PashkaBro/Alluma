@@ -2,10 +2,9 @@ import login from '../pages/login.page';
 
 describe('Login-form', function () {
 
-    it('UserName-field-displayed', function () {
-    login.userNameDisplayed();
+    it('Username-field-displayed', function () {
+    login.usernameDisplayed();
     })
-
 
     it('Password-field-displayed', function () {
     login.passField();
@@ -15,7 +14,6 @@ describe('Login-form', function () {
     login.loginBtn();
      })
 
-
     it('Remind-Password-button-displayed', function () {
     login.remindPassBtn();
      })
@@ -23,7 +21,6 @@ describe('Login-form', function () {
     it('User-placeholder-correct', function () {
     login.userPlaceholder();
     })
-
         
     it('Password-placeholder-correct', function () {
     login.PassPlaceholder();
