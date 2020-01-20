@@ -10,5 +10,5 @@ export default {
     newGameBtn: '#btn-game',
     continueGameBtn: '#btn-continue',
     logOutBtn: '#btn-logout',
-    allBtnTag: 'button'
+    allBtnTag: 'button',
 }

@@ -17,5 +17,10 @@ export default {
     allPlayerBtnFont: 'segoe ui',
 
     redirectUrl: 'http://qa.intgames.org/users',
-    baseUrl: 'http://qa.intgames.org/'
+    baseUrl: 'http://qa.intgames.org/',
+
+    welcomeTextFontSize: '16px',
+    welcomeTextFontColor: '#212529',
+    welcomeTextFontWeight: '400',
+    nicnameTextBold: '700'
 }
