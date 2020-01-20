@@ -42,6 +42,11 @@ class Login extends Base{
         assert.equal($(sel.reminderTxt).isDisplayed(),true);
     }
 
+    reminderTxtColor(){
+        let remTxtColor = $(sel.reminderTxt).getCSSProperty('color');
+        assert.equal($(sel.reminderTxt).isDisplayed(),true);
+    }    
+
 }
 
 export default new Login();

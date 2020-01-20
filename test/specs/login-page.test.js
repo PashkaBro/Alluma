@@ -34,4 +34,8 @@ describe('Login-page', function () {
       login.reminderTxtSize();
     })
 
+    it('Reminder-text-color', function () {
+      login.reminderTxtColor();
+    })
+
 });
