@@ -103,9 +103,9 @@ class Login extends Base {
         assert.equal($(sel.reminderTxt).isDisplayed(), true);
     }
 
-    // reminderTxtIsDisplayed() {
-    //     // let remTxtIsDisp = $(sel.reminderTxt).getText();
-    //     console.log($(sel.reminderTxt).getText())
-    // }    
+    reminderTxtIsCorrect() {
+        let remTxtIsDisp = $(sel.reminderTxt).getText();
+        assert.equal(remTxtIsDisp, exp.remText);
+    }
 }
 export default new Login();

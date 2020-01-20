@@ -38,4 +38,8 @@ describe('Login-page', function () {
     login.reminderTxtColor();
   })
 
+  it('Reminder-text-IsCorrect', function () {
+    login.reminderTxtIsCorrect();
+  })
+
 });
