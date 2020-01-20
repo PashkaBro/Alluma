@@ -1,51 +1,51 @@
 import sel from '../selectors/login-page.sel';
 import exp from '../expected/login.exp';
-import {assert} from 'chai';
+import { assert } from 'chai';
 import Base from './base';
 
-class Login extends Base{
-    
-    open(){
+class Login extends Base {
+
+    open() {
         browser.url('/');
         $(sel.logo).waitForDisplayed();
     }
 
-    logoDisplayed(){
+    logoDisplayed() {
         $(sel.logo).isDisplayed();
     }
 
-    formDisplayed(){
+    formDisplayed() {
         $(sel.form).isDisplayed();
     }
 
-    reminderTxtDisplayed(){
+    reminderTxtDisplayed() {
         $(sel.reminderTxt).isDisplayed();
     }
 
-    logoAlignment(){
+    logoAlignment() {
         let textAlign = $(sel.logo).getCSSProperty('text-align');
         assert.equal(textAlign.value, exp.logoAlign);
     }
 
-    logoHeight(){
+    logoHeight() {
         let height = $(sel.logo).getCSSProperty('height');
         assert.equal(height.value, exp.logoHeight);
     }
 
-    reminderTxtAlignment(){
+    reminderTxtAlignment() {
         let remTxtAlign = $(sel.reminderTxt).getCSSProperty('text-align');
         assert.equal(remTxtAlign.value, exp.remTxtAlign);
     }
 
-    reminderTxtSize(){
+    reminderTxtSize() {
         let remTxtSize = $(sel.reminderTxt).getSize('font-size');
-        assert.equal($(sel.reminderTxt).isDisplayed(),true);
+        assert.equal($(sel.reminderTxt).isDisplayed(), true);
     }
 
-    reminderTxtColor(){
+    reminderTxtColor() {
         let remTxtColor = $(sel.reminderTxt).getCSSProperty('color');
-        assert.equal($(sel.reminderTxt).isDisplayed(),true);
-    }    
+        assert.equal($(sel.reminderTxt).isDisplayed(), true);
+    }
 
 }
 
