@@ -2,7 +2,6 @@ export default {
     logoAlign: 'center',
     logoHeight: '256px',
 
-
     remTextAlign: 'center',
     remTextSize: 1,
     remTextColor: '#212529',
@@ -11,13 +10,13 @@ export default {
     usernamePlaceholder: 'Username *',
     passPlaceholder: 'Password *',
 
-    btnLoginBg: '#007bff',
+    btnLoginBg: 'rgba(0,123,255,1)',
     btnLoginTxt: 'Login',
-    btnLoginClr: '#ffffff',
-
-    btnRemindBg: '#ffc107',
+    btnLoginClr:'rgba(255,255,255,1)',
+   
+    btnRemindBg: 'rgba(255,193,7,1)',
     btnRemindTxt: 'Remind Password',
-    btnRemindClr: '#212529',
+    btnRemindClr: 'rgba(33,37,41,1)',
 
     errorAlign: 'center',
     errorSize: 1,
