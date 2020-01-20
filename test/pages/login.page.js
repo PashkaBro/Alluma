@@ -1,90 +1,89 @@
 import sel from '../selectors/login-page.sel';
 import exp from '../expected/login.exp';
-import {assert} from 'chai';
+import { assert } from 'chai';
 import Base from './base';
 
-class Login extends Base{
-    
-    open(){
+class Login extends Base {
+
+    open() {
         browser.url('/');
         $(sel.logo).waitForDisplayed();
     }
 
-    logoDisplayed(){
+    logoDisplayed() {
         $(sel.logo).isDisplayed();
     }
 
-    formDisplayed(){
+    formDisplayed() {
         $(sel.form).isDisplayed();
     }
 
-    reminderTxtDisplayed(){
+    reminderTxtDisplayed() {
         $(sel.reminderTxt).isDisplayed();
     }
 
-    logoAlignment(){
+    logoAlignment() {
         let textAlign = $(sel.logo).getCSSProperty('text-align');
         assert.equal(textAlign.value, exp.logoAlign);
     }
 
-    logoHeight(){
+    logoHeight() {
         let height = $(sel.logo).getCSSProperty('height');
         assert.equal(height.value, exp.logoHeight);
     }
 
-    usernameDisplayed(){
+    usernameDisplayed() {
         $(sel.email).isDisplayed();
     }
 
-    passField(){
+    passField() {
         $(sel.pass).isDisplayed();
     }
 
-    loginBtn(){
+    loginBtn() {
         $(sel.loginButton).isDisplayed();
     }
 
-    remindPassBtn(){
+    remindPassBtn() {
         $(sel.remindButton).isDisplayed();
     }
 
-    userPlaceholder(){
-        browser.url('/')
-       let uPlace = $(sel.email).getAttribute('placeholder');
+    userPlaceholder() {
+        let uPlace = $(sel.email).getAttribute('placeholder');
         assert.equal(uPlace, exp.usernamePlaceholder);
     }
-    
-    PassPlaceholder(){
+
+    PassPlaceholder() {
         let pPlace = $(sel.pass).getAttribute('placeholder');
-        assert.equal(pPlace, exp.passPlaceholder);  
+        assert.equal(pPlace, exp.passPlaceholder);
     }
 
-    loginBtnBgc(){
+    loginBtnBgc() {
         let bgc = $(sel.loginButton).getCSSProperty('background-color');
         assert.equal(bgc.value, exp.btnLoginBg);
     }
-   
-    loginBtnText(){
+
+    loginBtnText() {
         let lbt = $(sel.loginButton).getText();
         assert.equal(lbt, exp.btnLoginTxt);
     }
 
-    loginBtnTextColor(){
+    loginBtnTextColor() {
         let textColor = $(sel.loginButton1).getCSSProperty('color');
         assert.equal(textColor.value, exp.btnLoginClr);
     }
 
-    RemindPassBtnBgc(){
+    RemindPassBtnBgc() {
         let bgc = $(sel.remindButton).getCSSProperty('background-color');
         assert.equal(bgc.value, exp.btnRemindBg);
     }
 
-    RemindBtnText(){
+    RemindBtnText() {
         let rbt = $(sel.remindButton1).getText();
         assert.equal(rbt, exp.btnRemindTxt);
     }
 
-    RemindBtnTextColor(){
+    RemindBtnTextColor() {
         let textColor = $(sel.remindButton1).getCSSProperty('color');
         assert.equal(textColor.value, exp.btnRemindClr);
     }

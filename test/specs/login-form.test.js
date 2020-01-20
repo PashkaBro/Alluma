@@ -3,51 +3,52 @@ import login from '../pages/login.page';
 describe('Login-form', function () {
 
     it('Username-field-displayed', function () {
-    login.usernameDisplayed();
+        login.open();
+        login.usernameDisplayed();
     })
 
     it('Password-field-displayed', function () {
-    login.passField();
-     })
+        login.passField();
+    })
 
     it('Login-button-displayed', function () {
-    login.loginBtn();
-     })
+        login.loginBtn();
+    })
 
     it('Remind-Password-button-displayed', function () {
-    login.remindPassBtn();
-     })
+        login.remindPassBtn();
+    })
 
     it('User-placeholder-correct', function () {
-    login.userPlaceholder();
+        login.userPlaceholder();
     })
-        
+
     it('Password-placeholder-correct', function () {
-    login.PassPlaceholder();
+        login.PassPlaceholder();
     })
-      
+
     it('Login-button-background-color', function () {
-    login.loginBtnBgc();
+        login.loginBtnBgc();
     })
-      
+
     it('Login-button-text', function () {
-    login.loginBtnText();
-    }) 
+        login.loginBtnText();
+    })
 
     it('Login-button-text-color', function () {
-    login.loginBtnTextColor();
-    }) 
+        login.loginBtnTextColor();
+    })
 
     it('Remind-button-background-color', function () {
-    login.RemindPassBtnBgc();
+        login.RemindPassBtnBgc();
     })
 
     it('Remind-button-text', function () {
-    login.RemindBtnText();
-     }) 
+        login.RemindBtnText();
+    })
 
     it('Remind-button-text-color', function () {
-    login.RemindBtnTextColor();
-     }) 
+        login.RemindBtnTextColor();
+    })
 
 });
