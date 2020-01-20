@@ -90,7 +90,7 @@ class Login extends Base {
 
     reminderTxtAlignment() {
         let remTxtAlign = $(sel.reminderTxt).getCSSProperty('text-align');
-        assert.equal(remTxtAlign.value, exp.remTxtAlign);
+        assert.equal(remTxtAlign.value, exp.remTextAlign);
     }
 
     reminderTxtSize() {
@@ -101,7 +101,11 @@ class Login extends Base {
     reminderTxtColor() {
         let remTxtColor = $(sel.reminderTxt).getCSSProperty('color');
         assert.equal($(sel.reminderTxt).isDisplayed(), true);
-}
+    }
 
+    // reminderTxtIsDisplayed() {
+    //     // let remTxtIsDisp = $(sel.reminderTxt).getText();
+    //     console.log($(sel.reminderTxt).getText())
+    // }    
 }
 export default new Login();
