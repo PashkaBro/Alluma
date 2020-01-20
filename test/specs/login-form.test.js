@@ -24,7 +24,7 @@ describe('Login-form', function () {
     })
 
     it('Password-placeholder-correct', function () {
-        login.PassPlaceholder();
+        login.passPlaceholder();
     })
 
     it('Login-button-background-color', function () {
@@ -40,15 +40,15 @@ describe('Login-form', function () {
     })
 
     it('Remind-button-background-color', function () {
-        login.RemindPassBtnBgc();
+        login.remindPassBtnBgc();
     })
 
     it('Remind-button-text', function () {
-        login.RemindBtnText();
+        login.remindBtnText();
     })
 
     it('Remind-button-text-color', function () {
-        login.RemindBtnTextColor();
+        login.remindBtnTextColor();
     })
 
 });

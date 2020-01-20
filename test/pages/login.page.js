@@ -49,11 +49,11 @@ class Login extends Base {
     }
 
     userPlaceholder() {
-        let uPlace = $(sel.email).getAttribute('placeholder');
-        assert.equal(uPlace, exp.usernamePlaceholder);
+        let userPlacehold = $(sel.email).getAttribute('placeholder');
+        assert.equal(userPlacehold, exp.usernamePlaceholder);
     }
 
-    PassPlaceholder() {
+    passPlaceholder() {
         let pPlace = $(sel.pass).getAttribute('placeholder');
         assert.equal(pPlace, exp.passPlaceholder);
     }
@@ -73,17 +73,17 @@ class Login extends Base {
         assert.equal(textColor.value, exp.btnLoginClr);
     }
 
-    RemindPassBtnBgc() {
-        let bgc = $(sel.remindButton).getCSSProperty('background-color');
-        assert.equal(bgc.value, exp.btnRemindBg);
+    remindPassBtnBgc() {
+        let backGroundColor = $(sel.remindButton).getCSSProperty('background-color');
+        assert.equal(backGroundColor.value, exp.btnRemindBg);
     }
 
-    RemindBtnText() {
-        let rbt = $(sel.remindButton1).getText();
-        assert.equal(rbt, exp.btnRemindTxt);
+    remindBtnText() {
+        let remindButtonText = $(sel.remindButton1).getText();
+        assert.equal(remindButtonText, exp.btnRemindTxt);
     }
 
-    RemindBtnTextColor() {
+    remindBtnTextColor() {
         let textColor = $(sel.remindButton1).getCSSProperty('color');
         assert.equal(textColor.value, exp.btnRemindClr);
     }
