@@ -30,4 +30,8 @@ describe('Login-page', function () {
       login.reminderTxtAlignment();
     })
 
+    it('Reminder-text-size', function () {
+      login.reminderTxtSize();
+    })
+
 });

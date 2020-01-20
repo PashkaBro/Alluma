@@ -37,6 +37,11 @@ class Login extends Base{
         assert.equal(remTxtAlign.value, exp.remTxtAlign);
     }
 
+    reminderTxtSize(){
+        let remTxtSize = $(sel.reminderTxt).getSize('font-size');
+        assert.equal($(sel.reminderTxt).isDisplayed(),true);
+    }
+
 }
 
 export default new Login();
