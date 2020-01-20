@@ -19,7 +19,7 @@ class Reminder extends Base{
     }
 
     errorTextColor() {
-        let textColor = $(sel.errorText).getCSSProperty('color')['parsed']['hex'];
+        let textColor = $(sel.errorText).getCSSProperty('color').parsed.hex;
         assert.equal(textColor, exp.errorColor);
     }
 
@@ -29,16 +29,16 @@ class Reminder extends Base{
     }
 
     errorTextLocate() {          //Error message should be located between e-mail form and remind button
-        let emailPos = $(sel.emailForm).getLocation('y') + ($(sel.emailForm).getCSSProperty('height')['parsed']['value'] / 2);
-        let errorTextPos = $(sel.errorText).getLocation('y') + ($(sel.errorText).getCSSProperty('font-size')['parsed']['value'] / 2);
-        let btnRemindPos = $(sel.remindBtn).getLocation('y') + ($(sel.remindBtn).getCSSProperty('height')['parsed']['value'] / 2);
+        let emailPos = $(sel.emailForm).getLocation('y') + ($(sel.emailForm).getCSSProperty('height').parsed.value / 2);
+        let errorTextPos = $(sel.errorText).getLocation('y') + ($(sel.errorText).getCSSProperty('font-size').parsed.value / 2);
+        let btnRemindPos = $(sel.remindBtn).getLocation('y') + ($(sel.remindBtn).getCSSProperty('height').parsed.value / 2);
         let res = (errorTextPos > emailPos && errorTextPos < btnRemindPos);
         assert.equal(res, true);
     }
 
     errorTextAlign() {
         let errorTextPos = $(sel.errorText).getLocation('x') + ($(sel.errorText).getSize('width') / 2);
-        assert.equal(browser.getWindowSize()['width'] / 2, Math.ceil(errorTextPos) + 8)
+        assert.equal(browser.getWindowSize().width / 2, Math.ceil(errorTextPos) + 8)
     }
 
     emailFieldMax() {
@@ -73,7 +73,7 @@ class Reminder extends Base{
     }
 
     correctEmailMsgColor() {
-        let textColor = $(sel.errorText).getCSSProperty('color')['parsed']['hex'];
+        let textColor = $(sel.errorText).getCSSProperty('color').parsed.hex;
         assert.equal(textColor, exp.correctColor);
     }
 
@@ -85,7 +85,7 @@ class Reminder extends Base{
     spinnerDisplayed() {
 
         setTimeout(function () {
-            if (browser.getUrl() === sel.forgot) {
+            if (browser.getUrl() === exp.forgotUrl) {
                 assert.equal($(sel.spinner).isDisplayed(), true);
             }
         }, 500);
