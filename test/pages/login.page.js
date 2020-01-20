@@ -39,7 +39,7 @@ class Login extends Base{
     passField(){
         $(sel.pass).isDisplayed();
     }
-    
+
     loginBtn(){
         $(sel.loginButton).isDisplayed();
     }
@@ -61,7 +61,7 @@ class Login extends Base{
 
     loginBtnBgc(){
         let bgc = $(sel.loginButton).getCSSProperty('background-color');
-        assert.equal(bgc.value, exp.btnLoginBg2);
+        assert.equal(bgc.value, exp.btnLoginBg);
     }
    
     loginBtnText(){
@@ -71,12 +71,12 @@ class Login extends Base{
 
     loginBtnTextColor(){
         let textColor = $(sel.loginButton1).getCSSProperty('color');
-        assert.equal(textColor.value, exp.btnLoginClr2);
+        assert.equal(textColor.value, exp.btnLoginClr);
     }
 
     RemindPassBtnBgc(){
         let bgc = $(sel.remindButton).getCSSProperty('background-color');
-        assert.equal(bgc.value, exp.btnRemindBg2);
+        assert.equal(bgc.value, exp.btnRemindBg);
     }
 
 
@@ -87,7 +87,7 @@ class Login extends Base{
 
     RemindBtnTextColor(){
         let textColor = $(sel.remindButton1).getCSSProperty('color');
-        assert.equal(textColor.value, exp.btnRemindClr1);
+        assert.equal(textColor.value, exp.btnRemindClr);
     }
 
 }
