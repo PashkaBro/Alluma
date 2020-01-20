@@ -32,6 +32,62 @@ class Login extends Base {
         assert.equal(height.value, exp.logoHeight);
     }
 
+    usernameDisplayed() {
+        $(sel.email).isDisplayed();
+    }
+
+    passField() {
+        $(sel.pass).isDisplayed();
+    }
+
+    loginBtn() {
+        $(sel.loginButton).isDisplayed();
+    }
+
+    remindPassBtn() {
+        $(sel.remindButton).isDisplayed();
+    }
+
+    userPlaceholder() {
+        let userPlacehold = $(sel.email).getAttribute('placeholder');
+        assert.equal(userPlacehold, exp.usernamePlaceholder);
+    }
+
+    passPlaceholder() {
+        let pPlace = $(sel.pass).getAttribute('placeholder');
+        assert.equal(pPlace, exp.passPlaceholder);
+    }
+
+    loginBtnBgc() {
+        let bgc = $(sel.loginButton).getCSSProperty('background-color');
+        assert.equal(bgc.value, exp.btnLoginBg);
+    }
+
+    loginBtnText() {
+        let lbt = $(sel.loginButton).getText();
+        assert.equal(lbt, exp.btnLoginTxt);
+    }
+
+    loginBtnTextColor() {
+        let textColor = $(sel.loginButton1).getCSSProperty('color');
+        assert.equal(textColor.value, exp.btnLoginClr);
+    }
+
+    remindPassBtnBgc() {
+        let backGroundColor = $(sel.remindButton).getCSSProperty('background-color');
+        assert.equal(backGroundColor.value, exp.btnRemindBg);
+    }
+
+    remindBtnText() {
+        let remindButtonText = $(sel.remindButton1).getText();
+        assert.equal(remindButtonText, exp.btnRemindTxt);
+    }
+
+    remindBtnTextColor() {
+        let textColor = $(sel.remindButton1).getCSSProperty('color');
+        assert.equal(textColor.value, exp.btnRemindClr);
+    }
+
     reminderTxtAlignment() {
         let remTxtAlign = $(sel.reminderTxt).getCSSProperty('text-align');
         assert.equal(remTxtAlign.value, exp.remTxtAlign);
@@ -45,8 +101,7 @@ class Login extends Base {
     reminderTxtColor() {
         let remTxtColor = $(sel.reminderTxt).getCSSProperty('color');
         assert.equal($(sel.reminderTxt).isDisplayed(), true);
-    }
-
 }
 
+}
 export default new Login();
