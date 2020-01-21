@@ -56,7 +56,7 @@ class Pagination extends Base {
     btnNavPage() {
         let sumPages = $$('li');
         let length = sumPages.length;
-        for (let i = 1; i < sumPages.length - 2; i++) {
+        for (let i = 1; i <= length - 2; i++) {
             sumPages[i].click();
             let n = i - 1;
             if (i === 1) n = '';
