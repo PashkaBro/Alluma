@@ -1,8 +1,10 @@
 import sel from '../selectors/pagination_section.sel';
 import exp from '../expected/pagination_section.exp';
 import { assert } from 'chai';
-import Base from './base'
+import Base from './base';
+
 class Pagination extends Base {
+    
     paginationMiss() {
         this.openUsers();
         let res = sel.pageNavigation.length;
@@ -53,6 +55,7 @@ class Pagination extends Base {
         let page1 = $(sel.page1)
         page1.waitForDisplayed()
     }
+
     btnNavPage() {
         let sumPages = $$('li');
         let length = sumPages.length;
