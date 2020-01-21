@@ -84,10 +84,10 @@ class ReminderPassword {
         console.log(elem);
         let btnSize = $(sel.reminderPasswordBtn).getSize('width') / 2;
         console.log(btnSize);
-        let btnAlign = (btnCenter-btnSize) === parseFloat(elem);  //Math.ceil(elem);
+        let btnAlign = Math.ceil(btnCenter-btnSize) === Math.ceil(elem);  //Math.ceil(elem);
         assert.isTrue(btnAlign)
     }
-    
+        
 }
 
 export default new ReminderPassword();
