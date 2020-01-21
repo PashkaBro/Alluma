@@ -2,6 +2,8 @@ import sel from '../selectors/login-page.sel';
 import exp from '../expected/login.exp';
 import { assert } from 'chai';
 import Base from './base';
+import username from '../data/login.username';
+import headSel from '../selectors/header.sel'
 
 class Login extends Base {
 
@@ -34,6 +36,21 @@ class Login extends Base {
 
     errorEmpty() {
         browser.url('/');
+        $(sel.btnLogin).click();
+        let error = $(sel.errorText).isDisplayed();
+        assert.isTrue(error);
+    }
+
+    errorPassEmpty() {
+        $(sel.email).setValue(this.randomString(15));
+        $(sel.btnLogin).click();
+        let error = $(sel.errorText).isDisplayed();
+        assert.isTrue(error);
+    }
+
+    errorUsernameEmpty() {
+        browser.refresh();
+        $(sel.pass).setValue(this.randomString(15));
         $(sel.btnLogin).click();
         let error = $(sel.errorText).isDisplayed();
         assert.isTrue(error);
@@ -73,15 +90,17 @@ class Login extends Base {
     }
 
     passMaxField() {
-        browser.refresh();
         let randomStr = this.randomString(105);
         $(sel.pass).setValue(randomStr);
         let len = $(sel.pass).getValue().length;
         assert.equal(len, exp.passMaxLength);
     }
 
+    copyPastOff(){
+        let pass = $(sel.pass).getAttribute('type');
+    }
+
     userNotExistDisplayed() {
-        browser.refresh();
         let username = this.randomString(15);
         let pas = this.randomString(15);
         $(sel.email).setValue(username);
@@ -92,7 +111,7 @@ class Login extends Base {
     }
 
     userNotExistText() {
-        assert.equal($(sel.errorText).getHTML(false), exp.userNotExistText);
+        assert.equal($(sel.errorText).getText(), exp.userNotExistText);
     }
 
     userNotExistColor() {
@@ -100,8 +119,7 @@ class Login extends Base {
     }
 
     passIncorrect() {
-        browser.refresh();
-        let username = 'admin';
+        let username = 'moderator';
         let pas = this.randomString(15);
         $(sel.email).setValue(username);
         $(sel.pass).setValue(pas);
@@ -111,7 +129,7 @@ class Login extends Base {
     }
 
     passIncorrectText() {
-        assert.equal($(sel.errorText).getHTML(false), exp.passIncorrectText);
+        assert.equal($(sel.errorText).getText(), exp.passIncorrectText);
     }
 
     passIncorrectColor() {
@@ -120,11 +138,10 @@ class Login extends Base {
 
     usernameChange() {
         $(sel.email).setValue("1");
-        assert.isNotTrue($(sel.errorText).isDisplayed());
+        $(sel.errorText).waitForDisplayed(3000, true)
     }
 
     passChange() {
-        $(sel.errorText).waitForDisplayed(5000, true);
         let username = this.randomString(15);
         let pas = this.randomString(15);
         $(sel.email).setValue(username);
@@ -132,7 +149,12 @@ class Login extends Base {
         $(sel.btnLogin).click();
         $(sel.errorText).waitForDisplayed();
         $(sel.pass).setValue("1");
-        assert.isNotTrue($(sel.errorText).isDisplayed());
+        $(sel.errorText).waitForDisplayed(3000, true)
+    }
+
+    loginCorrect(){
+        this.userLogin(username.pashaLogin, username.pashkaPass);
+        $(headSel.logOutBtn).click();
     }
 
     usernameDisplayed() {
@@ -190,6 +212,7 @@ class Login extends Base {
         let textColor = $(sel.remindButton1).getCSSProperty('color');
         assert.equal(textColor.value, exp.btnRemindClr);
     }
+
 
 }
 
