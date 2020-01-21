@@ -4,18 +4,26 @@ import { assert } from 'chai';
 import Base from './base'
 class Pagination extends Base {
     paginationMiss() {
-        browser.url('/users')
-        $(sel.paginationContent).isDisplayed(false);
+        this.openUsers();
+        let res=sel.pageNavigation.length;
+        function pagination(length){
+            for(i=0;i<=length;i++){
+        if (res<4)
+        $(sel.paginationContent).isFalse(isDisplayed());
+            }
+        }
     }
     paginationApp() {
-        //pagination.openBase()
-        //pagination.moderLogin() ;
-        //randomString(max)
-        // allPlayersBtnRedirect()
-        $(sel.paginationContent).isDisplayed();
+        let res=sel.pageNavigation.length;
+        function pagination(length){
+            for(i=0;i<=length;i++){
+        if (res>4)
+        $(sel.paginationContent).waitForDisplayed();
+            }
+        }
     }
     paginationBtnLeft() {
-        browser.url('/users')
+        this.openUsers();
         let res = $(sel.btnLeft)
         res.isDisplayed();
     }
@@ -24,28 +32,33 @@ class Pagination extends Base {
         res.isDisplayed();
     }
     pageBtnMiddle() {
-        let res = $(sel.pageBtns).getCSSProperty('vertical-align').value
+        let res = $(sel.pageBtns).getCSSProperty('justify-content').value;
         assert.equal(res, exp.pagenationSectionMiddle)
     }
     btnNavNext() {
-        $$(sel.pageNavigation)[3].click();
-        let page2 = $(sel.page2)
-        page2.isDisplayed()
+        //$$('sel.pageNavigation.length-1').click();
+        let sumPages = $$('nav[aria-label="Page navigation"] li');
+         let length = sumPages.length;
+         sumPages[3].click(); 
+        let page2 =$$('#site-content table tbody tr')[0].$('td=11')
+         page2.waitForDisplayed()
+       // let page2 = $$(sel.page2)
+         //page2.waitForDisplayed()
     }
     btnNavPrev() {
-        $$(sel.pageNavigation)[0].click();
-        let page1 = $(sel.page1)
-        page1.isDisplayed()
+        $$(sel.pageNavigation.length)[0].click();
+        //let page1 =$$(sel.page1)
+        // page1.waitForDisplayed()
     }
     btn2Nav2Page() {
-        $$(sel.pageNavigation)[2].click();
-        let page2 = $(sel.page2)
-        page2.isDisplayed()
+        $$('sel.pageNavigation.length-2').click();
+        //let page2 = $(sel.page2)
+       // page2.waitForDisplayed()
     }
     btn1Nav1page() {
         $$(sel.pageNavigation)[1].click();
-        let page1 = $(sel.page1)
-        page1.isDisplayed()
+        let page1 = (sel.page1)
+       $$page1.waitForDisplayed()
     }
     btnSize() {
         let res = $(sel.btnPagination).getCSSProperty('font-size').value;

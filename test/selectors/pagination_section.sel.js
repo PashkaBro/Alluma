@@ -1,10 +1,10 @@
 export default {
-    paginationContent:"pagination content-middle",
-    btnLeft:'=Previous*',
-    btnRight:'=Next',
+    paginationContent: '#site content table',
+    btnLeft:'span[area-lable="Previous"]',
+    btnRight:'span[area-lable="Next"]',
     pageBtns:'ul',
-    pageNavigation: 'nav[aria-label="Page navigation"] li',
-    page2:"#site-content > div > div > table > tbody > tr:nth-child(1) > td:nth-child(1)",
-    page1:'#site-content > div > div > table > tbody > tr:nth-child(1) > td:nth-child(1)',
+    pageNavigation: ('nav[aria-label="Page navigation"] li'),
+    //page2:("#site-content table tbody tr")[0].$('td=11'),
+   //page1:("#site-content table tbody tr")[0].$('td=1'),
     btnPagination:'ul li span'
 }

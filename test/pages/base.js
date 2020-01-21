@@ -11,6 +11,9 @@ class Base {
     openForgot() {
         browser.url('/forgot');
     }
+    openUsers() {
+        browser.url('/users');
+    }
 
     moderLogin() {
         $(loginSel.email).setValue(data.moderLogin); //moderator login
