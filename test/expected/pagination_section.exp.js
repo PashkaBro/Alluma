@@ -1,6 +1,5 @@
 export default {
     pagenationSectionMiddle:'center',
     btnSize:'16px',
-    btnTxtColor:'#007bff'
-    
+    btnTxtColor:'#007bff'  
 }
