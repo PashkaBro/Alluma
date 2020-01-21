@@ -11,6 +11,7 @@ class Base {
     openForgot() {
         browser.url('/forgot');
     }
+    
     openUsers() {
         browser.url('/users');
     }
