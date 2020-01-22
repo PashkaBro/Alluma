@@ -20,7 +20,7 @@ class Base {
     }
 
     loginBtnKlick() {
-        $(loginSel.loginButton).click();
+        $(loginSel.loginButton).click() ;
     }
 
     userLogin(login, pass) { //call this function with two arguments (login, Password)
