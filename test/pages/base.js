@@ -19,15 +19,26 @@ class Base {
         $(headSel.logOutBtn).waitForExist(3000);
     }
 
-    loginBtnKlick() {
+    testLogin() {
+        $(loginSel.email).setValue(data.testLogin); //test login
+        $(loginSel.pass).setValue(data.testPass); //test pass
         $(loginSel.loginButton).click();
+        $(headSel.logOutBtn).waitForExist(3000);
     }
 
-    userLogin(login, pass) { //call this function with two arguments (login, Password)
+    anyUserLogin(login, pass) { //call this function with two arguments (login, Password)
         $(loginSel.email).setValue(login); //you need to enter your login existing email
         $(loginSel.pass).setValue(pass); //correct pass
         $(loginSel.loginButton).click();
         $(headSel.logOutBtn).waitForExist(3000);
+    }
+
+    loginBtnСlick() {
+        $(loginSel.loginButton).click();
+    }
+
+    allPlayersBtnRedirect() {
+        $(headSel.allPlayerBtn).click();
     }
 
     randomString(max) { //you need to set value for string length
@@ -38,8 +49,5 @@ class Base {
         return str
     }
 
-    allPlayersBtnRedirect() {
-        $(sel.allPlayerBtn).click();
-    }
 }
 export default Base;

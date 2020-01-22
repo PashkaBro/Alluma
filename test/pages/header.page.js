@@ -3,7 +3,7 @@ import exp from '../expected/header.exp';
 import { assert } from 'chai';
 import Base from './base';
 
-class Header extends Base{
+class Header extends Base {
 
     //header
     headerLocation() {
@@ -20,8 +20,8 @@ class Header extends Base{
         let length = $(sel.header).$$(sel.allBtnTag).length
         assert.equal(length, exp.numberOfBtn);
     }
-    //Login player btn
 
+    //Login player btn
     loginBtnAlign() {
         let headerLeft = $(sel.header).getSize('width') / 2;
         let elem = $(sel.loginBtn).getLocation('x');
@@ -64,13 +64,14 @@ class Header extends Base{
         let elem = $(sel.loginBtn).isExisting();
         assert.isFalse(elem);
     }
-    // All Player Button
 
+    // All Player Button
     allPlayerBtnAlign() {
         let headerCenter = $(sel.header).getSize('width') / 2;
         let elem = $(sel.allPlayerBtn).getLocation('x');
         let btnSize = $(sel.allPlayerBtn).getSize('width') / 2;
-        let btnAlign = (headerCenter -  btnSize) === Math.ceil(elem);
+        console.log(headerCenter, Math.ceil(elem), btnSize);
+        let btnAlign = (headerCenter - btnSize) === Math.ceil(elem);
         assert.isTrue(btnAlign)
     }
 
@@ -102,8 +103,8 @@ class Header extends Base{
     allPlayersBtnRedirect() {
         $(sel.allPlayerBtn).click();
         assert.equal(browser.getUrl(), exp.redirectUrl);
-
     }
+
 }
 
 export default new Header();
