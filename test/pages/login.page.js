@@ -234,7 +234,7 @@ class Login extends Base {
     }
 
     loginBtnTextColor() {
-        let textColor = $(sel.loginButton1).getCSSProperty('color');
+        let textColor = $(sel.btnLogin).getCSSProperty('color');
         assert.equal(textColor.value, exp.btnLoginClr);
     }
 
@@ -244,12 +244,12 @@ class Login extends Base {
     }
 
     remindBtnText() {
-        let remindButtonText = $(sel.remindButton1).getText();
+        let remindButtonText = $(sel.btnLogin).getText();
         assert.equal(remindButtonText, exp.btnRemindTxt);
     }
 
     remindBtnTextColor() {
-        let textColor = $(sel.remindButton1).getCSSProperty('color');
+        let textColor = $(sel.btnLogin).getCSSProperty('color');
         assert.equal(textColor.value, exp.btnRemindClr);
     }
 

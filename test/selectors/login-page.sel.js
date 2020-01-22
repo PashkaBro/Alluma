@@ -1,9 +1,6 @@
 export default {
     logo: '#logo',
     form: '.login-form',
-    
-    loginButton1: '.btn-primary',
-    remindButton1: '.btn-warning',
 
     reminderTxt: '#info-text',
     email: '#email',
