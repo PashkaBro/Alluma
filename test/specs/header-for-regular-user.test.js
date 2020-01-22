@@ -7,6 +7,10 @@ describe('Header', function () {
         header.welcomeTextInstedLoginBtn();
     })
 
+    it('Welcome-text-text', function () {
+        header.welcomeTextText();
+    })
+
     it('Welcome-text-font-size', function () {
         header.welcomeTextFontSize();
     })

@@ -120,6 +120,11 @@ class Header extends Base {
         assert.equal(size, exp.welcomeTextFontSize);
     }
 
+    welcomeTextText() {
+        let text = $(sel.welcomeText).getText();
+        assert.equal(text, exp.welcomeTextText);
+    }
+
     welcomeTextFontColor() {
         let color = $(sel.welcomeText).getCSSProperty('color').parsed.hex;
         assert.equal(color, exp.welcomeTextFontColor);
@@ -141,7 +146,7 @@ class Header extends Base {
         let elemPixfirst = $(sel.accountBtn).getLocation('x');
         let elemPixlast = $(sel.accountBtn).getSize('width') + elemPixfirst;
         let logoutBtnAlign = $(sel.logOutBtn).getLocation('x');
-        assert.isTrue(elemPixfirst > allPlayerBtnAlign && elemPixlast  < logoutBtnAlign)
+        assert.isTrue(elemPixfirst > allPlayerBtnAlign && elemPixlast < logoutBtnAlign)
     }
 
     myAccountBtnIsExist() {
