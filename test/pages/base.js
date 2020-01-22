@@ -33,13 +33,14 @@ class Base {
         $(headSel.logOutBtn).waitForExist(3000);
     }
 
-    loginBtnСlick() {
-        $(loginSel.loginButton).click();
-        $(loginSel.logo).waitForDisplayed();
+    allPlayersBtnClick() {
+        $(headSel.allPlayerBtn).click();
+        //add waitForDisplay()
     }
 
-    allPlayersBtnRedirect() {
-        $(headSel.allPlayerBtn).click();
+    logoutBtnСlick() {
+        $(headSel.logOutBtn).click();
+        $(loginSel.logo).waitForDisplayed();
     }
 
     randomString(max) { //you need to set value for string length
