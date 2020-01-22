@@ -62,7 +62,7 @@ class Login extends Base {
         assert.equal(error, exp.errorAlign);
     }
 
-    errorColor(){
+    errorColor() {
         assert.equal($(sel.errorText).getCSSProperty('color').parsed.rgba, exp.userNotExistColor);
     }
 
@@ -85,7 +85,6 @@ class Login extends Base {
         let error = $(sel.errorText).getCSSProperty('font-family').parsed.value[2];
         assert.equal(error, exp.errorFont);
     }
-
 
     usernameMinField() {
         let randomStr = this.randomString(1);
@@ -129,7 +128,7 @@ class Login extends Base {
         assert.equal(len, exp.passMaxLength);
     }
 
-    copyPastOff(){
+    copyPastOff() {
         let pass = $(sel.pass).getAttribute('type');
     }
 
@@ -185,14 +184,14 @@ class Login extends Base {
         $(sel.errorText).waitForDisplayed(3000, true)
     }
 
-    loginCorrect(){
+    loginCorrect() {
         this.userLogin(username.pashaLogin, username.pashkaPass);
         let titlePage = browser.getUrl();
         assert.equal(titlePage, exp.urlUser);
         $(headSel.logOutBtn).click();
     }
 
-    remindBtnFunc(){
+    remindBtnFunc() {
         $(sel.btnReminder).click();
         let titlePage = browser.getUrl();
         assert.equal(titlePage, exp.urlRemind);
@@ -261,7 +260,6 @@ class Login extends Base {
         let textColor = $(sel.remindButton1).getCSSProperty('color');
         assert.equal(textColor.value, exp.btnRemindClr);
     }
-
 
 }
 
