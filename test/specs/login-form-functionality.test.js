@@ -58,7 +58,7 @@ describe('Login-page', function () {
     login.passOverField();
   })
 
-  it('Password-field-copy/past-off', function () {
+  it('Password-field-copy-past-off', function () {
     login.copyPastOff();
   })
 
@@ -94,16 +94,16 @@ describe('Login-page', function () {
     login.passChange();
   })
 
-  it('Correct-user-and-password', function () {
-    login.loginCorrect();
-  })
-
   it('Remind-password-opener', function () {
     login.remindBtnFunc();
   })
 
   it('Response-spinner', function () {
     login.responceSpiner();
+  })
+
+  it('Correct-user-and-password', function () {
+    login.moderLogin();
   })
 
 })

@@ -182,14 +182,7 @@ class Login extends Base {
         $(sel.errorText).waitForDisplayed();
         $(sel.pass).setValue("1");
         $(sel.errorText).waitForDisplayed(3000, true)
-    }
-
-    loginCorrect() {
-        this.userLogin(username.pashaLogin, username.pashkaPass);
-        let titlePage = browser.getUrl();
-        assert.equal(titlePage, exp.urlUser);
-        $(headSel.logOutBtn).click();
-    }
+    }   
 
     remindBtnFunc() {
         $(sel.btnReminder).click();
