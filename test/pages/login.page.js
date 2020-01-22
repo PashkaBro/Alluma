@@ -35,7 +35,7 @@ class Login extends Base {
     }
 
     errorEmpty() {
-        browser.url('/');
+        this.openBase();
         $(sel.btnLogin).click();
         let error = $(sel.errorText).isDisplayed();
         assert.isTrue(error);
@@ -62,6 +62,10 @@ class Login extends Base {
         assert.equal(error, exp.errorAlign);
     }
 
+    errorColor(){
+        assert.equal($(sel.errorText).getCSSProperty('color').parsed.rgba, exp.userNotExistColor);
+    }
+
     errorLocated() {
         $(sel.btnLogin).click();
         let pass = $(sel.pass).getLocation('y');
@@ -82,15 +86,44 @@ class Login extends Base {
         assert.equal(error, exp.errorFont);
     }
 
+
+    usernameMinField() {
+        let randomStr = this.randomString(1);
+        $(sel.email).setValue(randomStr);
+        let len = $(sel.email).getValue().length;
+        assert.equal(len, exp.usernameMinLength);
+    }
+
+    passMinField() {
+        let randomStr = this.randomString(1);
+        $(sel.pass).setValue(randomStr);
+        let len = $(sel.pass).getValue().length;
+        assert.equal(len, exp.passMinLength);
+    }
+
     usernameMaxField() {
-        let randomStr = this.randomString(105);
+        let randomStr = this.randomString(100);
         $(sel.email).setValue(randomStr);
         let len = $(sel.email).getValue().length;
         assert.equal(len, exp.usernameMaxLength);
     }
 
     passMaxField() {
-        let randomStr = this.randomString(105);
+        let randomStr = this.randomString(100);
+        $(sel.pass).setValue(randomStr);
+        let len = $(sel.pass).getValue().length;
+        assert.equal(len, exp.passMaxLength);
+    }
+
+    usernameOverField() {
+        let randomStr = this.randomString(101);
+        $(sel.email).setValue(randomStr);
+        let len = $(sel.email).getValue().length;
+        assert.equal(len, exp.usernameMaxLength);
+    }
+
+    passOverField() {
+        let randomStr = this.randomString(101);
         $(sel.pass).setValue(randomStr);
         let len = $(sel.pass).getValue().length;
         assert.equal(len, exp.passMaxLength);
@@ -154,7 +187,23 @@ class Login extends Base {
 
     loginCorrect(){
         this.userLogin(username.pashaLogin, username.pashkaPass);
+        let titlePage = browser.getUrl();
+        assert.equal(titlePage, exp.urlUser);
         $(headSel.logOutBtn).click();
+    }
+
+    remindBtnFunc(){
+        $(sel.btnReminder).click();
+        let titlePage = browser.getUrl();
+        assert.equal(titlePage, exp.urlRemind);
+        $(headSel.logInBtn).click();
+    }
+
+    responceSpiner() {
+        $(sel.email).setValue(this.randomString(100));
+        $(sel.pass).setValue(this.randomString(100));
+        $(sel.btnLogin).click();
+        $(sel.spinner).waitForDisplayed(600);
     }
 
     usernameDisplayed() {
@@ -166,11 +215,11 @@ class Login extends Base {
     }
 
     loginBtn() {
-        $(sel.loginButton).isDisplayed();
+        $(sel.btnLogin).isDisplayed();
     }
 
     remindPassBtn() {
-        $(sel.remindButton).isDisplayed();
+        $(sel.btnReminder).isDisplayed();
     }
 
     userPlaceholder() {
@@ -184,12 +233,12 @@ class Login extends Base {
     }
 
     loginBtnBgc() {
-        let bgc = $(sel.loginButton).getCSSProperty('background-color');
+        let bgc = $(sel.btnLogin).getCSSProperty('background-color');
         assert.equal(bgc.value, exp.btnLoginBg);
     }
 
     loginBtnText() {
-        let lbt = $(sel.loginButton).getText();
+        let lbt = $(sel.btnLogin).getText();
         assert.equal(lbt, exp.btnLoginTxt);
     }
 
@@ -199,7 +248,7 @@ class Login extends Base {
     }
 
     remindPassBtnBgc() {
-        let backGroundColor = $(sel.remindButton).getCSSProperty('background-color');
+        let backGroundColor = $(sel.btnReminder).getCSSProperty('background-color');
         assert.equal(backGroundColor.value, exp.btnRemindBg);
     }
 

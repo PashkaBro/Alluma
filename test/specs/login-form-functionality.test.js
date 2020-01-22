@@ -18,6 +18,10 @@ describe('Login-page', function () {
     login.errorAlign();
   })
 
+  it('Error-color', function () {
+    login.errorColor();
+  })
+
   it('Error-location', function () {
     login.errorLocated();
   })
@@ -30,12 +34,28 @@ describe('Login-page', function () {
     login.errorFont();
   })
 
-  it('Username-field-max-100-length', function () {
+  it('Username-field-min-length', function () {
+    login.usernameMinField();
+  })
+
+  it('Password-field-min-length', function () {
+    login.passMinField();
+  })
+
+  it('Username-field-max-length', function () {
     login.usernameMaxField();
   })
 
-  it('Password-field-max-100-length', function () {
+  it('Password-field-max-length', function () {
     login.passMaxField();
+  })
+
+  it('Username-field-over-length', function () {
+    login.usernameOverField();
+  })
+
+  it('Password-field-over-length', function () {
+    login.passOverField();
   })
 
   it('Password-field-copy/past-off', function () {
@@ -76,6 +96,14 @@ describe('Login-page', function () {
 
   it('Correct-user-and-password', function () {
     login.loginCorrect();
+  })
+
+  it('Remind-password-opener', function () {
+    login.remindBtnFunc();
+  })
+
+  it('Response-spinner', function () {
+    login.responceSpiner();
   })
 
 })

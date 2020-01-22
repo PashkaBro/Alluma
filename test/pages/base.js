@@ -15,18 +15,18 @@ class Base {
     moderLogin() {
         $(loginSel.email).setValue(data.moderLogin); //moderator login
         $(loginSel.pass).setValue(data.moderPass); //moderator pass
-        $(loginSel.loginButton).click();
+        $(loginSel.btnLogin).click();
         $(headSel.logOutBtn).waitForDisplayed(3000);
     }
 
     loginBtnKlick() {
-        $(loginSel.loginButton).click();
+        $(loginSel.btnLogin).click();
     }
 
     userLogin(login, pass) { //call this function with two arguments (login, Password)
         $(loginSel.email).setValue(login); //you need to enter your login existing email
         $(loginSel.pass).setValue(pass); //correct pass
-        $(loginSel.loginButton).click();
+        $(loginSel.btnLogin).click();
         $(headSel.logOutBtn).waitForDisplayed(3000);
     }
 
