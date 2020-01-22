@@ -2,7 +2,6 @@ import sel from '../selectors/login-page.sel';
 import exp from '../expected/login.exp';
 import { assert } from 'chai';
 import Base from './base';
-import username from '../data/login.username';
 import headSel from '../selectors/header.sel'
 
 class Login extends Base {
