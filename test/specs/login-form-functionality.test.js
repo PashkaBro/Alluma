@@ -3,6 +3,7 @@ import login from '../pages/login.page';
 describe('Login-page', function () {
 
   it('Error-empty', function () {
+    login.open();
     login.errorEmpty();
   })
 

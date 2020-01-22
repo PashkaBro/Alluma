@@ -33,26 +33,77 @@ class Login extends Base {
         assert.equal(height.value, exp.logoHeight);
     }
 
+    usernameDisplayed() {
+        $(sel.email).isDisplayed();
+    }
+
+    passField() {
+        $(sel.pass).isDisplayed();
+    }
+
+    loginBtn() {
+        $(sel.btnLogin).isDisplayed();
+    }
+
+    remindPassBtn() {
+        $(sel.btnReminder).isDisplayed();
+    }
+
+    userPlaceholder() {
+        let userPlacehold = $(sel.email).getAttribute('placeholder');
+        assert.equal(userPlacehold, exp.usernamePlaceholder);
+    }
+
+    passPlaceholder() {
+        let pPlace = $(sel.pass).getAttribute('placeholder');
+        assert.equal(pPlace, exp.passPlaceholder);
+    }
+
+    loginBtnBgc() {
+        let bgc = $(sel.btnLogin).getCSSProperty('background-color');
+        assert.equal(bgc.value, exp.btnLoginBg);
+    }
+
+    loginBtnText() {
+        let lbt = $(sel.btnLogin).getText();
+        assert.equal(lbt, exp.btnLoginTxt);
+    }
+
+    loginBtnTextColor() {
+        let textColor = $(sel.btnLogin).getCSSProperty('color');
+        assert.equal(textColor.value, exp.btnLoginClr);
+    }
+
+    remindPassBtnBgc() {
+        let backGroundColor = $(sel.btnReminder).getCSSProperty('background-color');
+        assert.equal(backGroundColor.value, exp.btnRemindBg);
+    }
+
+    remindBtnText() {
+        let remindButtonText = $(sel.btnReminder).getText();
+        assert.equal(remindButtonText, exp.btnRemindTxt);
+    }
+
+    remindBtnTextColor() {
+        let textColor = $(sel.btnReminder).getCSSProperty('color');
+        assert.equal(textColor.value, exp.btnRemindClr);
+    }
+
     errorEmpty() {
-        this.openBase();
         $(sel.btnLogin).click();
-        let error = $(sel.errorText).isDisplayed();
-        assert.isTrue(error);
+        $(sel.errorText).waitForDisplayed();
     }
 
     errorPassEmpty() {
         $(sel.email).setValue(this.randomString(15));
         $(sel.btnLogin).click();
-        let error = $(sel.errorText).isDisplayed();
-        assert.isTrue(error);
+        $(sel.errorText).waitForDisplayed();
     }
 
     errorUsernameEmpty() {
-        browser.refresh();
         $(sel.pass).setValue(this.randomString(15));
         $(sel.btnLogin).click();
-        let error = $(sel.errorText).isDisplayed();
-        assert.isTrue(error);
+        $(sel.errorText).waitForDisplayed();
     }
 
     errorAlign() {
@@ -129,6 +180,7 @@ class Login extends Base {
 
     copyPastOff() {
         let pass = $(sel.pass).getAttribute('type');
+        assert.equal(pass, 'password')
     }
 
     userNotExistDisplayed() {
@@ -138,7 +190,6 @@ class Login extends Base {
         $(sel.pass).setValue(pas);
         $(sel.btnLogin).click();
         $(sel.errorText).waitForDisplayed();
-        assert.isTrue($(sel.errorText).isDisplayed());
     }
 
     userNotExistText() {
@@ -156,7 +207,6 @@ class Login extends Base {
         $(sel.pass).setValue(pas);
         $(sel.btnLogin).click();
         $(sel.errorText).waitForDisplayed();
-        assert.isTrue($(sel.errorText).isDisplayed());
     }
 
     passIncorrectText() {
@@ -181,13 +231,14 @@ class Login extends Base {
         $(sel.errorText).waitForDisplayed();
         $(sel.pass).setValue("1");
         $(sel.errorText).waitForDisplayed(3000, true)
-    }   
+    }
 
     remindBtnFunc() {
         $(sel.btnReminder).click();
         let titlePage = browser.getUrl();
         assert.equal(titlePage, exp.urlRemind);
         $(headSel.logInBtn).click();
+        $(sel.logo).waitForDisplayed();
     }
 
     responceSpiner() {
@@ -195,62 +246,6 @@ class Login extends Base {
         $(sel.pass).setValue(this.randomString(100));
         $(sel.btnLogin).click();
         $(sel.spinner).waitForDisplayed(600);
-    }
-
-    usernameDisplayed() {
-        $(sel.email).isDisplayed();
-    }
-
-    passField() {
-        $(sel.pass).isDisplayed();
-    }
-
-    loginBtn() {
-        $(sel.btnLogin).isDisplayed();
-    }
-
-    remindPassBtn() {
-        $(sel.btnReminder).isDisplayed();
-    }
-
-    userPlaceholder() {
-        let userPlacehold = $(sel.email).getAttribute('placeholder');
-        assert.equal(userPlacehold, exp.usernamePlaceholder);
-    }
-
-    passPlaceholder() {
-        let pPlace = $(sel.pass).getAttribute('placeholder');
-        assert.equal(pPlace, exp.passPlaceholder);
-    }
-
-    loginBtnBgc() {
-        let bgc = $(sel.btnLogin).getCSSProperty('background-color');
-        assert.equal(bgc.value, exp.btnLoginBg);
-    }
-
-    loginBtnText() {
-        let lbt = $(sel.btnLogin).getText();
-        assert.equal(lbt, exp.btnLoginTxt);
-    }
-
-    loginBtnTextColor() {
-        let textColor = $(sel.btnLogin).getCSSProperty('color');
-        assert.equal(textColor.value, exp.btnLoginClr);
-    }
-
-    remindPassBtnBgc() {
-        let backGroundColor = $(sel.btnReminder).getCSSProperty('background-color');
-        assert.equal(backGroundColor.value, exp.btnRemindBg);
-    }
-
-    remindBtnText() {
-        let remindButtonText = $(sel.btnReminder).getText();
-        assert.equal(remindButtonText, exp.btnRemindTxt);
-    }
-
-    remindBtnTextColor() {
-        let textColor = $(sel.btnReminder).getCSSProperty('color');
-        assert.equal(textColor.value, exp.btnRemindClr);
     }
 
 }
