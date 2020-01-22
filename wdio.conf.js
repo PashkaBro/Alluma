@@ -2,7 +2,7 @@ exports.config = {
     runner: 'local',
     path: '/',
     specs: [
-       './test/specs/header-for-regular-user.test.js'       
+       './test/specs/*.js'       
     ],
     exclude: [
 
