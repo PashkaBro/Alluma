@@ -70,10 +70,8 @@ class Header extends Base {
         let headerCenter = $(sel.header).getSize('width') / 2;
         let elem = $(sel.allPlayerBtn).getLocation('x');
         let btnSize = $(sel.allPlayerBtn).getSize('width') / 2;
-        console.log(headerCenter, elem, btnSize);
-        console.log(headerCenter - btnSize - elem);
-        let btnAlign = (headerCenter - btnSize - elem <= 5);
-        assert.isTrue(btnAlign)
+        let diff = headerCenter - btnSize - elem;
+        assert.isTrue(diff <= 1 && diff >= -1)
     }
 
     allPlayerBtnBgColor() {
