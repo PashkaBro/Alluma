@@ -22,6 +22,7 @@ class Header extends Base {
     }
 
     //Login player btn
+
     loginBtnAlign() {
         let headerLeft = $(sel.header).getSize('width') / 2;
         let elem = $(sel.loginBtn).getLocation('x');
@@ -66,6 +67,7 @@ class Header extends Base {
     }
 
     // All Player Button
+
     allPlayerBtnAlign() {
         let headerCenter = $(sel.header).getSize('width') / 2;
         let elem = $(sel.allPlayerBtn).getLocation('x');
@@ -102,6 +104,119 @@ class Header extends Base {
     allPlayersBtnRedirect() {
         $(sel.allPlayerBtn).click();
         assert.equal(browser.getUrl(), exp.redirectUrl);
+    }
+
+    //Header For regular user
+
+    welcomeTextInstedLoginBtn() {
+        let res;
+        ($(sel.loginBtn).isDisplayed !== true) && ($(sel.welcomeText).isDisplayed) ?
+            res = true : res = false;
+        assert.isTrue(res);
+    }
+
+    welcomeTextFontSize() {
+        let size = $(sel.welcomeText).getCSSProperty('font-size').value;
+        assert.equal(size, exp.welcomeTextFontSize);
+    }
+
+    welcomeTextFontColor() {
+        let color = $(sel.welcomeText).getCSSProperty('color').parsed.hex;
+        assert.equal(color, exp.welcomeTextFontColor);
+    }
+
+    welcomeConstantTextWeight() {
+        let weight = $(sel.welcomeText).getCSSProperty('font-weight').value;
+        assert.equal(weight, exp.welcomeTextFontWeight);
+    }
+
+    nicnameTextWeight() {
+        let fontSize = $(sel.nicnameText).getCSSProperty('font-weight').value;
+        assert.equal(fontSize, exp.nicnameTextBold);
+    }
+    // My Account Btn
+
+    myAccountBtnAlign() {
+        let allPlayerBtnAlign = $(sel.allPlayerBtn).getSize('width') + $(sel.allPlayerBtn).getLocation('x');
+        let elemPixfirst = $(sel.accountBtn).getLocation('x');
+        let elemPixlast = $(sel.accountBtn).getSize('width') + elemPixfirst;
+        let logoutBtnAlign = $(sel.logOutBtn).getLocation('x');
+        assert.isTrue(elemPixfirst > allPlayerBtnAlign && elemPixlast  < logoutBtnAlign)
+    }
+
+    myAccountBtnIsExist() {
+        let btnExist = $(sel.accountBtn).isDisplayed();
+        assert.isTrue(btnExist);
+    }
+
+    myAccountBtnBgColor() {
+        let elem = $(sel.accountBtn);
+        assert.equal(elem.getCSSProperty('background-color').parsed.hex, exp.allPlayerBtnBgColor);
+    }
+
+    myAccountBtnText() {
+        let text = $(sel.accountBtn).getText();
+        assert.equal(text, exp.myAccountBtnText);
+    }
+
+    myAccountBtnTextColor() {
+        let elem = $(sel.accountBtn).getCSSProperty('color').parsed.hex;
+        assert.equal(elem, exp.allPlayerBtnTextColor);
+    }
+
+    myAccountBtnFontSize() {
+        let fontSize = $(sel.accountBtn).getCSSProperty('font-size').value;
+        assert.equal(fontSize, exp.allPlayerBtnFontSize);
+    }
+
+    myAccountBtnFont() {
+        let font = $(sel.accountBtn).getCSSProperty('font-family').parsed.value[2];
+        assert.equal(font, exp.allPlayerBtnFont);
+    }
+
+    myAccountBtnRedirect() {
+        $(sel.accountBtn).click();
+        $(sel.myAccountRedirectUniqueId).waitForDisplayed(3000)
+        $(sel.myAccountRedirectUniqueId).isDisplayed()
+    }
+
+    //Logout Btn
+
+    logoutBtnAlign() {
+        let headerRight = $(sel.header).getSize('width') / 3 * 2;
+        let elem = $(sel.loginBtn).getLocation('x');
+        let btnAlign = (headerRight < elem);
+        assert.isTrue(btnAlign)
+    }
+
+    logoutBtnBgColor() {
+        let elem = $(sel.logOutBtn).getCSSProperty('background-color').parsed.hex;
+        assert.equal(elem, exp.loginBtnBgColor);
+    }
+
+    logoutBtnText() {
+        let textHTML = $(sel.logOutBtn).getText();
+        assert.equal(textHTML, exp.logoutBtnText);
+    }
+
+    logoutBtnTextColor() {
+        let elem = $(sel.logOutBtn).getCSSProperty('color').parsed.hex;
+        assert.equal(elem, exp.loginBtnTextColor);
+    }
+
+    logoutBtnFontSize() {
+        let fontSize = $(sel.logOutBtn).getCSSProperty('font-size').value;
+        assert.equal(fontSize, exp.loginBtnFontSize);
+    }
+
+    logoutBtnFont() {
+        let fontSize = $(sel.logOutBtn).getCSSProperty('font-family').parsed.value[2];
+        assert.equal(fontSize, exp.loginBtnFont);
+    }
+
+    logoutClickRedirect() {
+        $(sel.logOutBtn).click();
+        assert.equal(browser.getUrl(), exp.baseUrl);
     }
 
 }

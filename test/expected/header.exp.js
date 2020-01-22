@@ -22,5 +22,8 @@ export default {
     welcomeTextFontSize: '16px',
     welcomeTextFontColor: '#212529',
     welcomeTextFontWeight: '400',
-    nicnameTextBold: '700'
+    nicnameTextBold: '700',
+
+    myAccountBtnText: 'My Account',
+    logoutBtnText: 'Logout'
 }
