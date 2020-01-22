@@ -244,12 +244,12 @@ class Login extends Base {
     }
 
     remindBtnText() {
-        let remindButtonText = $(sel.btnLogin).getText();
+        let remindButtonText = $(sel.btnReminder).getText();
         assert.equal(remindButtonText, exp.btnRemindTxt);
     }
 
     remindBtnTextColor() {
-        let textColor = $(sel.btnLogin).getCSSProperty('color');
+        let textColor = $(sel.btnReminder).getCSSProperty('color');
         assert.equal(textColor.value, exp.btnRemindClr);
     }
 
