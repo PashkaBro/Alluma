@@ -1,15 +1,10 @@
 import login from '../pages/login.page';
 import remind from '../pages/pass-reminder.page'
 
-
 describe('Login-page', function () {
 
-  it('Open-homepage', function () {
-    login.open();
-  })
-
   it('Open-pass-reminder', function () {
-    remind.goToPage();
+    remind.openForgot();
   })
 
   it('Empty-email-field-error', function () {

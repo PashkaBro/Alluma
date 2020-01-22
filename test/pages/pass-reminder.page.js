@@ -1,4 +1,3 @@
-import loginSel from '../selectors/login-page.sel';
 import sel from '../selectors/pass-reminder.page.sel';
 import exp from '../expected/pass-reminder.exp';
 import { assert } from 'chai';
@@ -6,11 +5,7 @@ import Base from './base';
 
 class Reminder extends Base{
 
-    goToPage() {
-        $(loginSel.btnReminder).click();
-    }
-
-    clickRemindPass() {
+      clickRemindPass() {
         $(sel.remindBtn).click();
     }
 
