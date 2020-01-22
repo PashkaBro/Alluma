@@ -35,6 +35,7 @@ class Base {
 
     loginBtnСlick() {
         $(loginSel.loginButton).click();
+        $(loginSel.logo).waitForDisplayed();
     }
 
     allPlayersBtnRedirect() {
