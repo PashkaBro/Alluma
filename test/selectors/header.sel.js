@@ -9,6 +9,7 @@ export default {
     newPlayerBtn: '#btn-new',
     newGameBtn: '#btn-game',
     continueGameBtn: '#btn-continue',
+    logInBtn: '#btn-login',
     logOutBtn: '#btn-logout',
     allBtnTag: 'button'
 }
