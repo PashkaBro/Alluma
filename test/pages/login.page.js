@@ -89,6 +89,15 @@ class Login extends Base {
         assert.equal(textColor.value, exp.btnRemindClr);
     }
 
+    reminderTxtAlignment() {
+        let remTxtAlign = $(sel.reminderTxt).getCSSProperty('text-align');
+        assert.equal(remTxtAlign.value, exp.remTextAlign);
+    }
+
+    reminderTxtSize() {
+        let remTxtSize = $(sel.reminderTxt).getSize('font-size');
+        assert.equal($(sel.reminderTxt).isDisplayed(), true);
+    }
     errorEmpty() {
         $(sel.btnLogin).click();
         $(sel.errorText).waitForDisplayed();
@@ -246,6 +255,16 @@ class Login extends Base {
         $(sel.pass).setValue(this.randomString(15));
         $(sel.btnLogin).click();
         $(sel.spinner).waitForDisplayed(600);
+    }
+
+    reminderTxtColor() {
+        let remTxtColor = $(sel.reminderTxt).getCSSProperty('color');
+        assert.equal($(sel.reminderTxt).isDisplayed(), true);
+    }
+    
+    reminderTxtIsCorrect() {
+        let remTxtIsDisp = $(sel.reminderTxt).getText();
+        assert.equal(remTxtIsDisp, exp.remText);
     }
 
 }
