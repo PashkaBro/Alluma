@@ -1,5 +1,6 @@
 import login from '../pages/login.page';
-import allPlayersPage from './../pages/all-players.page'
+import allPlayersPage from './../pages/all-players.page';
+import playerPage from '../pages/player.page';
 
 describe('Player-page', function () {
 
@@ -8,9 +9,9 @@ describe('Player-page', function () {
       allPlayersPage.goToPlayerPage(0);
     });
 
-    // it('Paid-today-checked', function () {
-    //   login.open();
-    // });
+    it('Paid-today-checkbox-is-displayed', function () {
+       playerPage.paidTodayChkb();
+    });
 
     // it('Paid-today-unchecked', function () {
     //   login.open();
