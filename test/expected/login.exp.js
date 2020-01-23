@@ -1,12 +1,12 @@
 export default {
     logoAlign: 'center',
     logoHeight: '256px',
-    
+
     remTextAlign: 'center',
     remTextSize: 1,
     remTextColor: '#212529',
     remText: "Your temporary password was automatically generated. Use 'Remind Password' to get it. You will be able to change your password in your account.",
-    
+
     usernamePlaceholder: 'Username *',
     passPlaceholder: 'Password *',
 
@@ -22,6 +22,8 @@ export default {
     errorSize: 1,
     errorFont: 'segoe ui',
 
+    usernameMinLength: 1,
+    passMinLength: 1,
     usernameMaxLength: 100,
     passMaxLength: 100,
 
@@ -29,4 +31,7 @@ export default {
     userNotExistColor: 'rgba(255,0,0,1)',
     passIncorrectText: 'Password is incorrect',
     passIncorrectColor: 'rgba(255,0,0,1)',
+
+    urlUser: 'http://qa.intgames.org/users',
+    urlRemind: 'http://qa.intgames.org/forgot'
 }
