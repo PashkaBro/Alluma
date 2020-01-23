@@ -1,4 +1,5 @@
 import sel from '../selectors/pass-reminder.page.sel';
+import homeSel from '../selectors/login-page.sel';
 import exp from '../expected/pass-reminder.exp';
 import { assert } from 'chai';
 import Base from './base';
@@ -37,6 +38,11 @@ class Reminder extends Base {
         assert.equal(browser.getWindowSize().width / 2, Math.ceil(errorTextPos) + 8)
     }
 
+    emailFieldOne() {
+        $(sel.emailForm).setValue(this.randomString(1));
+        assert.equal($(sel.emailForm).getValue().length, 1);
+    }
+
     emailFieldMax() {
         $(sel.emailForm).setValue(this.randomString(100));
         assert.equal($(sel.emailForm).getValue().length, 100);
@@ -61,7 +67,7 @@ class Reminder extends Base {
     }
 
     errorTextNotDisplayed() {
-        assert.equal($(sel.errorText).isDisplayed(), false);
+        $(sel.errorText).waitForDisplayed(3000, true);
     }
 
     inputCorrectEmail() {
@@ -79,18 +85,11 @@ class Reminder extends Base {
     }
 
     spinnerDisplayed() {
-
-        setTimeout(function () {
-            if (browser.getUrl() === exp.forgotUrl) {
-                assert.equal($(sel.spinner).isDisplayed(), true);
-            }
-        }, 500);
+        $(sel.spinner).waitForDisplayed();
     }
 
     redirectPage() {
-        setTimeout(function () {
-            assert.equal(browser.getUrl(), exp.homeUrl);
-        }, 2500);
+        $(homeSel.logo).waitForDisplayed(3500);
     }
 }
 

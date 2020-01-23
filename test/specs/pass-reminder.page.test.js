@@ -1,6 +1,6 @@
 import remind from '../pages/pass-reminder.page'
 
-describe('Pemind-passord-page', function () {
+describe('Remind-password-page', function () {
 
   it('Open-pass-reminder', function () {
     remind.openForgot();
@@ -21,6 +21,10 @@ describe('Pemind-passord-page', function () {
 
   it('Error-text-align-center', function () {
     remind.errorTextAlign();
+  })
+
+  it('Email-field-accepts-1', function () {
+    remind.emailFieldOne();
   })
 
   it('Email-field-accepts-100', function () {
@@ -60,16 +64,16 @@ describe('Pemind-passord-page', function () {
     remind.errorTextDisplayed();
   })
 
+  it('Correct-email-spinner-displayed', function () { // if request takes more than 0.5 sec
+    remind.spinnerDisplayed();
+  })
+
   it('Correct-email-message-color', function () {
     remind.correctEmailMsgColor();
   })
 
   it('Correct-email-message-text', function () {
     remind.correctEmailMsgText();
-  })
-
-  it('Correct-email-spinner-displayed', function () { // if request takes more than 0.5 sec
-    remind.spinnerDisplayed();
   })
 
   it('Redirect-page', function () {
