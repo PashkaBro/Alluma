@@ -3,9 +3,9 @@ import exp from '../expected/pass-reminder.exp';
 import { assert } from 'chai';
 import Base from './base';
 
-class Reminder extends Base{
+class Reminder extends Base {
 
-      clickRemindPass() {
+    clickRemindPass() {
         $(sel.remindBtn).click();
     }
 
@@ -24,10 +24,11 @@ class Reminder extends Base{
     }
 
     errorTextLocate() {          //Error message should be located between e-mail form and remind button
-        let emailPos = $(sel.emailForm).getLocation('y') + ($(sel.emailForm).getCSSProperty('height').parsed.value / 2);
-        let errorTextPos = $(sel.errorText).getLocation('y') + ($(sel.errorText).getCSSProperty('font-size').parsed.value / 2);
-        let btnRemindPos = $(sel.remindBtn).getLocation('y') + ($(sel.remindBtn).getCSSProperty('height').parsed.value / 2);
-        let res = (errorTextPos > emailPos && errorTextPos < btnRemindPos);
+        let emailPos = $(sel.emailForm).getLocation('y') + ($(sel.emailForm).getCSSProperty('height').parsed.value);
+        let errorTextPosTop = $(sel.errorText).getLocation('y');
+        let errorTextPosBottom = $(sel.errorText).getLocation('y') + ($(sel.errorText).getCSSProperty('font-size').parsed.value);
+        let btnRemindPos = $(sel.remindBtn).getLocation('y');
+        let res = (errorTextPosTop > emailPos && errorTextPosBottom < btnRemindPos);
         assert.equal(res, true);
     }
 

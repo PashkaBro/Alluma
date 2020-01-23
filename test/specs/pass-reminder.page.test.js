@@ -1,7 +1,6 @@
-import login from '../pages/login.page';
 import remind from '../pages/pass-reminder.page'
 
-describe('Login-page', function () {
+describe('Pemind-passord-page', function () {
 
   it('Open-pass-reminder', function () {
     remind.openForgot();
