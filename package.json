@@ -5,6 +5,7 @@
   "main": "wdio.conf.js",
   "scripts": {
     "test": "npm run clean && npm run temp && wdio wdio.conf.js",
+    "api": "wdio api.conf.js",
     "tm": "npm run clean && npm run temp-mac && wdio wdio.conf.js",
     "azure": "npm run temp && wdio wdio.conf.js",
     "clean": "rm -rf temp",
@@ -31,6 +32,7 @@
     "@babel/preset-env": "^7.7.7",
     "@babel/register": "^7.7.7",
     "@wdio/cli": "^5.18.0",
+    "axios": "^0.19.2",
     "chai": "^4.2.0",
     "webdriverio": "^5.18.0"
   },
