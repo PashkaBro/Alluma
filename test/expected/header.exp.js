@@ -20,7 +20,7 @@ export default {
     baseUrl: 'http://qa.intgames.org/',
 
     welcomeTextFontSize: '16px',
-    welcomeTextText: 'Hi, PashkaRich!',
+    welcomeTextText: 'Hi, Regular!',
     welcomeTextFontColor: '#212529',
     welcomeTextFontWeight: '400',
     nicnameTextBold: '700',
