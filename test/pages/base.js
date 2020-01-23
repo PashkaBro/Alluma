@@ -20,13 +20,15 @@ class Base {
     }
 
     testLogin() {
+        this.openBase();
         $(loginSel.email).setValue(data.testLogin); //test login
         $(loginSel.pass).setValue(data.testPass); //test pass
-        $(loginSel.loginButton).click();
+        $(loginSel.btnLogin).click();
         $(headSel.logOutBtn).waitForExist(3000);
     }
 
     anyUserLogin(login, pass) { //call this function with two arguments (login, Password)
+        this.openBase()
         $(loginSel.email).setValue(login); //you need to enter your login existing email
         $(loginSel.pass).setValue(pass); //correct pass
         $(loginSel.btnLogin).click();
