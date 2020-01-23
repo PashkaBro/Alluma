@@ -3,7 +3,7 @@ import header from '../pages/header.page';
 describe('Header', function () {
 
     it('Welcome-text-insated-of-login-button', function () {
-        header.anyUserLogin('PashkaRich@gmail.com', 'kejv0u8sqt');
+        header.testLogin();
         header.welcomeTextInstedLoginBtn();
     })
 

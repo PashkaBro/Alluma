@@ -182,7 +182,6 @@ class Header extends Base {
     myAccountBtnRedirect() {
         $(sel.accountBtn).click();
         $(sel.myAccountRedirectUniqueId).waitForDisplayed(3000)
-        $(sel.myAccountRedirectUniqueId).isDisplayed()
     }
 
     //Logout Btn
