@@ -1,8 +1,6 @@
 import {assert} from 'chai';
 import reminderPassword from '../pages/remind-password-page';
 
-
-
 describe('Reminder page', function () {
 
     it('Reminder-page-is-displayed', function () {
@@ -60,9 +58,6 @@ describe('Reminder page', function () {
     it('Reminder-password-btn-align', function () {
         reminderPassword.reminderPasswordBtnAlign();
     })
-
-    
-
-    
+        
 })
 
