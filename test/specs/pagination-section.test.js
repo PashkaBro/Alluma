@@ -1,20 +1,17 @@
 import pagination from '../pages/pagination_section.page';
 
-describe('Pagination section page', function () {
+describe('Pagination', function () {
 
-    it('Pagenation section missing', function () {
-        pagination.paginationMiss();
-    })
-
-    it('Pagenation section appears', function () {
+    it('Pagination-section-appears', function () {
+        pagination.openUsers();
         pagination.paginationApp();
     })
 
-    it('Pagenation has button Left', function () {
+    it('Pagination-has-button-Left', function () {
         pagination.paginationBtnLeft();
     })
 
-    it('Pagenation has button Right', function () {
+    it('Pagination has button Right', function () {
         pagination.paginationBtnRight();
     })
 

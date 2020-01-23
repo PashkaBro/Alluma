@@ -1,10 +1,12 @@
 export default {
-    paginationContent: '#site content table',
-    btnLeft:'span[area-lable="Previous"]',
-    btnRight:'span[area-lable="Next"]',
-    pageBtns:'ul',
+    listOfUsers: '#site-content table tbody tr',
+    table: '#site-content table tbody',
+    section: 'nav[aria-label="Page navigation"]',
+    btnLeft: 'span[aria-label="Previous"]',
+    btnRight: 'span[aria-label="Next"]',
+    pageBtns: 'nav[aria-label="Page navigation"] ul',
     pageNavigation: 'li',
-    page2:'td=11',
-    page1:'td=1',
-    btnPagination:'ul li span'
+    nextPage: 'td=11',
+    origiPage: 'td=1',
+    btnPagination: 'nav[aria-label="Page navigation"] ul li span'
 }

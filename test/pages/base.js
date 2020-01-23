@@ -17,10 +17,11 @@ class Base {
     }
 
     moderLogin() {
+        this.openBase();
         $(loginSel.email).setValue(data.moderLogin); //moderator login
         $(loginSel.pass).setValue(data.moderPass); //moderator pass
         $(loginSel.btnLogin).click();
-        $(headSel.logOutBtn).waitForDisplayed(3000);
+        $(headSel.logOutBtn).waitForDisplayed();
     }
 
     testLogin() {

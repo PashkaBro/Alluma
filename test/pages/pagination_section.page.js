@@ -4,32 +4,17 @@ import { assert } from 'chai';
 import Base from './base';
 
 class Pagination extends Base {
-    
-    paginationMiss() {
-        this.openUsers();
-        let res = sel.pageNavigation.length;
-        function pagination(length) {
-            for (i = 0; i <= length; i++) {
-                if (res < 4)
-                    $(sel.paginationContent).isFalse(isDisplayed());
-            }
-        }
-    }
 
     paginationApp() {
-        let res = sel.pageNavigation.length;
-        function pagination(length) {
-            for (i = 0; i <= length; i++) {
-                if (res > 4)
-                    $(sel.paginationContent).waitForDisplayed();
-            }
+        let array = $$(sel.listOfUsers);
+        if (array.length === exp.noOfUsers){
+            assert.isTrue($(sel.section).isDisplayed());
         }
     }
 
     paginationBtnLeft() {
-        this.openUsers();
-        let res = $(sel.btnLeft)
-        res.isDisplayed();
+        $(sel.btnLeft).waitForDisplayed();
+        assert.isTrue($(sel.btnLeft).isDisplayed())
     }
 
     paginationBtnRight() {
@@ -46,18 +31,17 @@ class Pagination extends Base {
         let sumPages = $$(sel.pageNavigation);
         let length = sumPages.length;
         sumPages[length - 1].click();
-        let page2 = $(sel.page2)
-        page2.waitForDisplayed()
+        $(sel.table).$(sel.nextPage).waitForDisplayed()
     }
 
     btnNavPrev() {
         $$(sel.pageNavigation)[0].click();
-        let page1 = $(sel.page1)
-        page1.waitForDisplayed()
+        let page1 = $(sel.origiPage);
+        page1.waitForDisplayed();
     }
 
     btnNavPage() {
-        let sumPages = $$('li');
+        let sumPages = $$(sel.pageNavigation);
         let length = sumPages.length;
         for (let i = 1; i <= length - 2; i++) {
             sumPages[i].click();
@@ -67,7 +51,6 @@ class Pagination extends Base {
             if (i === length - 3) {
                 $(`td=${i}0`).waitForDisplayed();
             }
-
         }
     }
 
