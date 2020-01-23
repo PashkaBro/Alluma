@@ -13,9 +13,9 @@ describe('Player-page', function () {
        playerPage.paidTodayChkb();
     });
 
-    // it('Paid-today-unchecked', function () {
-    //   login.open();
-    // });
+    it('Paid-today-checkbox-can-be-checked', function () {
+       playerPage.paidTodayCanBeChecked();
+    });
 
     // it('', function () {
     //   login.open();

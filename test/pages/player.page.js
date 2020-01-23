@@ -7,6 +7,10 @@ class PlayerPage {
     paidTodayChkb (){
         $(sel.checkboxPt).isDisplayed();
     }
+
+    paidTodayCanBeChecked (){
+        $(sel.checkboxPt).isClickable();
+    }
 }
 
 export default new PlayerPage();
