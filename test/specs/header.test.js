@@ -34,6 +34,7 @@ describe('Header', function () {
   it('Login-button-font-family', function () {
     header.loginBtnFont();
   })
+
   it('Login-button-alignment', function () {
     header.loginBtnAlign();
   })
@@ -45,7 +46,7 @@ describe('Header', function () {
   it('Login-button-not-exist', function () {
     header.loginBtnNotExist();
   })
-  
+
   it('AllPlayer-button-alignment', function () {
     header.allPlayerBtnAlign()
   })
