@@ -242,8 +242,8 @@ class Login extends Base {
     }
 
     responceSpiner() {
-        $(sel.email).setValue(this.randomString(100));
-        $(sel.pass).setValue(this.randomString(100));
+        $(sel.email).setValue(this.randomString(15));
+        $(sel.pass).setValue(this.randomString(15));
         $(sel.btnLogin).click();
         $(sel.spinner).waitForDisplayed(600);
     }
