@@ -58,5 +58,10 @@ class Base {
         return str
     }
 
+    validatePlaceholderBySelector(selector, expectedPlaceholder) {
+        const actualPlaceholder = $(selector).getAttribute('placeholder');
+        assert.equal(actualPlaceholder, expectedPlaceholder);
+    }
+
 }
 export default Base;

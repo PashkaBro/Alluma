@@ -17,7 +17,11 @@ describe('Player-page', function () {
        playerPage.paidTodayCanBeChecked();
     });
 
-    // it('', function () {
-    //   login.open();
-    // });
+    it('If-paid-add-visit-on-PT', function () {
+       playerPage.ifPaidAddVisit();
+    });
+
+    it('First-Name-placeholder', function () {
+      playerPage.ifPaidAddVisit();
+   });
 })
