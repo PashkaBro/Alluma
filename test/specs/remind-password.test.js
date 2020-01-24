@@ -1,4 +1,3 @@
-import {assert} from 'chai';
 import reminderPassword from '../pages/remind-password-page';
 
 describe('Reminder page', function () {

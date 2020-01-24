@@ -1,6 +1,7 @@
 import sel from '../selectors/remind-password.sel';
 import exp from '../expected/remind-password.exp';
 import { assert } from 'chai';
+import Base from '../pages/base';
 
 class ReminderPassword extends Base {
 
