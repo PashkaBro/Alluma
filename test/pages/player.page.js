@@ -4,7 +4,7 @@ import selAllPl from '../selectors/all-players-page.sel';
 import expRes from '../expected/player-page.exp';
 import { assert } from 'chai';
 
-class PlayerPage {
+class PlayerPage extends Base {
 
     paidTodayChkb (){
         $(sel.checkboxPt).isDisplayed();
