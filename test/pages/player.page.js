@@ -2,37 +2,53 @@ import Base from './base';
 import sel from '../selectors/player-page.sel';
 import selAllPl from '../selectors/all-players-page.sel';
 import expRes from '../expected/player-page.exp';
+import { assert } from 'chai';
 
 class PlayerPage extends Base {
 
-    paidTodayChkb (){
+    paidTodayChkb() {
         $(sel.checkboxPt).isDisplayed();
     }
 
-    paidTodayCanBeChecked (){
+    paidTodayCanBeChecked() {
         $(sel.checkboxPt).isClickable();
     }
 
-    //ifPaidAddVisit (){
-     //   let visits = 3
-      //  if ($(sel.checkboxPt).isSelected()){
-       //     assert.equal(visits, visits + 1);
-       // };
+    ifCheckedAddVisit() {
+        if ($(sel.checkboxPt).isSelected()) {
+            $(sel.checkboxPt).click();
+        }
+        const visitsOld = $(sel.fieldVisits).getValue();
+        const expectedVisits = 1 + parseInt(visitsOld);
+        $(sel.checkboxPt).click();
+        const visits = $(sel.fieldVisits).getValue();
+        assert.equal(parseInt(visits), expectedVisits); 
+    }
 
-    //}
-    placeholderFirstName () {
+    ifUncheckedAddVisit() {
+        if (!$(sel.checkboxPt).isSelected()) {
+            $(sel.checkboxPt).click();
+        }
+        const visitsOld = $(sel.fieldVisits).getValue();
+        const expectedVisits = parseInt(visitsOld) - 1;
+        $(sel.checkboxPt).click();
+        const visits = $(sel.fieldVisits).getValue();
+        assert.equal(parseInt(visits), expectedVisits); 
+    }
+
+    placeholderFirstName() {
         this.validatePlaceholderBySelector(sel.fieldFN, expRes.placeHTextFN);
     }
 
-    placeholderLastName () {
+    placeholderLastName() {
         this.validatePlaceholderBySelector(sel.fieldLN, expRes.placeHTextLN);
     }
 
-    placeholderEmail () {
+    placeholderEmail() {
         this.validatePlaceholderBySelector(sel.fieldEm, expRes.placeHTextE);
     }
 
-    placeholderNickname () {
+    placeholderNickname() {
         this.validatePlaceholderBySelector(sel.fieldN, expRes.PlaceHTextN)
     }
 

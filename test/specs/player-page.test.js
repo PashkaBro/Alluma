@@ -17,8 +17,16 @@ describe('Player-page', function () {
        playerPage.paidTodayCanBeChecked();
     });
 
+    it('If-checked-add-visit', function(){
+      playerPage.ifCheckedAddVisit();
+    });
+
+    it('If-unchecked-add-visit', function(){
+      playerPage.ifUncheckedAddVisit();
+    });
+
     it('Placeholders-validation', function () {
       playerPage.placeholderFirstName();
-      
+
    });
 })

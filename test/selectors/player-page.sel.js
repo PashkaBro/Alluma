@@ -7,5 +7,5 @@ export default {
     fieldEm: "#email",
     fieldN: "#nickname",
     fieldVisits: "#visits",
-
+    
 }
