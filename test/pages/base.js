@@ -1,6 +1,7 @@
 import data from '../data/login.username';
 import loginSel from '../selectors/login-page.sel';
 import headSel from '../selectors/header.sel';
+import { assert } from 'chai';
 
 class Base {
 

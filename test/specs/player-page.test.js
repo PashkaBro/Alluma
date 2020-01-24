@@ -17,4 +17,8 @@ describe('Player-page', function () {
        playerPage.paidTodayCanBeChecked();
     });
 
+    it('Placeholders-validation', function () {
+      playerPage.placeholderFirstName();
+      
+   });
 })
