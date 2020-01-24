@@ -17,11 +17,4 @@ describe('Player-page', function () {
        playerPage.paidTodayCanBeChecked();
     });
 
-    it('If-paid-add-visit-on-PT', function () {
-       playerPage.ifPaidAddVisit();
-    });
-
-    it('First-Name-placeholder', function () {
-      playerPage.ifPaidAddVisit();
-   });
 })
