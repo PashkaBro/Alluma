@@ -104,7 +104,7 @@ describe('Login-page', function () {
   })
 
   it('Correct-user-and-password', function () {
-    login.moderLogin();
+    login.testLogin();
   })
 
 })
