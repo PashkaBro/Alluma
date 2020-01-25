@@ -6,7 +6,6 @@ import { assert } from 'chai';
 class AllPlayersPage extends Base {
 
     openPage() {
-        this.openBase();
         this.moderLogin();
         $(sel.playersTableHeaders).waitForDisplayed();
         assert.equal($$(sel.playersTableHeaders).length, 10);
