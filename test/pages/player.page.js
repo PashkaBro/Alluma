@@ -1,7 +1,6 @@
 import Base from './base';
 import sel from '../selectors/player-page.sel';
 import selAllPl from '../selectors/all-players-page.sel';
-import expRes from '../expected/player-page.exp';
 import { assert } from 'chai';
 
 class PlayerPage extends Base {
@@ -37,19 +36,19 @@ class PlayerPage extends Base {
     }
 
     placeholderFirstName() {
-        this.validatePlaceholderBySelector(sel.fieldFN, expRes.placeHTextFN);
+        this.validatePlaceholderExists(sel.fieldFN);
     }
 
     placeholderLastName() {
-        this.validatePlaceholderBySelector(sel.fieldLN, expRes.placeHTextLN);
+        this.validatePlaceholderExists(sel.fieldLN);
     }
 
     placeholderEmail() {
-        this.validatePlaceholderBySelector(sel.fieldEm, expRes.placeHTextE);
+        this.validatePlaceholderExists(sel.fieldEm);
     }
 
     placeholderNickname() {
-        this.validatePlaceholderBySelector(sel.fieldN, expRes.PlaceHTextN)
+        this.validatePlaceholderExists(sel.fieldN)
     }
 
 }

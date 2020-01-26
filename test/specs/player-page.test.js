@@ -25,8 +25,20 @@ describe('Player-page', function () {
       playerPage.ifUncheckedAddVisit();
     });
 
-    it('Placeholders-validation', function () {
+    it('Placeholder-First-Name-Exists', function () {
       playerPage.placeholderFirstName();
+    });
 
-   });
+    it('Placeholder-Last-Name-Exists', function () {
+      playerPage.placeholderLastName(); 
+    });
+
+    it('Placeholder-Email-Exists', function () {
+      playerPage.placeholderEmail();
+    });
+
+    it('Placeholder-Nickname-Exists', function () {
+      playerPage.placeholderNickname();
+    });
+
 })

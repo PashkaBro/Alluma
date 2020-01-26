@@ -59,9 +59,9 @@ class Base {
         return str
     }
 
-    validatePlaceholderBySelector(selector, expectedPlaceholder) {
+    validatePlaceholderExists(selector) {
         const actualPlaceholder = $(selector).getAttribute('placeholder');
-        assert.equal(actualPlaceholder, expectedPlaceholder);
+        assert.isString(actualPlaceholder);
     }
 
 }
