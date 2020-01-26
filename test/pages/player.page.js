@@ -13,10 +13,20 @@ class PlayerPage extends Base {
         $(sel.checkboxPt).isClickable();
     }
 
-    ifCheckedAddVisit() {
+    checkPTCheckboxIfUnchecked() {
+        if (!$(sel.checkboxPt).isSelected()) {
+            $(sel.checkboxPt).click();
+        }
+    }
+
+    uncheckPTCheckboxIfChecked() {
         if ($(sel.checkboxPt).isSelected()) {
             $(sel.checkboxPt).click();
         }
+    }
+
+    ifCheckedAddVisit() {
+        this.uncheckPTCheckboxIfChecked();
         const visitsOld = $(sel.fieldVisits).getValue();
         const expectedVisits = 1 + parseInt(visitsOld);
         $(sel.checkboxPt).click();
@@ -25,9 +35,7 @@ class PlayerPage extends Base {
     }
 
     ifUncheckedAddVisit() {
-        if (!$(sel.checkboxPt).isSelected()) {
-            $(sel.checkboxPt).click();
-        }
+        this.checkPTCheckboxIfUnchecked();
         const visitsOld = $(sel.fieldVisits).getValue();
         const expectedVisits = parseInt(visitsOld) - 1;
         $(sel.checkboxPt).click();
@@ -49,6 +57,12 @@ class PlayerPage extends Base {
 
     placeholderNickname() {
         this.validatePlaceholderExists(sel.fieldN)
+    }
+
+    clickUpdateBtn() {
+        $(sel.updateBtn).click();
+        $(sel.infoUpdMsg).waitForDisplayed();
+        // $(sel.infoUpdMsg).getValue
     }
 
 }

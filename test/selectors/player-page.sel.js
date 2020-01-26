@@ -7,5 +7,6 @@ export default {
     fieldEm: "#email",
     fieldN: "#nickname",
     fieldVisits: "#visits",
-    
+    updateBtn: '#registration',
+    infoUpdMsg: 'span.green-text',
 }

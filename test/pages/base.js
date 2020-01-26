@@ -2,6 +2,7 @@ import data from '../data/login.username';
 import loginSel from '../selectors/login-page.sel';
 import headSel from '../selectors/header.sel';
 import { assert } from 'chai';
+import allPlayersSel from '../selectors/all-players-page.sel'
 
 class Base {
 
@@ -43,7 +44,7 @@ class Base {
 
     allPlayersBtnClick() {
         $(headSel.allPlayerBtn).click();
-        //add waitForDisplay()
+        $(allPlayersSel.playersTableHeaders).waitForDisplayed();
     }
 
     logoutBtnСlick() {

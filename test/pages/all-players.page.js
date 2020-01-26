@@ -17,6 +17,17 @@ class AllPlayersPage extends Base {
         row.$(sel.playersTableInner.links).click();
         $(playerPageSel.firstNameInput).waitForDisplayed();
     }
+
+    validatePTCheckboxForPlayer(index = 0, checked = true) {
+        const ptCell = $$(sel.playersTableRows)[index].$$('td')[6];
+        let expectedLength; 
+        if (checked) { 
+            expectedLength = 1;
+        } else {
+            expectedLength = 0;
+        }
+        assert.equal(ptCell.$$('img').length, expectedLength);
+    }
 }
 
 export default new AllPlayersPage();
