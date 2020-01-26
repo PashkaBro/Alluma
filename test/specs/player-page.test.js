@@ -3,7 +3,7 @@ import allPlayersPage from './../pages/all-players.page';
 import playerPage from '../pages/player.page';
 
 describe('Player-page', function () {
-
+  describe('Paid-today', () => {
     it('Page-displayed', function () {
       allPlayersPage.openPage();
       allPlayersPage.goToPlayerPage(0);
@@ -24,21 +24,45 @@ describe('Player-page', function () {
     it('If-unchecked-add-visit', function(){
       playerPage.ifUncheckedAddVisit();
     });
+  })
+    
+  describe('Input-fields', () => {
+    it('Page-displayed', function () {
+      allPlayersPage.openPage();
+      allPlayersPage.goToPlayerPage(0);
+    });
 
-    it('Placeholder-First-Name-Exists', function () {
+    it('Placeholder-First-Name-Exists', function() {
       playerPage.placeholderFirstName();
     });
 
-    it('Placeholder-Last-Name-Exists', function () {
+    it('Placeholder-Last-Name-Exists', function() {
       playerPage.placeholderLastName(); 
     });
 
-    it('Placeholder-Email-Exists', function () {
+    it('Placeholder-Email-Exists', function() {
       playerPage.placeholderEmail();
     });
 
     it('Placeholder-Nickname-Exists', function () {
       playerPage.placeholderNickname();
     });
+
+    it('Error-Msg-appears-for-empty-first-name', function() {
+      playerPage.emptyFirstNameUpdateError()
+    }); 
+
+    it('Error-Msg-appears-for-empty-last-name', function() {
+      playerPage.emptyLastNameUpdateError()
+    });
+
+    it('Error-Msg-appears-for-empty-email', function() {
+      playerPage.emptyEmailUpdateError()
+    }); 
+
+    it('Error-Msg-appears-for-empty-nickname', function() {
+      playerPage.emptyNicknameUpdateError()
+    }); 
+  })
 
 })

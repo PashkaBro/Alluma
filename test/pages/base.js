@@ -65,5 +65,13 @@ class Base {
         assert.isString(actualPlaceholder);
     }
 
+    clearInputField(selector) {
+        const length = $(selector).getValue().length;
+        browser.execute(function (input) {
+            input.focus();
+        }, $(selector));
+        browser.keys(Array(length).fill('Backspace'));
+    }
+
 }
 export default Base;

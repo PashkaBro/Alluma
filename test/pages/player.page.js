@@ -1,7 +1,7 @@
 import Base from './base';
 import sel from '../selectors/player-page.sel';
-import selAllPl from '../selectors/all-players-page.sel';
 import { assert } from 'chai';
+import playerExp from '../expected/player-page.exp';
 
 class PlayerPage extends Base {
 
@@ -63,6 +63,54 @@ class PlayerPage extends Base {
         $(sel.updateBtn).click();
         $(sel.infoUpdMsg).waitForDisplayed();
     }
+
+    clickUpdateBtnAndError() {
+        $(sel.updateBtn).click();
+        $(sel.errorMsg).waitForDisplayed();
+        const erMsgText = $(sel.errorMsg).getText();
+        assert.equal(erMsgText, playerExp.errorMessText);
+    }
+
+    emptyFirstNameUpdateError() {
+        this.clearInputField(sel.fieldFN);
+        $(sel.fieldLN).setValue(playerExp.lastName);
+        $(sel.fieldEm).setValue(playerExp.email);
+        $(sel.fieldN).setValue(playerExp.nick); 
+        this.clickUpdateBtnAndError();
+    }
+
+    emptyLastNameUpdateError() {
+        $(sel.fieldFN).setValue(playerExp.firstName);
+        this.clearInputField(sel.fieldLN);
+        $(sel.fieldEm).setValue(playerExp.email);
+        $(sel.fieldN).setValue(playerExp.nick); 
+        this.clickUpdateBtnAndError();
+    }
+
+    emptyEmailUpdateError() {
+        $(sel.fieldFN).setValue(playerExp.firstName);
+        $(sel.fieldLN).setValue(playerExp.lastName);
+        this.clearInputField(sel.fieldEm);
+        $(sel.fieldN).setValue(playerExp.nick); 
+        this.clickUpdateBtnAndError();
+    }
+
+    emptyNicknameUpdateError() {
+        $(sel.fieldFN).setValue(playerExp.firstName);
+        $(sel.fieldLN).setValue(playerExp.lastName);
+        $(sel.fieldEm).setValue(playerExp.email);
+        this.clearInputField(sel.fieldN);
+        this.clickUpdateBtnAndError();
+    } 
+
+    // this code is not working for some reason, agter clcking update it autofill First Name field
+    // emptyNicknameUpdateError() {
+    //     $(sel.fieldFN).setValue('');
+    //     $(sel.fieldLN).setValue(playerExp.lastName);
+    //     $(sel.fieldEm).setValue(playerExp.email);
+    //     $(sel.fieldN).setValue(playerExp.nick);
+    //     this.clickUpdateBtnAndError();
+    // } 
 
 }
 

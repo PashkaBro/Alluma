@@ -9,4 +9,5 @@ export default {
     fieldVisits: "#visits",
     updateBtn: '#registration',
     infoUpdMsg: 'span.green-text',
+    errorMsg: 'span.error-text',
 }
