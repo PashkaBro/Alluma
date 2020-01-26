@@ -62,7 +62,6 @@ class PlayerPage extends Base {
     clickUpdateBtn() {
         $(sel.updateBtn).click();
         $(sel.infoUpdMsg).waitForDisplayed();
-        // $(sel.infoUpdMsg).getValue
     }
 
 }
