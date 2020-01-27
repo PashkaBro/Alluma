@@ -57,7 +57,6 @@ class Pagination extends Base {
     btnSize() {
         let res = $(sel.btnPagination).getCSSProperty('font-size').value;
         assert.equal(res, exp.btnSize)
-        console.log(res)
     }
 
     btnTxtColor() {
