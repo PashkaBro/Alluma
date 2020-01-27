@@ -8,7 +8,6 @@ class AllPlayersPage extends Base {
     openPage() {
         this.moderLogin();
         $(sel.playersTableHeaders).waitForDisplayed();
-        assert.equal($$(sel.playersTableHeaders).length, 10);
     }
 
     goToPlayerPage(index = 0) {

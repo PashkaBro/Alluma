@@ -43,22 +43,6 @@ class PlayerPage extends Base {
         assert.equal(parseInt(visits), expectedVisits); 
     }
 
-    placeholderFirstName() {
-        this.validatePlaceholderExists(sel.fieldFN);
-    }
-
-    placeholderLastName() {
-        this.validatePlaceholderExists(sel.fieldLN);
-    }
-
-    placeholderEmail() {
-        this.validatePlaceholderExists(sel.fieldEm);
-    }
-
-    placeholderNickname() {
-        this.validatePlaceholderExists(sel.fieldN)
-    }
-
     clickUpdateBtn() {
         $(sel.updateBtn).click();
         $(sel.infoUpdMsg).waitForDisplayed();
@@ -101,16 +85,7 @@ class PlayerPage extends Base {
         $(sel.fieldEm).setValue(playerExp.email);
         this.clearInputField(sel.fieldN);
         this.clickUpdateBtnAndError();
-    } 
-
-    // this code is not working for some reason, agter clcking update it autofill First Name field
-    // emptyNicknameUpdateError() {
-    //     $(sel.fieldFN).setValue('');
-    //     $(sel.fieldLN).setValue(playerExp.lastName);
-    //     $(sel.fieldEm).setValue(playerExp.email);
-    //     $(sel.fieldN).setValue(playerExp.nick);
-    //     this.clickUpdateBtnAndError();
-    // } 
+    }
 
 }
 

@@ -60,17 +60,13 @@ class Base {
         return str
     }
 
-    validatePlaceholderExists(selector) {
+    validatePlaceholder(selector, expectedPlaceholder) {
         const actualPlaceholder = $(selector).getAttribute('placeholder');
-        assert.isString(actualPlaceholder);
+        assert.equal(actualPlaceholder, expectedPlaceholder);
     }
 
     clearInputField(selector) {
-        const length = $(selector).getValue().length;
-        browser.execute(function (input) {
-            input.focus();
-        }, $(selector));
-        browser.keys(Array(length).fill('Backspace'));
+        $(selector).setValue(['0', 'Backspace']);
     }
 
 }

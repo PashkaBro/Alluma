@@ -32,22 +32,6 @@ describe('Player-page', function () {
       allPlayersPage.goToPlayerPage(0);
     });
 
-    it('Placeholder-First-Name-Exists', function() {
-      playerPage.placeholderFirstName();
-    });
-
-    it('Placeholder-Last-Name-Exists', function() {
-      playerPage.placeholderLastName(); 
-    });
-
-    it('Placeholder-Email-Exists', function() {
-      playerPage.placeholderEmail();
-    });
-
-    it('Placeholder-Nickname-Exists', function () {
-      playerPage.placeholderNickname();
-    });
-
     it('Error-Msg-appears-for-empty-first-name', function() {
       playerPage.emptyFirstNameUpdateError()
     }); 
