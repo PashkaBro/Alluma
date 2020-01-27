@@ -11,7 +11,7 @@ class Reminder extends Base {
     }
 
     errorTextDisplayed() {
-        $(sel.errorText).isDisplayed();
+        $(sel.errorText).waitForDisplayed();
     }
 
     errorTextColor() {
@@ -35,7 +35,8 @@ class Reminder extends Base {
 
     errorTextAlign() {
         let errorTextPos = $(sel.errorText).getLocation('x') + ($(sel.errorText).getSize('width') / 2);
-        assert.equal(browser.getWindowSize().width / 2, Math.ceil(errorTextPos))
+        console.log((browser.getWindowSize().width / 2) - errorTextPos);
+        assert.isTrue((browser.getWindowSize().width / 2) - errorTextPos < 10);
     }
 
     emailFieldOne() {
@@ -89,7 +90,7 @@ class Reminder extends Base {
     }
 
     redirectPage() {
-        $(homeSel.logo).waitForDisplayed(3500);
+        $(homeSel.logo).waitForDisplayed(4000);
     }
 }
 

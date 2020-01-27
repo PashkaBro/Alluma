@@ -61,7 +61,6 @@ describe('Remind-password-page', function () {
   it('Correct-email-message-display', function () {
     remind.inputCorrectEmail();
     remind.clickRemindPass();
-    remind.errorTextDisplayed();
   })
 
   it('Correct-email-spinner-displayed', function () { // if request takes more than 0.5 sec
@@ -69,6 +68,7 @@ describe('Remind-password-page', function () {
   })
 
   it('Correct-email-message-color', function () {
+    remind.errorTextDisplayed();
     remind.correctEmailMsgColor();
   })
 
