@@ -1,83 +1,62 @@
-import remind from '../pages/pass-reminder.page'
+import reminderPassword from '../pages/remind-password-page';
 
-describe('Remind-password-page', function () {
+describe('Reminder page', function () {
 
-  it('Open-pass-reminder', function () {
-    remind.openForgot();
-  })
+    it('Reminder-page-is-displayed', function () {
+        reminderPassword.remPageDisplayed();
+    })
+    
+    it('Reminder-page-is-aligned', function () {
+        reminderPassword.remPageAligned();
+    })
 
-  it('Empty-email-field-error', function () {
-    remind.clickRemindPass();
-    remind.errorTextDisplayed();
-  })
+    it('Email-text-field', function () {
+        reminderPassword.emailFieldDisplayed();
+    })
 
-  it('Empty-field-error-text', function () {
-    remind.errorText();
-  })
+    it('Reminder-text', function () {
+        reminderPassword.reminderTextDisplayed();
+    })
 
-  it('Error-text-between-email-and-button', function () {
-    remind.errorTextLocate();
-  })
+    it('Reminder-password-button', function () {
+        reminderPassword.reminderPasswordBtn();
+    })    
 
-  it('Error-text-align-center', function () {
-    remind.errorTextAlign();
-  })
+    it('Email-field-contains-placeholder', function () {
+        reminderPassword.emailFieldContainsPlaceholder();
+    })
 
-  it('Email-field-accepts-1', function () {
-    remind.emailFieldOne();
-  })
+    it('Reminder-text-aligned', function () {
+        reminderPassword.reminderTextAligned();
+    })
 
-  it('Email-field-accepts-100', function () {
-    remind.emailFieldMax();
-  })
+    it('Reminder-text-size', function () {
+        reminderPassword.reminderTextSize();
+    })
 
-  it('Email-field-not-accept-101', function () {
-    remind.emailFieldMaxNegattive();
-  })
+    it('Reminder-text-color', function () {
+        reminderPassword.reminderTextColor();
+    })
 
-  it('Email-not-exist-message-display', function () {
-    remind.inputWrongEmail();
-    remind.clickRemindPass();
-    remind.errorTextDisplayed();
-  })
+    it('Reminder-text-name', function () {
+        reminderPassword.reminderTextName();
+    })
 
-  it('Email-not-exist-message-text', function () {
-    remind.inputWrongEmail();
-    remind.clickRemindPass();
-    remind.wrongEmailMsg();
-  })
+    it('Reminder-password-btn-color', function () {
+        reminderPassword.reminderPasswordBtnColor();
+    })
 
-  it('Email-not-exist-message-display', function () {
-    remind.inputWrongEmail();
-    remind.clickRemindPass();
-    remind.errorTextDisplayed();
-  })
+    it('Reminder-password-button-name', function () {
+        reminderPassword.reminderPasswordBtnName();
+    })
 
-  it('Email-not-exist-message-gone', function () {
-    remind.addChargEmail();
-    remind.errorTextNotDisplayed();
-  })
+    it('Reminder-password-btn-text-color', function () {
+        reminderPassword.reminderPasswordBtnTextColor();
+    })
 
-  it('Correct-email-message-display', function () {
-    remind.inputCorrectEmail();
-    remind.clickRemindPass();
-  })
-
-  it('Correct-email-spinner-displayed', function () { // if request takes more than 0.5 sec
-    remind.spinnerDisplayed();
-  })
-
-  it('Correct-email-message-color', function () {
-    remind.errorTextDisplayed();
-    remind.correctEmailMsgColor();
-  })
-
-  it('Correct-email-message-text', function () {
-    remind.correctEmailMsgText();
-  })
-
-  it('Redirect-page', function () {
-    remind.redirectPage();
-  })
-
+    it('Reminder-password-btn-align', function () {
+        reminderPassword.reminderPasswordBtnAlign();
+    })
+        
 })
+
