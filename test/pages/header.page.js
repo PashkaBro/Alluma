@@ -225,4 +225,4 @@ class Header extends Base {
 
 }
 
-export default new Header();
+    export default new Header();
