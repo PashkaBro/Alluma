@@ -1,6 +1,8 @@
 import data from '../data/login.username';
 import loginSel from '../selectors/login-page.sel';
 import headSel from '../selectors/header.sel';
+import { assert } from 'chai';
+import allPlayersSel from '../selectors/all-players-page.sel'
 
 class Base {
 
@@ -42,7 +44,7 @@ class Base {
 
     allPlayersBtnClick() {
         $(headSel.allPlayerBtn).click();
-        //add waitForDisplay()
+        $(allPlayersSel.playersTableHeaders).waitForDisplayed();
     }
 
     logoutBtnСlick() {
@@ -56,6 +58,15 @@ class Base {
             str += String.fromCharCode(Math.random() * (126 - 35) + 35)
         }
         return str
+    }
+
+    validatePlaceholder(selector, expectedPlaceholder) {
+        const actualPlaceholder = $(selector).getAttribute('placeholder');
+        assert.equal(actualPlaceholder, expectedPlaceholder);
+    }
+
+    clearInputField(selector) {
+        $(selector).setValue(['0', 'Backspace']);
     }
 
 }
