@@ -35,7 +35,7 @@ class Reminder extends Base {
 
     errorTextAlign() {
         let errorTextPos = $(sel.errorText).getLocation('x') + ($(sel.errorText).getSize('width') / 2);
-        assert.equal(browser.getWindowSize().width / 2, Math.ceil(errorTextPos) + 8)
+        assert.equal(browser.getWindowSize().width / 2, Math.ceil(errorTextPos))
     }
 
     emailFieldOne() {
