@@ -1,12 +1,10 @@
-import sel from '../selectors/header-for-mod.sel';
-import exp from '../expected/header-for-mod.exp';
+import sel from '../selectors/header.sel';
 import Base from './base';
-import { assert } from 'chai';
 
 class HeaderMod extends Base{
 
     newPlayerBtnModerat(){
-        $(sel.newBtn).isDisplayed();
+        $(sel.newPlayerBtn).isDisplayed();
     }
 
     newGameBtnModerat(){
@@ -14,26 +12,8 @@ class HeaderMod extends Base{
     }
 
     continueBtnModerat(){
-        $(sel.btnContinue).isDisplayed();
+        $(sel.continueGameBtn).isDisplayed();
     }
 
-
-    newPlayertBtnRedirect() {
-        $(sel.newBtn).click();
-        assert.equal(browser.getUrl(), exp.redirNewPlaer);
-    }
-
-    
-    newGameBtnRedirect() {
-        $(sel.newGameBtn).click();
-        assert.equal(browser.getUrl(), exp.redirNewGame);
-       
-    }
-
-    continueBtnRedirect() {
-        $(sel.btnContinue).click();
-        assert.equal(browser.getUrl(), exp.redirContinue);
-       
-    }
 }
 export default new HeaderMod;
