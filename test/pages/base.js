@@ -1,8 +1,9 @@
 import data from '../data/login.username';
 import loginSel from '../selectors/login-page.sel';
 import headSel from '../selectors/header.sel';
+import allPlayersSel from '../selectors/all-players-page.sel';
+import exp from '../expected/base.exp';
 import { assert } from 'chai';
-import allPlayersSel from '../selectors/all-players-page.sel'
 
 class Base {
 
@@ -50,6 +51,22 @@ class Base {
     logoutBtnСlick() {
         $(headSel.logOutBtn).click();
         $(loginSel.logo).waitForDisplayed();
+    }
+
+    newPlayertBtnRedirect() {
+        $(headSel.newPlayerBtn).click();
+        assert.equal(browser.getUrl(), exp.redirNewPlaer);
+    }
+    
+    newGameBtnRedirect() {
+        $(headSel.newGameBtn).click();
+        assert.equal(browser.getUrl(), exp.redirNewGame); 
+    }
+
+    continueBtnRedirect() {
+        $(headSel.continueGameBtn).click();
+        assert.equal(browser.getUrl(), exp.redirContinue);
+       
     }
 
     randomString(max) { //you need to set value for string length
