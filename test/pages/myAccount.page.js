@@ -3,87 +3,89 @@ import Base from './base';
 import sel from '../selectors/myAccount.sel';
 import exp from '../expected/myAccount.exp'
 import data from '../data/login.username';
+import baseExp from '../expected/base.exp';
+
 
 
 class MyAccountPage extends Base {
 
-    randomStringMyAccount(len) {
-        var p = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789" + '~`!@#$%^&*()_+-={}[]:";\'<>?,./|\\' ;
-        return [...Array(len)].reduce(a=>a+p[~~(Math.random()*p.length)],''); //For each element in the array: pick a random character from p and add it to a string
-      }
+    // randomStringMyAccount(len) {
+        // var p = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789" + '~`!@#$%^&*()_+-={}[]:";\'<>?,./|\\' ;
+        // return [...Array(len)].reduce(a=>a+p[~~(Math.random()*p.length)],''); //For each element in the array: pick a random character from p and add it to a string
+      // }
 
       pageAppear(){
         const elemButn = $(sel.myAccBtn);
         elemButn.click();
-        let uniqelemonAccount = $(sel.myAccFrame);
+        let uniqelemonAccount = $(sel.titlePass);
         uniqelemonAccount.waitForDisplayed();
 
-        assert.equal(uniqelemonAccount.isDisplayed(), true)
+        assert.isTrue(uniqelemonAccount.isDisplayed());
       }
 
       firstNameConsist(){
         const firstName = $(sel.firstNameInput);
-        assert.equal(firstName.isDisplayed(), true);
+        assert.isTrue(firstName.isDisplayed());
       }
 
       lastNameConsist(){
         const lastName = $(sel.lastNameInput);
-        assert.equal(lastName.isDisplayed(), true);
+        assert.isTrue(lastName.isDisplayed());
       }
 
       usernameConsist(){
         const username = $(sel.usernameInput);
-        assert.equal(username.isDisplayed(), true);
+        assert.isTrue(username.isDisplayed());
       }
 
       nicknameConsist(){
         const nickname = $(sel.nicknameInput);
-        assert.equal(nickname.isDisplayed(), true);
+        assert.isTrue(nickname.isDisplayed());
       }
 
       ratingConsist(){
         const rating = $(sel.titleRating);
-        assert.equal(rating.isDisplayed(), true);
+        assert.isTrue(rating.isDisplayed());
       }
 
       visitsConsist(){
         const visits = $(sel.titleVisits);
-        assert.equal(visits.isDisplayed(), true);
+        assert.isTrue(visits.isDisplayed());
       }
 
       winsConsist(){
         const wins = $(sel.titleWins);
-        assert.equal(wins.isDisplayed(), true);
+        assert.isTrue(wins.isDisplayed());
       }
 
       losesConsist(){
         const loses = $(sel.titleLoses);
-        assert.equal(loses.isDisplayed(), true);
+        assert.isTrue(loses.isDisplayed());
       }
 
       maleBtnConsist(){
         const maleBtn = $(sel.maleRadioBtn);
-        assert.equal(maleBtn.isDisplayed(), true);
+        assert.isTrue(maleBtn.isDisplayed());
       }
 
       femaleBtnConsist(){
         const femaleBtn = $(sel.femaleRadioBtn);
-        assert.equal(femaleBtn.isDisplayed(), true);
+        assert.isTrue(femaleBtn.isDisplayed());
       }
 
       passFieldConsist(){
         const passField = $(sel.passField);
-        assert.equal(passField.isDisplayed(), true);
+        assert.isTrue(passField.isDisplayed());
       }
 
       updateBtnConsist(){
         const updateBtn = $(sel.updateBtn);
-        assert.equal(updateBtn.isDisplayed(), true);
+        assert.isTrue(updateBtn.isDisplayed());
       }
 
       revertBtnConsist(){
         const revertBtn = $(sel.revertBtn);
-        assert.equal(revertBtn.isDisplayed(), true);
+        assert.isTrue(revertBtn.isDisplayed());
       }
 
       firstNameInfo(){
@@ -127,7 +129,7 @@ class MyAccountPage extends Base {
       }
 
       firstNameAccept(){
-        const value = this.randomStringMyAccount(100);
+        const value = this.randomString(100);
         $(sel.firstNameInput).clearValue();
         $(sel.firstNameInput).addValue(value);
         let accepted = $(sel.firstNameInput).getValue();
@@ -135,7 +137,7 @@ class MyAccountPage extends Base {
       }
 
       lastNameAccept(){
-        const value = this.randomStringMyAccount(100);
+        const value = this.randomString(100);
         $(sel.lastNameInput).clearValue();
         $(sel.lastNameInput).addValue(value);
         let accepted = $(sel.lastNameInput).getValue();
@@ -143,7 +145,7 @@ class MyAccountPage extends Base {
       }
 
       usernameAccept(){
-        const value = this.randomStringMyAccount(100);
+        const value = this.randomString(100);
         console.log(value);
         $(sel.usernameInput).clearValue();
         $(sel.usernameInput).addValue(value);
@@ -152,7 +154,7 @@ class MyAccountPage extends Base {
       }
 
       nicknameAccept(){
-        const value = this.randomStringMyAccount(100);
+        const value = this.randomString(101)
         $(sel.nicknameInput).clearValue();
         $(sel.nicknameInput).addValue(value);
         let accepted = $(sel.nicknameInput).getValue();
@@ -160,25 +162,25 @@ class MyAccountPage extends Base {
       }
 
       firstnameRejection(){
-        $(sel.firstNameInput).setValue(this.randomStringMyAccount(101));
+        $(sel.firstNameInput).setValue(this.randomString(101));
         let finalinput = $(sel.firstNameInput).getValue().length;
         assert.equal(finalinput, 100);
       }
 
       lastnameRejection(){
-        $(sel.lastNameInput).setValue(this.randomStringMyAccount(101));
+        $(sel.lastNameInput).setValue(this.randomString(101));
         let finalinput = $(sel.lastNameInput).getValue().length;
         assert.equal(finalinput, 100);
       }
 
       usernameRejection(){
-        $(sel.usernameInput).setValue(this.randomStringMyAccount(101));
+        $(sel.usernameInput).setValue(this.randomString(101));
         let finalinput = $(sel.usernameInput).getValue().length;
         assert.equal(finalinput, 100);
       }
 
       nicknameRejection(){
-        $(sel.nicknameInput).setValue(this.randomStringMyAccount(101));
+        $(sel.nicknameInput).setValue(this.randomString(101));
         let finalinput = $(sel.nicknameInput).getValue().length;
         assert.equal(finalinput, 100);
       }
@@ -254,7 +256,7 @@ class MyAccountPage extends Base {
       }
 
       passFieldAccept(){
-        const value = this.randomStringMyAccount(100);
+        const value = this.randomString(100);
         $(sel.passField).clearValue();
         $(sel.passField).addValue(value);
         const accepted = $(sel.passField).getValue();
@@ -262,7 +264,7 @@ class MyAccountPage extends Base {
       }
 
       passFieldRejection(){
-        $(sel.passField).setValue(this.randomStringMyAccount(101));
+        $(sel.passField).setValue(this.randomString(101));
         const finalinput = $(sel.passField).getValue().length;
         assert.equal(finalinput, 100);
       }
