@@ -104,19 +104,20 @@ class Login extends Base {
     }
 
     errorPassEmpty() {
+        this.clearInputField(sel.pass);
         $(sel.email).setValue(this.randomString(15));
         $(sel.btnLogin).click();
         $(sel.errorText).waitForDisplayed();
     }
 
     errorUsernameEmpty() {
+        this.clearInputField(sel.email);
         $(sel.pass).setValue(this.randomString(15));
         $(sel.btnLogin).click();
         $(sel.errorText).waitForDisplayed();
     }
 
     errorAlign() {
-        $(sel.btnLogin).click();
         let error = $(sel.errorText).getCSSProperty('text-align').value;
         assert.equal(error, exp.errorAlign);
     }
@@ -126,7 +127,6 @@ class Login extends Base {
     }
 
     errorLocated() {
-        $(sel.btnLogin).click();
         let pass = $(sel.pass).getLocation('y');
         let login = $(sel.btnLogin).getLocation('y');
         let error = $(sel.errorText).getLocation('y');
@@ -134,13 +134,11 @@ class Login extends Base {
     }
 
     errorSize() {
-        $(sel.btnLogin).click();
         let error = $(sel.errorText).getCSSProperty('font-size').parsed.value / 16
         assert.equal(error, exp.errorSize);
     }
 
     errorFont() {
-        $(sel.btnLogin).click();
         let error = $(sel.errorText).getCSSProperty('font-family').parsed.value[2];
         assert.equal(error, exp.errorFont);
     }

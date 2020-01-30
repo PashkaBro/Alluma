@@ -1,6 +1,9 @@
 import data from '../data/login.username';
 import loginSel from '../selectors/login-page.sel';
 import headSel from '../selectors/header.sel';
+import allPlayersSel from '../selectors/all-players-page.sel';
+import exp from '../expected/base.exp';
+import { assert } from 'chai';
 
 class Base {
 
@@ -42,12 +45,28 @@ class Base {
 
     allPlayersBtnClick() {
         $(headSel.allPlayerBtn).click();
-        //add waitForDisplay()
+        $(allPlayersSel.playersTableHeaders).waitForDisplayed();
     }
 
     logoutBtnСlick() {
         $(headSel.logOutBtn).click();
         $(loginSel.logo).waitForDisplayed();
+    }
+
+    newPlayertBtnRedirect() {
+        $(headSel.newPlayerBtn).click();
+        assert.equal(browser.getUrl(), exp.redirNewPlaer);
+    }
+    
+    newGameBtnRedirect() {
+        $(headSel.newGameBtn).click();
+        assert.equal(browser.getUrl(), exp.redirNewGame); 
+    }
+
+    continueBtnRedirect() {
+        $(headSel.continueGameBtn).click();
+        assert.equal(browser.getUrl(), exp.redirContinue);
+       
     }
 
     randomString(max) { //you need to set value for string length
@@ -56,6 +75,15 @@ class Base {
             str += String.fromCharCode(Math.random() * (126 - 35) + 35)
         }
         return str
+    }
+
+    validatePlaceholder(selector, expectedPlaceholder) {
+        const actualPlaceholder = $(selector).getAttribute('placeholder');
+        assert.equal(actualPlaceholder, expectedPlaceholder);
+    }
+
+    clearInputField(selector) {
+        $(selector).setValue(['0', 'Backspace']);
     }
 
 }
