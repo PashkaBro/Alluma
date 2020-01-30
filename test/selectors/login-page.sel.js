@@ -10,5 +10,5 @@ export default {
     btnReminder: '#btn-forgot',
 
     errorText: '#error-text',
-    spinner: '#spinne'
+    spinner: '#spinner'
 }
