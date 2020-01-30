@@ -2,8 +2,6 @@ import { assert } from 'chai';
 import Base from './base';
 import sel from '../selectors/myAccount.sel';
 import exp from '../expected/myAccount.exp'
-import data from '../data/login.username';
-import baseExp from '../expected/base.exp';
 
 class MyAccountPage extends Base {
 
