@@ -1,11 +1,11 @@
 import base from '../pages/header.page'
 
-describe('Header-for-moderator', function () {
+describe('game scenario 1', function () {
 
   let citizens = [4, 5, 6, 7, 8, 9, 10];
   let mafia = [1, 2, 3];
-  let playersToKillAtDay = [8, 6, 1, 4, 2];
-  let nightKIll = [6, 5, 4];
+  let playersToKillAtDay = [4, 6, 1, 4, 2];
+  let nightKIll = [3, 5, 4];
 
   function night() {
     if ($('#end-page').isDisplayed()) {
@@ -15,7 +15,7 @@ describe('Header-for-moderator', function () {
     else {
       //browser.pause(2000);
       $$('.Dropdown-control')[0].click();
-      $$('.Dropdown-option')[nightKIll[0] - 1].click();
+      $$('.Dropdown-option')[nightKIll[0]].click();
       nightKIll.shift();
       //browser.pause(2000);
       $('.btn-warning').click();
@@ -31,7 +31,7 @@ describe('Header-for-moderator', function () {
     else if (votedPlayer !== 'undefind') {
 
       $('.Dropdown-control').click();
-      $$('.Dropdown-option')[playersToKillAtDay[0] - 1].click();
+      $$('.Dropdown-option')[playersToKillAtDay[0]].click();
       playersToKillAtDay.shift();
       //browser.pause(2000);
       $('.btn-warning').click();
