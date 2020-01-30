@@ -5,22 +5,12 @@ import exp from '../expected/myAccount.exp'
 import data from '../data/login.username';
 import baseExp from '../expected/base.exp';
 
-
-
 class MyAccountPage extends Base {
 
-    // randomStringMyAccount(len) {
-        // var p = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789" + '~`!@#$%^&*()_+-={}[]:";\'<>?,./|\\' ;
-        // return [...Array(len)].reduce(a=>a+p[~~(Math.random()*p.length)],''); //For each element in the array: pick a random character from p and add it to a string
-      // }
 
       pageAppear(){
-        const elemButn = $(sel.myAccBtn);
-        elemButn.click();
-        let uniqelemonAccount = $(sel.titlePass);
-        uniqelemonAccount.waitForDisplayed();
-
-        assert.isTrue(uniqelemonAccount.isDisplayed());
+        this.myAccountBtnClick();
+        assert.isTrue($(sel.titlePass).isDisplayed());
       }
 
       firstNameConsist(){
@@ -90,22 +80,23 @@ class MyAccountPage extends Base {
 
       firstNameInfo(){
         const firstNameCont = $(sel.firstNameInput).getValue();
-        assert.equal,(firstNameCont, data.moderLogin);
+        console.log(firstNameCont);
+        assert.equal(firstNameCont, exp.firstNameContent);
       }
 
       lastNameInfo(){
         let lastNameCont = $(sel.lastNameInput).getValue();
-        assert.equal,(lastNameCont, data.moderLogin);
+        assert.equal(lastNameCont, exp.lastNameContent);
       }
 
       usernameInfo(){
         let usernameCont = $(sel.usernameInput).getValue()
-        assert.equal,(usernameCont, data.moderPass);
+        assert.equal(usernameCont, exp.usernameContent);
       }
 
       nicknameInfo(){
         let nicknameCont = $(sel.nicknameInput).getValue();
-        assert.equal,(nicknameCont, data.moderLogin);
+        assert.equal(nicknameCont, exp.nicknameContent);
       }
 
       firstNameMaxLength(){

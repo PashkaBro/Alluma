@@ -1,5 +1,10 @@
 export default {
 
+    firstNameContent: 'Moder',
+    lastNameContent: 'Ator',
+    usernameContent: 'moderator',
+    nicknameContent: 'Moderator',
+    
     firstNameMaxLength: 100,
     lastNameMaxLength: 100,
     usernameMaxLength: 100,
