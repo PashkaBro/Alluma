@@ -4,9 +4,9 @@
   "description": "Test Automation Framework | WebDriver I/O | Node.js | JavaScript | Mocha | Chai | Selenium",
   "main": "wdio.conf.js",
   "scripts": {
-    "test": "npm run clean && npm run temp && wdio wdio.conf.js && npm run report",
+    "test": "npm run clean && npm run temp && wdio wdio.conf.js",
     "api": "wdio api.conf.js",
-    "tm": "npm run clean && npm run temp-mac && wdio wdio.conf.js && npm run report",
+    "tm": "npm run clean && npm run temp-mac && wdio wdio.conf.js",
     "azure": "npm run temp && wdio wdio.conf.js",
     "clean": "rm -rf temp",
     "temp": "mkdir temp\\screenshots",
