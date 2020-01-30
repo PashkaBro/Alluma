@@ -10,7 +10,8 @@
     "azure": "npm run temp && wdio wdio.conf.js",
     "clean": "rm -rf temp",
     "temp": "mkdir temp\\screenshots",
-    "temp-mac": "mkdir temp temp/screenshots"
+    "temp-mac": "mkdir temp temp/screenshots",
+    "report": "allure generate temp/allure-results -o temp/allure-report && node email.js"
   },
   "keywords": [
     "Test",
@@ -34,6 +35,7 @@
     "@wdio/cli": "^5.18.0",
     "axios": "^0.19.2",
     "chai": "^4.2.0",
+    "nodemailer": "^6.4.2",
     "webdriverio": "^5.18.0"
   },
   "devDependencies": {
