@@ -3,7 +3,7 @@ exports.config = {
     path: '/',
     specs: [
        //'./test/specs/*.js'     
-       './test/scenario/scenario-game-1.js'  
+       './test/specs/scenario-game-1.js'  
     ],
     exclude: [
 
