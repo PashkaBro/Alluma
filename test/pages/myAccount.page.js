@@ -8,7 +8,6 @@ class MyAccountPage extends Base {
 
       pageAppear(){
         this.myAccountBtnClick();
-        assert.isTrue($(sel.titlePass).isDisplayed());
       }
 
       firstNameConsist(){
@@ -78,7 +77,6 @@ class MyAccountPage extends Base {
 
       firstNameInfo(){
         const firstNameCont = $(sel.firstNameInput).getValue();
-        console.log(firstNameCont);
         assert.equal(firstNameCont, exp.firstNameContent);
       }
 
@@ -118,7 +116,7 @@ class MyAccountPage extends Base {
       }
 
       firstNameAccept(){
-        const value = this.randomString(100);
+        const value = this.randomString(exp.firstNameMaxLength);
         $(sel.firstNameInput).clearValue();
         $(sel.firstNameInput).addValue(value);
         let accepted = $(sel.firstNameInput).getValue();
@@ -126,7 +124,7 @@ class MyAccountPage extends Base {
       }
 
       lastNameAccept(){
-        const value = this.randomString(100);
+        const value = this.randomString(exp.lastNameMaxLength);
         $(sel.lastNameInput).clearValue();
         $(sel.lastNameInput).addValue(value);
         let accepted = $(sel.lastNameInput).getValue();
@@ -134,8 +132,7 @@ class MyAccountPage extends Base {
       }
 
       usernameAccept(){
-        const value = this.randomString(100);
-        console.log(value);
+        const value = this.randomString(exp.usernameMaxLength);
         $(sel.usernameInput).clearValue();
         $(sel.usernameInput).addValue(value);
         let accepted = $(sel.usernameInput).getValue();
@@ -143,7 +140,7 @@ class MyAccountPage extends Base {
       }
 
       nicknameAccept(){
-        const value = this.randomString(101)
+        const value = this.randomString(exp.nicknameMaxLength)
         $(sel.nicknameInput).clearValue();
         $(sel.nicknameInput).addValue(value);
         let accepted = $(sel.nicknameInput).getValue();
@@ -151,27 +148,27 @@ class MyAccountPage extends Base {
       }
 
       firstnameRejection(){
-        $(sel.firstNameInput).setValue(this.randomString(101));
+        $(sel.firstNameInput).setValue(this.randomString(exp.firstNameMaxLength + 1));
         let finalinput = $(sel.firstNameInput).getValue().length;
-        assert.equal(finalinput, 100);
+        assert.equal(finalinput, exp.firstNameMaxLength);
       }
 
       lastnameRejection(){
-        $(sel.lastNameInput).setValue(this.randomString(101));
+        $(sel.lastNameInput).setValue(this.randomString(exp.lastNameMaxLength + 1));
         let finalinput = $(sel.lastNameInput).getValue().length;
-        assert.equal(finalinput, 100);
+        assert.equal(finalinput, exp.lastNameMaxLength);
       }
 
       usernameRejection(){
-        $(sel.usernameInput).setValue(this.randomString(101));
+        $(sel.usernameInput).setValue(this.randomString(exp.usernameMaxLength + 1));
         let finalinput = $(sel.usernameInput).getValue().length;
-        assert.equal(finalinput, 100);
+        assert.equal(finalinput, exp.usernameMaxLength);
       }
 
       nicknameRejection(){
-        $(sel.nicknameInput).setValue(this.randomString(101));
+        $(sel.nicknameInput).setValue(this.randomString(exp.nicknameMaxLength + 1));
         let finalinput = $(sel.nicknameInput).getValue().length;
-        assert.equal(finalinput, 100);
+        assert.equal(finalinput, exp.nicknameMaxLength);
       }
 
       raitingConsist(){
@@ -245,7 +242,7 @@ class MyAccountPage extends Base {
       }
 
       passFieldAccept(){
-        const value = this.randomString(100);
+        const value = this.randomString(exp.passFieldMaxLength);
         $(sel.passField).clearValue();
         $(sel.passField).addValue(value);
         const accepted = $(sel.passField).getValue();
@@ -253,9 +250,9 @@ class MyAccountPage extends Base {
       }
 
       passFieldRejection(){
-        $(sel.passField).setValue(this.randomString(101));
+        $(sel.passField).setValue(this.randomString(exp.passFieldMaxLength + 1));
         const finalinput = $(sel.passField).getValue().length;
-        assert.equal(finalinput, 100);
+        assert.equal(finalinput, exp.passFieldMaxLength);
       }
 
       updateBtnConsist(){
@@ -317,19 +314,6 @@ class MyAccountPage extends Base {
         const fontSize = $(sel.revertBtn).getCSSProperty('font-family').parsed.value[2];
         assert.equal(fontSize, exp.revertBtnFontFamily );
       }
-
-
-
-
-
-
-
-
-
-
-    
-
-
 }
 
 export default new MyAccountPage();

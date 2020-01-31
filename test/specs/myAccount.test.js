@@ -5,7 +5,6 @@ import data from '../data/login.username';
 // @ts-ignore
 describe('my account page appearance', () => {
     it('opens by clicking button in the header', () => {
-      MyAccountPage.openBase();
       MyAccountPage.moderLogin();
       MyAccountPage.pageAppear();   
     })
