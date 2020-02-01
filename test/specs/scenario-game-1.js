@@ -6,7 +6,7 @@ import Game1 from '../scenario/scenario-game-1'
 import gameData from '../data/game.data'
 
 describe('game scenario 1', function () {
- 
+
   it('players select', function () {
     Game1.playersSelect()
     Game1.game(gameData.game1)
