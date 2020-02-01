@@ -15,6 +15,7 @@ btnAll: '#btn-all',
 checkBox: 'input[name=paidToday]',
 table: '.table',
 imgSelector: 'img',
-comentField: '.mt-2[placeholder="Comment"]'
+comentField: '.mt-2[placeholder="Comment"]',
+greenText: '.green-text'
 
 }

@@ -1,11 +1,14 @@
 import Base from '../pages/base'
 import sel from '../selectors/scenario-game.sel'
 import data from '../data/game.data'
+let nightKill
+let dayKill
+ data.game2.night.length > 0?
+ nightKill = data.game2.night.split(',') : nightKill = []
+ data.game2.day.lenght > 0?
+ dayKill = data.game2.day.split(',') :  dayKill = []
 
-let nightKill = data.game2.night.split(' ')
-let dayKill = data.game2.day.split(' ')
-
-class Game1 extends Base {
+class Game2 extends Base {
     night() {
         if ($(sel.endPage).isDisplayed()) {
             $(sel.btnLogout).click();
@@ -35,7 +38,7 @@ class Game1 extends Base {
             $$(sel.dropdown)[0].click();
             for (let i = 0; i < $$(sel.allDropdowns).length; i++) {
                 if ($$(sel.allDropdowns)[i].getText() == dayKill[0]) {
-                    $$(sel.dropdownLine)[i].click();
+                    $$(sel.dropdownLine)[i].click(); 
                 }
             }
             dayKill.shift();
@@ -63,7 +66,9 @@ class Game1 extends Base {
                 $(sel.table).$$('a')[i - 1].click()
                 $(sel.checkBox).click()
                 $(sel.regBtn).click()
+                $(sel.greenText).waitForDisplayed(2000)
                 $(sel.btnAll).click()
+
             }
         }
         $('#btn-game').click();
@@ -94,17 +99,17 @@ class Game1 extends Base {
 
     killGame() {
         if ($(sel.endPage).isDisplayed()) {
-            browser.pause(1000)
             $(sel.btnLogout).click();
-        }
-        else if ($(sel.btnLogin).isDisplayed) {
+            $(sel.btnLogin).isDisplayed()
             console.log('done');
         }
+       
         else {
             $('#btn-continue').click();
             console.log('error');
+            $$(sel.paidTodayIcon2)[$$(sel.paidTodayIcon2).length - 1].waitForDisplayed()
             $$(sel.paidTodayIcon2)[$$(sel.paidTodayIcon2).length - 1].click();
         }
     }
 }
-export default new Game1;
+export default new Game2;
