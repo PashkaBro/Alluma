@@ -62,7 +62,6 @@ class Game1 extends Base {
         }
         else if (dayKill.length === 0 && nightKill.length === 0) {
             res = "NOT ENOUGH PLAYERS SELECTED TO DYE FOR RUN GAME"
-            console.log(res);
         }
         else {
             $(sel.yelowBtn).click();
@@ -111,12 +110,10 @@ class Game1 extends Base {
 
     killGame() {
         if ($(sel.endPage).isDisplayed()) {
-            browser.pause(1000)
-            console.log(res);
             assert.equal($(sel.endPage + ' div').getText(), res);
             $(sel.btnLogout).click();
             $(sel.btnLogin).isDisplayed()
-            return (console.log('done'));
+            return 'nothing to return'
         }
 
         else if ($('#btn-continue').isDisplayed()) {
