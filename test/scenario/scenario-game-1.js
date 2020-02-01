@@ -1,8 +1,10 @@
 import Base from '../pages/base'
 import sel from '../selectors/scenario-game.sel'
 import data from '../data/game.data'
+import { assert } from 'chai'
 let nightKill
 let dayKill
+let res
 
  
 
@@ -15,11 +17,12 @@ class Game1 extends Base {
     nightKill = g.night.split(',') : nightKill = [];
     g.day.length > 0?
     dayKill = g.day.split(',') :  dayKill = [];
+    res = g.res
     }
 
     night() {
         if ($(sel.endPage).isDisplayed()) {
-            this.killGame();
+            //this.killGame();
         }
         else if (nightKill.length !== 0) {
             $$(sel.dropdown)[0].click();
@@ -40,7 +43,7 @@ class Game1 extends Base {
 
     day() {
         if ($(sel.endPage).isDisplayed()) {
-            this.killGame();
+            //this.killGame();
         }
         else if (dayKill.length !== 0) {
             $$(sel.dropdown)[0].click();
@@ -57,7 +60,8 @@ class Game1 extends Base {
 
         }
         else if (dayKill.length === 0 && nightKill.length === 0) {
-            console.log("NOT ENOUGH PLAYERS SELECTED TO DYE FOR RUN GAME");
+            res = "NOT ENOUGH PLAYERS SELECTED TO DYE FOR RUN GAME"
+            console.log(res);
         }
         else {
             $(sel.yelowBtn).click();
@@ -107,8 +111,9 @@ class Game1 extends Base {
     killGame() {
         if ($(sel.endPage).isDisplayed()) {
             browser.pause(1000)
+            console.log(res);
+            assert.equal($(sel.endPage+ ' div').getText(), res);
             $(sel.btnLogout).click();
-            
             $(sel.btnLogin).isDisplayed()
             return(console.log('done'));
         }

@@ -130,3 +130,78 @@ describe('game scenario 5', function () {
 
 })
 
+describe('game scenario 6', function () {
+
+  it('players select', function () {
+    Game1.playersSelect()
+    Game1.game(gameData.game6)
+  })
+
+  it('roles select', function () {
+    Game1.rolesSelect()
+  })
+
+  it('start game', function () {
+    Game1.startGame()
+  })
+
+  it('game process', function () {
+    Game1.night();
+  })
+
+  it('kill game', function () {
+    Game1.killGame()
+  })
+
+})
+
+describe('game scenario 7', function () {
+
+  it('players select', function () {
+    Game1.playersSelect()
+    Game1.game(gameData.game7)
+  })
+
+  it('roles select', function () {
+    Game1.rolesSelect()
+  })
+
+  it('start game', function () {
+    Game1.startGame()
+  })
+
+  it('game process', function () {
+    Game1.night();
+  })
+
+  it('kill game', function () {
+    Game1.killGame()
+  })
+
+})
+
+describe('game scenario 8', function () {
+
+  it('players select', function () {
+    Game1.playersSelect()
+    Game1.game(gameData.game8)
+  })
+
+  it('roles select', function () {
+    Game1.rolesSelect()
+  })
+
+  it('start game', function () {
+    Game1.startGame()
+  })
+
+  it('game process', function () {
+    Game1.night();
+  })
+
+  it('kill game', function () {
+    Game1.killGame()
+  })
+
+})
+
