@@ -1,4 +1,4 @@
-import AllPlayers from '../pages/all-players-page.page';
+import AllPlayers from '../pages/all-players.page';
 
 describe('Header', function () {
 
@@ -9,6 +9,15 @@ describe('Header', function () {
 
     it('links-redirect-to-each-player-page', function () {
         AllPlayers.namesEqualNames()
+    })
+
+    it('Table-has-PT-column', function () {
+        AllPlayers.allPlayersBtnClick()
+        AllPlayers.ptColumnIsExist()
+    })
+
+    it('Aditional-column-text-PT', function () {
+        AllPlayers.ptColumnText()
     })
 
 })

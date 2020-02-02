@@ -27,6 +27,27 @@ class AllPlayersPage extends Base {
         }
         assert.equal(ptCell.$$('img').length, expectedLength);
     }
+
+    namesIsClickable() {
+        $$(sel.nameIsLink)[Math.round(Math.random(9))].isDisplayed();
+        $$(sel.nameIsLink)[Math.round(Math.random(9))].isClickable();
+    }
+
+    namesEqualNames() {
+        let i = Math.round(Math.random(9))
+        let name = $$(sel.nameIsLink)[i].getText();
+        $$(sel.nameIsLink)[i].click();
+        let nameEqual = $(sel.firstName).getAttribute('value') + ' ' + $(sel.lastName).getAttribute('value');
+        assert.equal(name, nameEqual);
+    }
+
+    ptColumnIsExist() {
+        assert.equal($$(sel.tableHead).length, 10)
+    }
+
+    ptColumnText() {
+        assert.equal($$(sel.tableHead)[6].getText(),'PT')
+    }
 }
 
 export default new AllPlayersPage();
