@@ -74,8 +74,8 @@ class Game1 extends Base {
     playersSelectApi(g) {
         this.moderLogin();
         $(sel.btnLogout).waitForDisplayed(500)
-        $('#btn-game').click();
-        $('#search').setValue("Hello")
+        $(sel.btnGame).click();
+        $(sel.search).setValue("Hello")
         for (let i = 0; i < $$(sel.imgSelector).length; i++) {
             $(sel.yelowBtn).waitForDisplayed()
             $$(sel.imgSelector)[0].click();
@@ -87,16 +87,21 @@ class Game1 extends Base {
     playersSelectExistingUsers(g) {
         this.moderLogin();
         $(sel.btnLogout).waitForDisplayed(500)
-        for (let i = 1; i < $$(sel.paidTodayIcon1).length; i++) {
-            if ($$(sel.paidTodayIcon1)[i].$$(sel.paidTodayIcon2)[1] === undefined) {
-                $(sel.table).$$('a')[i - 1].click()
+        if($$(sel.paidTodayIcon1).length < 11){
+            console.log('NOT ENOUGH PLAYERS TO START GAME');
+            
+        }
+        
+        for (let i = 0; i < $$(sel.paidTodayIcon1).length-1; i++) {
+            if ($$(sel.paidTodayIcon3)[i*10+6].getHTML(false) === '<span></span>') {
+                $$(sel.table)[i].click()
                 $(sel.checkBox).click()
                 $(sel.regBtn).click()
                 $(sel.greenText).waitForDisplayed(4000)
                 $(sel.btnAll).click()
             }
         }
-        $('#btn-game').click();
+        $(sel.btnGame).click();
         for (let i = 0; i < $$(sel.imgSelector).length; i++) {
             $$(sel.imgSelector)[0].click();
         }
@@ -130,10 +135,10 @@ class Game1 extends Base {
             return 'nothing to return'
         }
 
-        else if ($('#btn-continue').isDisplayed()) {
-            $('#btn-continue').click();
+        else if ($(sel.btnContinue).isDisplayed()) {
+            $(sel.btnContinue).click();
             console.log('error');
-            $('.hover-item').waitForDisplayed()
+            $(sel.trashIcon).waitForDisplayed()
             $$(sel.paidTodayIcon2)[$$(sel.paidTodayIcon2).length - 1].click();
         }
     }
@@ -177,18 +182,18 @@ class Game1 extends Base {
 
     ///////////////////////////////////////
 
-    pdel() {
-        this.moderLogin();
-        $(sel.btnLogout).waitForDisplayed(500)
-        for (let i = 0; i < 30; i++) {
-            $(sel.btnAll).click();
-            $('#search').setValue("Hello")
-            $$('.table td a')[0].click()
+    // pdel() {
+    //     this.moderLogin();
+    //     $(sel.btnLogout).waitForDisplayed(500)           //use only to delete users in case of error
+    //     for (let i = 0; i < 30; i++) {
+    //         $(sel.btnAll).click();
+    //         $(sel.search).setValue("Hello")
+    //         $$(sel.table)[0].click()
 
-            $('.hover-item').click();
-            $(sel.greenText).waitForDisplayed()
-        }
-    }
+    //         $(sel.trashIcon).click();
+    //         $(sel.greenText).waitForDisplayed()
+    //     }
+    // }
     ////////////////////////////////////////
 }
 
