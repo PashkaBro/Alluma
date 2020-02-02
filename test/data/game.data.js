@@ -1,4 +1,17 @@
 export default {
+
+    user: {
+        firstName: "Hello",
+        lastName: "World",
+        email: "lalaLO",
+        pass: "simple_pass",
+        admin: false,
+        nickName: "helloW",
+        moderator: false,
+        sex: "male",
+        lastTimePaid: Date.now()
+    },
+    
     game1: {
         night: '6,10,9,5,3', //1vs1 mafia vins
         day: '1,2,4,8,7',
