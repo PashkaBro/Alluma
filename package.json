@@ -11,7 +11,7 @@
     "clean": "rm -rf temp",
     "temp": "mkdir temp\\screenshots",
     "temp-mac": "mkdir temp temp/screenshots",
-    "report": "allure generate temp/allure-results -o temp/allure-report && allure open ./temp/allure-report && node email.js"
+    "report": "allure generate temp/allure-results -o temp/allure-report && node email.js"
   },
   "keywords": [
     "Test",
