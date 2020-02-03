@@ -1,5 +1,3 @@
 node_modules
 temp
 .vscode
-test/specs/scenario-game-1.js
-scenario
