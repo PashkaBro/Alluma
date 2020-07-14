@@ -2,7 +2,7 @@ exports.config = {
     runner: 'local',
     path: '/',
     specs: [
-       './test/specs/footer.test.js'     
+       './test/specs/home.test.js'     
     ],
     exclude: [
 

@@ -7,5 +7,9 @@ class Base {
         browser.url('/');
     }
 
+    fieldInput(){
+        
+    }
+
 }
 export default Base;

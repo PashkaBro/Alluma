@@ -24,7 +24,7 @@
   ],
   "author": "Pavlo Brovko",
   "license": "ISC",
-  "repository": "https://ReactWebDevelopment@dev.azure.com/ReactWebDevelopment/IntGames/_git/Automation",
+  "repository": "https://github.com/PashkaBro/Alluma",
   "dependencies": {
     "@babel/cli": "^7.10.4",
     "@babel/core": "^7.10.4",
