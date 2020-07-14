@@ -21,6 +21,7 @@ exports.config = {
     services: ['chromedriver'],
     framework: 'mocha',
     reporters: ['spec', ['allure', {outputDir: 'temp/allure-results'}]],
+    
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000,

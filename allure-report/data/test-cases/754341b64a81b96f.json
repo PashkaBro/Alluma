@@ -1,0 +1,116 @@
+{
+  "uid" : "754341b64a81b96f",
+  "name" : "Quastion-text",
+  "fullName" : "Home page.Quastion-text",
+  "historyId" : "a2ac702850dcb72a10f15a87830e0068",
+  "time" : {
+    "start" : 1594713441047,
+    "stop" : 1594713441087,
+    "duration" : 40
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /session/:sessionId/elements",
+      "time" : {
+        "start" : 1594713441047,
+        "stop" : 1594713441055,
+        "duration" : 8
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "1cafe8e4b384c8bd",
+        "name" : "Request",
+        "source" : "1cafe8e4b384c8bd.json",
+        "type" : "application/json",
+        "size" : 65
+      }, {
+        "uid" : "1db988a9450f16d5",
+        "name" : "Response",
+        "source" : "1db988a9450f16d5.json",
+        "type" : "application/json",
+        "size" : 184
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "GET /session/:sessionId/element/27f2e746-62c4-4b91-ad23-3b163d03ff94/text",
+      "time" : {
+        "start" : 1594713441057,
+        "stop" : 1594713441086,
+        "duration" : 29
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "c12b990d191c0253",
+        "name" : "Response",
+        "source" : "c12b990d191c0253.json",
+        "type" : "application/json",
+        "size" : 35
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Home page"
+  }, {
+    "name" : "testClass",
+    "value" : "Home page"
+  }, {
+    "name" : "testMethod",
+    "value" : "Quastion-text"
+  }, {
+    "name" : "package",
+    "value" : "Home page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "754341b64a81b96f.json",
+  "parameterValues" : [ "chrome" ]
+}

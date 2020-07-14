@@ -106,7 +106,7 @@ describe('Client', function () { //Suite
     browser.url('/');
     let title = browser.getTitle();
     browser.pause(2000); //Pause
-    assert.equal(title, 'Intellectual Games Club');
+    assert.equal(title, '*Title*');
   })
 
 });
@@ -154,7 +154,7 @@ Add the following code under `reporters: ['dot','spec','allure'],`:
 ````
     reporterOptions: {
         allure: {
-            outputDir: 'allure-results'
+            outputDir: 'temp/allure-results'
         }
     },
 ````
@@ -165,7 +165,7 @@ npm i allure-commandline -g
 #### 10.3. Create a script to generate and open a report:
 Add the following script to `package.json`:
 ````
-"report": "allure generate --clean && allure open"
+"report": "allure generate './temp/allure-results' --clean && allure open"
 ````
 #### 10.4. Create a script to clean `allure-results` folder before running a test:
 Add the following script to `package.json`:
@@ -203,147 +203,3 @@ import { assert } from 'chai';
 ````
 Please make sure you replaced it in all the test files. Now you can use all the methods described here:
 https://www.npmjs.com/package/chai
-
-
-<a name="smoke"></a>
-## 12. Adding Smoke suite:
-#### 12.1. Go to `test` folder, create `smoke` folder, and open it:
-````
-cd test
-mkdir smoke
-cd smoke
-````
-#### 12.2. Create `smoke.js` file and open it:
-````
-touch smoke.js
-open smoke.js
-````
-#### 12.3. Copy and paste the following code to the file:
-````
-import { assert } from 'chai';
-
-describe('Login', function () {
-
-  it('Works', function () {
-    browser.url('/');
-    $('#email').setValue('testreacttest@gmail.com');
-    $('#pass').setValue('testTest');
-    $('#login').click();
-    let newBug = $('#new_bug');
-    newBug.waitForDisplayed(5000);
-    assert.isTrue(newBug.isDisplayed());
-  })
-
-});
-````
-#### 12.4. Create folder for regression testing:
-Get back to `test` folder, create `reg` folder there, and move existing test files to it:
-````
-cd ..
-mkdir reg
-mv client.js reg/client.js
-mv login.js reg/login.js
-cd ..
-````
-#### 12.5. Update the configuration:
-Open `wdio.conf.js` file and update the test specs including the new folder path:
-````
-specs: [
-        './test/reg/client.js',
-        './test/reg/login.js'
-    ],
-````
-#### 12.6. Create smoke test configuration:
-Copy and rename the existing Regression configuration (`wdio.conf.js`) to create a new configuration file (`smoke.conf.js`):
-````
-cp wdio.conf.js smoke.conf.js
-````
-#### 12.7. Update the configuration:
-Open the new configuration file `smoke.conf.js` and provide a path to the smoke test:
-````
-specs: [
-        './test/smoke/smoke.js'
-    ],
-````
-#### 12.8. Create and run `smoke` script:
-Open `package.json` and add `smoke` script:
-````
-"smoke": "npm run clean && wdio smoke.conf.js && npm run report"
-````
-Once done, run the test:
-````
-npm run smoke
-````
-
-
-<a name="git"></a>
-## 13. Working with Git
-#### 13.1. Create GitHub account:
-https://github.com/join
-#### 13.2. Once logged in create new repository:
-https://github.com/new
-Provide `Repository name` and click `Create repository`.
-On the next page you have the instruction how to connect your local repo with the remote one.
-#### 13.3. Initialize local git repo:
-Get back to Terminal and type:
-````
-git init
-````
-#### 13.4. Create and configure `.gitignore` file:
-This file is used to list all folders and files which should be ignored by Git.
-````
-touch .gitignore
-open .gitignore
-````
-Add the following lines to the file:
-````
-node_modules
-allure-results
-allure-report
-.git
-.idea
-````
-#### 13.5. Add all files to Git and create first commit:
-````
-git add .
-git commit -m "first commit"
-````
-#### 13.6. Add all files to Git and create first commit:
-````
-git add .
-git commit -m "first commit"
-````
-#### 13.7. Connect your local git with remote GitHub repo:
-Get the link from the page you get on GitHub:
-````
-git remote add origin {link}
-````
-#### 13.8. Push your local code to the remote repo:
-````
-git push -u origin master
-````
-#### 13.9. Some git commands to use:
-1) List of branches:
-````
-git branch
-````
-2) Create branch:
-````
-git branch {name}
-````
-3) Delete branch:
-````
-git branch -D {name}
-````
-4) Switch to another branch:
-````
-git checkout {name}
-````
-5) Commiting changes:
-````
-git commit -m "commit message"
-````
-6) Pushing changes:
-````
-git push
-````

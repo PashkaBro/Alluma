@@ -1,0 +1,116 @@
+{
+  "uid" : "8535a6fda0cd473",
+  "name" : "Welcome-text",
+  "fullName" : "Home page.Welcome-text",
+  "historyId" : "93f6263d137dd19e7dab3f59ccd32a32",
+  "time" : {
+    "start" : 1594713441022,
+    "stop" : 1594713441047,
+    "duration" : 25
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1594713441023,
+        "stop" : 1594713441036,
+        "duration" : 13
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "788fe9f268f8d8e9",
+        "name" : "Request",
+        "source" : "788fe9f268f8d8e9.json",
+        "type" : "application/json",
+        "size" : 65
+      }, {
+        "uid" : "82d4f8fa3ebdf436",
+        "name" : "Response",
+        "source" : "82d4f8fa3ebdf436.json",
+        "type" : "application/json",
+        "size" : 83
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "GET /session/:sessionId/element/a681e666-73fd-4ea6-92d6-e4cfaf4d2705/text",
+      "time" : {
+        "start" : 1594713441037,
+        "stop" : 1594713441046,
+        "duration" : 9
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "7fdec85c3c8f5652",
+        "name" : "Response",
+        "source" : "7fdec85c3c8f5652.json",
+        "type" : "application/json",
+        "size" : 24
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Home page"
+  }, {
+    "name" : "testClass",
+    "value" : "Home page"
+  }, {
+    "name" : "testMethod",
+    "value" : "Welcome-text"
+  }, {
+    "name" : "package",
+    "value" : "Home page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8535a6fda0cd473.json",
+  "parameterValues" : [ "chrome" ]
+}

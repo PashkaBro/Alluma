@@ -1,0 +1,321 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "0-0",
+    "children" : [ {
+      "name" : "Password-1",
+      "uid" : "c3083a51fe5e9205",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713446757,
+        "stop" : 1594713446820,
+        "duration" : 63
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Login-form-contain-elements",
+      "uid" : "7fc69dcc43725252",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713440960,
+        "stop" : 1594713440996,
+        "duration" : 36
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Username-1",
+      "uid" : "562ae56bb2eb5695",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713443511,
+        "stop" : 1594713443568,
+        "duration" : 57
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Quastion-text",
+      "uid" : "754341b64a81b96f",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713441047,
+        "stop" : 1594713441087,
+        "duration" : 40
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Quick-screner-link",
+      "uid" : "c0c9c3f136562b33",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713441087,
+        "stop" : 1594713441109,
+        "duration" : 22
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Password-100",
+      "uid" : "f31707234345c231",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713445327,
+        "stop" : 1594713446757,
+        "duration" : 1430
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Button-text",
+      "uid" : "1e98b1d5e00bf43c",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713441288,
+        "stop" : 1594713441305,
+        "duration" : 17
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Username-101",
+      "uid" : "34cdf4ad45bd92d5",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713443841,
+        "stop" : 1594713445327,
+        "duration" : 1486
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Login-form-title-text",
+      "uid" : "38496c37aebd07a7",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713440931,
+        "stop" : 1594713440960,
+        "duration" : 29
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Password-0",
+      "uid" : "87e0ddd23df642ed",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713446820,
+        "stop" : 1594713448473,
+        "duration" : 1653
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Username-100",
+      "uid" : "e43de3d8146a04a4",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713442366,
+        "stop" : 1594713443511,
+        "duration" : 1145
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Welcome-text",
+      "uid" : "8535a6fda0cd473",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713441022,
+        "stop" : 1594713441047,
+        "duration" : 25
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Login-explanation-text",
+      "uid" : "220c75b31255eb98",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713441305,
+        "stop" : 1594713441342,
+        "duration" : 37
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Username-text",
+      "uid" : "773fcc849f009aac",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713441109,
+        "stop" : 1594713441149,
+        "duration" : 40
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Page-contain-header-footer-login-page",
+      "uid" : "625891fecbb4a1fc",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713438458,
+        "stop" : 1594713440931,
+        "duration" : 2473
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Login-form-contain-elements",
+      "uid" : "c7416930ca91fc79",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713441174,
+        "stop" : 1594713441288,
+        "duration" : 114
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Password-text",
+      "uid" : "a645db0925623053",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713441151,
+        "stop" : 1594713441174,
+        "duration" : 23
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Username-0",
+      "uid" : "1c6de3d562cc60c0",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713443568,
+        "stop" : 1594713443840,
+        "duration" : 272
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Sequre-input",
+      "uid" : "1ccfe57553f6ca42",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713450207,
+        "stop" : 1594713450219,
+        "duration" : 12
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Forgot-username-redirect",
+      "uid" : "8332311f2f51eb25",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713450219,
+        "stop" : 1594713450407,
+        "duration" : 188
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Explanation-text",
+      "uid" : "f84b9188ce946bbe",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713440996,
+        "stop" : 1594713441022,
+        "duration" : 26
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Forgot-password-redirect",
+      "uid" : "44a693650f5d1dde",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713450407,
+        "stop" : 1594713451593,
+        "duration" : 1186
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Quick-screner-redirect",
+      "uid" : "4f76c1b20e2cbb76",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713441343,
+        "stop" : 1594713442366,
+        "duration" : 1023
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Password-101",
+      "uid" : "60c6f9d496c2f64e",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594713448473,
+        "stop" : 1594713450207,
+        "duration" : 1734
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    } ],
+    "uid" : "516fe00eea05ad99e936fa729b55eff4"
+  } ]
+}

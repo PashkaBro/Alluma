@@ -1,0 +1,173 @@
+{
+  "uid" : "34cdf4ad45bd92d5",
+  "name" : "Username-101",
+  "fullName" : "Home page.Username-101",
+  "historyId" : "2a010768fe2e59df6d14825e9264c875",
+  "time" : {
+    "start" : 1594713443841,
+    "stop" : 1594713445327,
+    "duration" : 1486
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /session/:sessionId/url",
+      "time" : {
+        "start" : 1594713443841,
+        "stop" : 1594713444821,
+        "duration" : 980
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "c3875b1a838f7e40",
+        "name" : "Request",
+        "source" : "c3875b1a838f7e40.json",
+        "type" : "application/json",
+        "size" : 41
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1594713444821,
+        "stop" : 1594713444836,
+        "duration" : 15
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "675c3beed94c41ec",
+        "name" : "Request",
+        "source" : "675c3beed94c41ec.json",
+        "type" : "application/json",
+        "size" : 68
+      }, {
+        "uid" : "8df461a11e051486",
+        "name" : "Response",
+        "source" : "8df461a11e051486.json",
+        "type" : "application/json",
+        "size" : 83
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/:sessionId/element/86d81cc8-7c35-4107-bf44-0a13b33488c8/clear",
+      "time" : {
+        "start" : 1594713444837,
+        "stop" : 1594713444873,
+        "duration" : 36
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "POST /session/:sessionId/element/86d81cc8-7c35-4107-bf44-0a13b33488c8/value",
+      "time" : {
+        "start" : 1594713444891,
+        "stop" : 1594713445312,
+        "duration" : 421
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "5b09d7e718b4907a",
+        "name" : "Request",
+        "source" : "5b09d7e718b4907a.json",
+        "type" : "application/json",
+        "size" : 118
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "GET /session/:sessionId/element/86d81cc8-7c35-4107-bf44-0a13b33488c8/property/value",
+      "time" : {
+        "start" : 1594713445312,
+        "stop" : 1594713445327,
+        "duration" : 15
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "df702c4ac788c998",
+        "name" : "Response",
+        "source" : "df702c4ac788c998.json",
+        "type" : "application/json",
+        "size" : 103
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 5,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Home page"
+  }, {
+    "name" : "testClass",
+    "value" : "Home page"
+  }, {
+    "name" : "testMethod",
+    "value" : "Username-101"
+  }, {
+    "name" : "package",
+    "value" : "Home page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "34cdf4ad45bd92d5.json",
+  "parameterValues" : [ "chrome" ]
+}

@@ -1,0 +1,116 @@
+{
+  "uid" : "38496c37aebd07a7",
+  "name" : "Login-form-title-text",
+  "fullName" : "Home page.Login-form-title-text",
+  "historyId" : "f534cda1b239e3ce225161b3e4de39ef",
+  "time" : {
+    "start" : 1594713440931,
+    "stop" : 1594713440960,
+    "duration" : 29
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /session/:sessionId/elements",
+      "time" : {
+        "start" : 1594713440932,
+        "stop" : 1594713440944,
+        "duration" : 12
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "5f9e06e4175e2726",
+        "name" : "Request",
+        "source" : "5f9e06e4175e2726.json",
+        "type" : "application/json",
+        "size" : 65
+      }, {
+        "uid" : "2cc3a6f36edab3a9",
+        "name" : "Response",
+        "source" : "2cc3a6f36edab3a9.json",
+        "type" : "application/json",
+        "size" : 184
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "GET /session/:sessionId/element/0a4d1fec-51a1-46ab-8383-78687785f76a/text",
+      "time" : {
+        "start" : 1594713440945,
+        "stop" : 1594713440960,
+        "duration" : 15
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "19342e762a1b085f",
+        "name" : "Response",
+        "source" : "19342e762a1b085f.json",
+        "type" : "application/json",
+        "size" : 13
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Home page"
+  }, {
+    "name" : "testClass",
+    "value" : "Home page"
+  }, {
+    "name" : "testMethod",
+    "value" : "Login-form-title-text"
+  }, {
+    "name" : "package",
+    "value" : "Home page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "38496c37aebd07a7.json",
+  "parameterValues" : [ "chrome" ]
+}

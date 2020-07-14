@@ -1,0 +1,231 @@
+[ {
+  "uid" : "625891fecbb4a1fc",
+  "name" : "Page-contain-header-footer-login-page",
+  "time" : {
+    "start" : 1594713438458,
+    "stop" : 1594713440931,
+    "duration" : 2473
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "773fcc849f009aac",
+  "name" : "Username-text",
+  "time" : {
+    "start" : 1594713441109,
+    "stop" : 1594713441149,
+    "duration" : 40
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a645db0925623053",
+  "name" : "Password-text",
+  "time" : {
+    "start" : 1594713441151,
+    "stop" : 1594713441174,
+    "duration" : 23
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4f76c1b20e2cbb76",
+  "name" : "Quick-screner-redirect",
+  "time" : {
+    "start" : 1594713441343,
+    "stop" : 1594713442366,
+    "duration" : 1023
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "60c6f9d496c2f64e",
+  "name" : "Password-101",
+  "time" : {
+    "start" : 1594713448473,
+    "stop" : 1594713450207,
+    "duration" : 1734
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "220c75b31255eb98",
+  "name" : "Login-explanation-text",
+  "time" : {
+    "start" : 1594713441305,
+    "stop" : 1594713441342,
+    "duration" : 37
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1ccfe57553f6ca42",
+  "name" : "Sequre-input",
+  "time" : {
+    "start" : 1594713450207,
+    "stop" : 1594713450219,
+    "duration" : 12
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c3083a51fe5e9205",
+  "name" : "Password-1",
+  "time" : {
+    "start" : 1594713446757,
+    "stop" : 1594713446820,
+    "duration" : 63
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1c6de3d562cc60c0",
+  "name" : "Username-0",
+  "time" : {
+    "start" : 1594713443568,
+    "stop" : 1594713443840,
+    "duration" : 272
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f84b9188ce946bbe",
+  "name" : "Explanation-text",
+  "time" : {
+    "start" : 1594713440996,
+    "stop" : 1594713441022,
+    "duration" : 26
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e43de3d8146a04a4",
+  "name" : "Username-100",
+  "time" : {
+    "start" : 1594713442366,
+    "stop" : 1594713443511,
+    "duration" : 1145
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "87e0ddd23df642ed",
+  "name" : "Password-0",
+  "time" : {
+    "start" : 1594713446820,
+    "stop" : 1594713448473,
+    "duration" : 1653
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "38496c37aebd07a7",
+  "name" : "Login-form-title-text",
+  "time" : {
+    "start" : 1594713440931,
+    "stop" : 1594713440960,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1e98b1d5e00bf43c",
+  "name" : "Button-text",
+  "time" : {
+    "start" : 1594713441288,
+    "stop" : 1594713441305,
+    "duration" : 17
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c0c9c3f136562b33",
+  "name" : "Quick-screner-link",
+  "time" : {
+    "start" : 1594713441087,
+    "stop" : 1594713441109,
+    "duration" : 22
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f31707234345c231",
+  "name" : "Password-100",
+  "time" : {
+    "start" : 1594713445327,
+    "stop" : 1594713446757,
+    "duration" : 1430
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8535a6fda0cd473",
+  "name" : "Welcome-text",
+  "time" : {
+    "start" : 1594713441022,
+    "stop" : 1594713441047,
+    "duration" : 25
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "562ae56bb2eb5695",
+  "name" : "Username-1",
+  "time" : {
+    "start" : 1594713443511,
+    "stop" : 1594713443568,
+    "duration" : 57
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "44a693650f5d1dde",
+  "name" : "Forgot-password-redirect",
+  "time" : {
+    "start" : 1594713450407,
+    "stop" : 1594713451593,
+    "duration" : 1186
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8332311f2f51eb25",
+  "name" : "Forgot-username-redirect",
+  "time" : {
+    "start" : 1594713450219,
+    "stop" : 1594713450407,
+    "duration" : 188
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "34cdf4ad45bd92d5",
+  "name" : "Username-101",
+  "time" : {
+    "start" : 1594713443841,
+    "stop" : 1594713445327,
+    "duration" : 1486
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c7416930ca91fc79",
+  "name" : "Login-form-contain-elements",
+  "time" : {
+    "start" : 1594713441174,
+    "stop" : 1594713441288,
+    "duration" : 114
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "754341b64a81b96f",
+  "name" : "Quastion-text",
+  "time" : {
+    "start" : 1594713441047,
+    "stop" : 1594713441087,
+    "duration" : 40
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
