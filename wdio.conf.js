@@ -2,7 +2,7 @@ exports.config = {
     runner: 'local',
     path: '/',
     specs: [
-       './test/specs/*.js'     
+       './test/specs/footer.test.js'     
     ],
     exclude: [
 
@@ -14,7 +14,7 @@ exports.config = {
     }],
     logLevel: 'silent',
     bail: 0,
-    baseUrl: 'http://qa.intgames.org/',
+    baseUrl: 'http://oxcdemo.alluma.org/',
     waitforTimeout: 10000,
     connectionRetryTimeout: 90000,
     connectionRetryCount: 3,

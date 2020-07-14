@@ -1,5 +1,5 @@
 import login from '../pages/login.page';
-import allPlayersPage from './../pages/all-players.page';
+import allPlayersPage from '../pages/all-players.page';
 import playerPage from '../pages/player.page';
 
 describe('Player-page', function () {

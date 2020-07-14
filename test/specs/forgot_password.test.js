@@ -1,4 +1,4 @@
-import allPlayersPage from './../pages/all-players.page';
+import allPlayersPage from '../pages/all-players.page';
 import playerPage from '../pages/player.page';
 
 describe('All-players-page', function () {
