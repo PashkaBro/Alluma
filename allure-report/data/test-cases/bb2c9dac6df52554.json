@@ -1,0 +1,173 @@
+{
+  "uid" : "bb2c9dac6df52554",
+  "name" : "Password-100",
+  "fullName" : "Home page.Password-100",
+  "historyId" : "459497305ba5717e3dfbbaab33c641d9",
+  "time" : {
+    "start" : 1594714070565,
+    "stop" : 1594714072289,
+    "duration" : 1724
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /session/:sessionId/url",
+      "time" : {
+        "start" : 1594714070565,
+        "stop" : 1594714071846,
+        "duration" : 1281
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "20878e4bcb5159f2",
+        "name" : "Request",
+        "source" : "20878e4bcb5159f2.json",
+        "type" : "application/json",
+        "size" : 41
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1594714071846,
+        "stop" : 1594714071864,
+        "duration" : 18
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "f52fb2d40584119",
+        "name" : "Request",
+        "source" : "f52fb2d40584119.json",
+        "type" : "application/json",
+        "size" : 68
+      }, {
+        "uid" : "7e6215820c47ad22",
+        "name" : "Response",
+        "source" : "7e6215820c47ad22.json",
+        "type" : "application/json",
+        "size" : 83
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/:sessionId/element/cdd7eee9-00ae-4bb4-8c7c-6eb485bed8c9/clear",
+      "time" : {
+        "start" : 1594714071864,
+        "stop" : 1594714071909,
+        "duration" : 45
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "POST /session/:sessionId/element/cdd7eee9-00ae-4bb4-8c7c-6eb485bed8c9/value",
+      "time" : {
+        "start" : 1594714071909,
+        "stop" : 1594714072284,
+        "duration" : 375
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "dfbafa7c6bee3b3d",
+        "name" : "Request",
+        "source" : "dfbafa7c6bee3b3d.json",
+        "type" : "application/json",
+        "size" : 117
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "GET /session/:sessionId/element/cdd7eee9-00ae-4bb4-8c7c-6eb485bed8c9/property/value",
+      "time" : {
+        "start" : 1594714072284,
+        "stop" : 1594714072289,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "640fe7827314f7e1",
+        "name" : "Response",
+        "source" : "640fe7827314f7e1.json",
+        "type" : "application/json",
+        "size" : 103
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 5,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Home page"
+  }, {
+    "name" : "testClass",
+    "value" : "Home page"
+  }, {
+    "name" : "testMethod",
+    "value" : "Password-100"
+  }, {
+    "name" : "package",
+    "value" : "Home page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bb2c9dac6df52554.json",
+  "parameterValues" : [ "chrome" ]
+}

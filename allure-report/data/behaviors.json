@@ -3,129 +3,129 @@
   "name" : "behaviors",
   "children" : [ {
     "name" : "Page-contain-header-footer-login-page",
-    "uid" : "625891fecbb4a1fc",
+    "uid" : "a42797e8454918f9",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713438458,
-      "stop" : 1594713440931,
-      "duration" : 2473
+      "start" : 1594714062854,
+      "stop" : 1594714065980,
+      "duration" : 3126
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Login-form-title-text",
-    "uid" : "38496c37aebd07a7",
+    "uid" : "203c60538bad235a",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713440931,
-      "stop" : 1594713440960,
-      "duration" : 29
+      "start" : 1594714065980,
+      "stop" : 1594714066018,
+      "duration" : 38
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Explanation-text",
-    "uid" : "f84b9188ce946bbe",
+    "uid" : "5371badd56f65a83",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713440996,
-      "stop" : 1594713441022,
-      "duration" : 26
+      "start" : 1594714066075,
+      "stop" : 1594714066169,
+      "duration" : 94
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Welcome-text",
-    "uid" : "8535a6fda0cd473",
+    "uid" : "3c8010ad68eeae7e",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713441022,
-      "stop" : 1594713441047,
-      "duration" : 25
+      "start" : 1594714066169,
+      "stop" : 1594714066202,
+      "duration" : 33
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Quastion-text",
-    "uid" : "754341b64a81b96f",
+    "uid" : "e3cf23891a7755af",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713441047,
-      "stop" : 1594713441087,
-      "duration" : 40
+      "start" : 1594714066202,
+      "stop" : 1594714066238,
+      "duration" : 36
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Quick-screner-link",
-    "uid" : "c0c9c3f136562b33",
+    "uid" : "4dd135e420545a65",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713441087,
-      "stop" : 1594713441109,
-      "duration" : 22
+      "start" : 1594714066238,
+      "stop" : 1594714066269,
+      "duration" : 31
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Username-text",
-    "uid" : "773fcc849f009aac",
+    "uid" : "c9817f1a2780a695",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713441109,
-      "stop" : 1594713441149,
-      "duration" : 40
+      "start" : 1594714066270,
+      "stop" : 1594714066291,
+      "duration" : 21
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Password-text",
-    "uid" : "a645db0925623053",
+    "uid" : "badfb90b839833e9",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713441151,
-      "stop" : 1594713441174,
-      "duration" : 23
+      "start" : 1594714066291,
+      "stop" : 1594714066312,
+      "duration" : 21
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Login-form-contain-elements",
-    "uid" : "c7416930ca91fc79",
+    "uid" : "a4c21d52824c150f",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713441174,
-      "stop" : 1594713441288,
-      "duration" : 114
+      "start" : 1594714066313,
+      "stop" : 1594714066367,
+      "duration" : 54
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Button-text",
-    "uid" : "1e98b1d5e00bf43c",
+    "uid" : "a78f21125ab3528a",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713441288,
-      "stop" : 1594713441305,
+      "start" : 1594714066367,
+      "stop" : 1594714066384,
       "duration" : 17
     },
     "flaky" : false,
@@ -133,142 +133,142 @@
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Login-explanation-text",
-    "uid" : "220c75b31255eb98",
+    "uid" : "9c58f91ff85ba46a",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713441305,
-      "stop" : 1594713441342,
-      "duration" : 37
+      "start" : 1594714066384,
+      "stop" : 1594714066414,
+      "duration" : 30
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Quick-screner-redirect",
-    "uid" : "4f76c1b20e2cbb76",
+    "uid" : "62bbd462b2406b08",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713441343,
-      "stop" : 1594713442366,
-      "duration" : 1023
+      "start" : 1594714066414,
+      "stop" : 1594714067558,
+      "duration" : 1144
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Username-100",
-    "uid" : "e43de3d8146a04a4",
+    "uid" : "b44fc2c005ee6b70",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713442366,
-      "stop" : 1594713443511,
-      "duration" : 1145
+      "start" : 1594714067558,
+      "stop" : 1594714068625,
+      "duration" : 1067
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Username-1",
-    "uid" : "562ae56bb2eb5695",
+    "uid" : "d075c6e9d16989f2",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713443511,
-      "stop" : 1594713443568,
-      "duration" : 57
+      "start" : 1594714068625,
+      "stop" : 1594714068678,
+      "duration" : 53
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Username-0",
-    "uid" : "1c6de3d562cc60c0",
+    "uid" : "469d542af80c687e",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713443568,
-      "stop" : 1594713443840,
-      "duration" : 272
+      "start" : 1594714068678,
+      "stop" : 1594714068938,
+      "duration" : 260
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Username-101",
-    "uid" : "34cdf4ad45bd92d5",
+    "uid" : "b196f807944a6985",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713443841,
-      "stop" : 1594713445327,
-      "duration" : 1486
+      "start" : 1594714068938,
+      "stop" : 1594714070565,
+      "duration" : 1627
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Password-100",
-    "uid" : "f31707234345c231",
+    "uid" : "bb2c9dac6df52554",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713445327,
-      "stop" : 1594713446757,
-      "duration" : 1430
+      "start" : 1594714070565,
+      "stop" : 1594714072289,
+      "duration" : 1724
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Password-1",
-    "uid" : "c3083a51fe5e9205",
+    "uid" : "91a85ce22f28f757",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713446757,
-      "stop" : 1594713446820,
-      "duration" : 63
+      "start" : 1594714072289,
+      "stop" : 1594714072350,
+      "duration" : 61
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Password-0",
-    "uid" : "87e0ddd23df642ed",
+    "uid" : "742bdc10f24bc451",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713446820,
-      "stop" : 1594713448473,
-      "duration" : 1653
+      "start" : 1594714072350,
+      "stop" : 1594714073887,
+      "duration" : 1537
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Password-101",
-    "uid" : "60c6f9d496c2f64e",
+    "uid" : "444cf2c69776d8dc",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713448473,
-      "stop" : 1594713450207,
-      "duration" : 1734
+      "start" : 1594714073888,
+      "stop" : 1594714075384,
+      "duration" : 1496
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Sequre-input",
-    "uid" : "1ccfe57553f6ca42",
+    "uid" : "fe97bee17d4a7ca7",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713450207,
-      "stop" : 1594713450219,
+      "start" : 1594714075384,
+      "stop" : 1594714075396,
       "duration" : 12
     },
     "flaky" : false,
@@ -276,26 +276,26 @@
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Forgot-username-redirect",
-    "uid" : "8332311f2f51eb25",
+    "uid" : "a80b20f36c3a044f",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713450219,
-      "stop" : 1594713450407,
-      "duration" : 188
+      "start" : 1594714075396,
+      "stop" : 1594714075572,
+      "duration" : 176
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome" ]
   }, {
     "name" : "Forgot-password-redirect",
-    "uid" : "44a693650f5d1dde",
+    "uid" : "d4d59a39fbe395f",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1594713450407,
-      "stop" : 1594713451593,
-      "duration" : 1186
+      "start" : 1594714075572,
+      "stop" : 1594714076864,
+      "duration" : 1292
     },
     "flaky" : false,
     "newFailed" : false,
