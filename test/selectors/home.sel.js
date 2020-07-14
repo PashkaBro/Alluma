@@ -13,6 +13,10 @@ export default {
     usernameField: 'input[name="Username"]',
     passField: 'input[name="Password"]',
     button: '.gg-btn',
-    formExplText: '.gg-login-form-title4'
+    formExplText: '.gg-login-form-title4',
+    forgotUsername: 'fieldset a[href*="ForgotUsername"]',
+    forgotPassword: 'fieldset a[href*="ForgotPassword"]',
+    usernameField0: '.gg-error-block li',
+    passwordField0: '.gg-error-block li',
 
 }

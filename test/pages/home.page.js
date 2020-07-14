@@ -60,7 +60,7 @@ class Home extends Base {
         let elem = $(sel.usernameField).isDisplayed() 
         === $(sel.passField).isDisplayed() 
         === $(sel.button).isDisplayed()
-        assert.isTrue(elem)
+        assert.isTrue(elem);
       }
 
       ButtonText(){
@@ -71,7 +71,7 @@ class Home extends Base {
       LoginExplText(){
         let text = ''
         $$(sel.formExplText).map(el => text += el.getText() + ' ');
-        text = text.slice(0,-1)
+        text = text.slice(0,-1);
         assert.equal(text, exp.logExplText);
       }
 
@@ -83,81 +83,77 @@ class Home extends Base {
 
       ScrenerRedirect(){
         $(sel.loginFormScreener).click();
-        let link = browser.getUrl()
+        let link = browser.getUrl();
         assert.equal(link, exp.screnerRedirect);
       }
 
       User100(){
-        $(sel.loginFormScreener).click();
-        let text = browser.getUrl()
-        assert.equal(text, exp.screnerRedirect);
+        this.openBase();
+        let elem = this.inputFieldCompare($(sel.usernameField), 100);
+        assert.isTrue(elem);
       }
 
       User1(){
-       let href = $(sel.email).getAttribute('href')
-        assert.equal(href, exp.emailUrl);
+        let elem = this.inputFieldCompare($(sel.usernameField), 1);
+        assert.isTrue(elem);
       }
 
       User0(){
-        $$(sel.column3Links)[0].click();
-        let url = browser.getUrl()
-        assert.equal(url, exp.facebookUrl);
+        this.inputFieldCompare($(sel.usernameField), 0);
+        this.inputFieldCompare($(sel.passField), 1);
+        $(sel.button).click();
+        let errorText = $(sel.usernameField0).getText();
+        assert.equal(errorText, exp.usernameErrorText);
       }
 
       User101(){
-        this.openBase()
-        $$(sel.column3Links)[1].click();
-        let url = browser.getUrl()
-        assert.equal(url, exp.twitterUrl);
+        this.openBase();
+        let elem = this.inputFieldCompare($(sel.usernameField), 101);
+        assert.isTrue(!elem);
       }
 
       Pass100(){
-        this.openBase()
-        $(sel.linkedinLinkForClick).click();
-        let url = browser.getUrl().substring(0, 25) // hardcode due to no existing user for Linkedin 
-        assert.equal(url, exp.linkedinUrlNonUser.substring(0, 25));
+        this.openBase();
+        let elem = this.inputFieldCompare($(sel.passField), 100);
+        assert.isTrue(elem);
       }
 
       Pass1(){
-        this.openBase()
-        $$(sel.lowerFooterLinks1)[0].click();
-        let url = browser.getUrl()
-        assert.equal(url, exp.logoUrl);
+        let elem = this.inputFieldCompare($(sel.passField), 1);
+        assert.isTrue(elem);
       }
 
       Pass0(){
         this.openBase()
-        $(sel.copyrightlink).click();
-        let url = browser.getUrl()
-        assert.equal(url, exp.copyrightLink);
+        this.inputFieldCompare($(sel.usernameField), 1);
+        this.inputFieldCompare($(sel.passField), 0);
+        $(sel.button).click();
+        let errorText = $(sel.passwordField0).getText();
+        assert.equal(errorText, exp.passwordErrorText);
       }
 
       Pass101(){
-        this.openBase()
-        $$(sel.column3Links)[1].click();
-        let url = browser.getUrl()
-        assert.equal(url, exp.twitterUrl);
+        this.openBase();
+        let elem = this.inputFieldCompare($(sel.passField), 101);
+        assert.isTrue(!elem);
       }
 
       BulletsInput(){
-        this.openBase()
-        $(sel.linkedinLinkForClick).click();
-        let url = browser.getUrl().substring(0, 25) // hardcode due to no existing user for Linkedin 
-        assert.equal(url, exp.linkedinUrlNonUser.substring(0, 25));
+        let type = $(sel.passField).getAttribute('type');
+        assert.equal(type, exp.sequreInput);
       }
 
       ForgotUsername(){
-        this.openBase()
-        $$(sel.lowerFooterLinks1)[0].click();
-        let url = browser.getUrl()
-        assert.equal(url, exp.logoUrl);
+        $(sel.forgotUsername).click();
+        let link = browser.getUrl().substring(0, 71);
+        assert.equal(link, exp.forgotUsernameRedirect.substring(0, 71));
       }
 
       ForgotPassword(){
         this.openBase()
-        $(sel.copyrightlink).click();
-        let url = browser.getUrl()
-        assert.equal(url, exp.copyrightLink);
+        $(sel.forgotPassword).click();
+        let link = browser.getUrl().substring(0, 71);
+        assert.equal(link, exp.forgotPasswordRedirect.substring(0, 71));
       }
       
 }

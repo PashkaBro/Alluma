@@ -59,49 +59,49 @@ describe('Home page', function () {
         Home.ScrenerRedirect()
     })
 
-    // it('Username-100', () =>  {
-    //     AllPlayers.User100()
-    // })
+    it('Username-100', () =>  {
+        Home.User100()
+    })
 
-    // it('Username-1', () =>  {
-    //     AllPlayers.User1()
-    // })
+    it('Username-1', () =>  {
+        Home.User1()
+    })
 
-    // it('Username-0', () =>  {
-    //     AllPlayers.User0()
-    // })
+    it('Username-0', () =>  {
+        Home.User0()
+    })
 
-    // it('Username-101', () =>  {
-    //     AllPlayers.User101()
-    // })
+    it('Username-101', () =>  {
+        Home.User101()
+    })
 
-    // it('Password-100', () =>  {
-    //     AllPlayers.Pass100()
-    // })
+    it('Password-100', () =>  {
+        Home.Pass100()
+    })
 
-    // it('Password-1', () =>  {
-    //     AllPlayers.Pass1()
-    // })
+    it('Password-1', () =>  {
+        Home.Pass1()
+    })
 
-    // it('Password-0', () =>  {
-    //     AllPlayers.Pass0()
-    // })
+    it('Password-0', () =>  {
+        Home.Pass0()
+    })
 
-    // it('Password-101', () =>  {
-    //     AllPlayers.Pass101()
-    // })
+    it('Password-101', () =>  {
+        Home.Pass101()
+    })
 
-    // it('Sequre-input', () =>  {
-    //     AllPlayers.BulletsInput()
-    // })
+    it('Sequre-input', () =>  {
+        Home.BulletsInput()
+    })
 
-    // it('Forgot-username-redirect', () =>  {
-    //     AllPlayers.ForgotUsername()
-    // })
+    it('Forgot-username-redirect', () =>  {
+        Home.ForgotUsername()
+    })
 
-    // it('Forgot-password-redirect', () =>  {
-    //     AllPlayers.ForgotPassword()
-    // })
+    it('Forgot-password-redirect', () =>  {
+        Home.ForgotPassword()
+    })
 
    
 })
