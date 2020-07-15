@@ -1,25 +1,69 @@
-import allPlayersPage from '../pages/all-players.page';
-import playerPage from '../pages/player.page';
+import forgotPassword from '../pages/forgotPassword.page';
 
-describe('All-players-page', function () {
+describe('Forgot-password', function () {
+  
+  it('Page-contain-items', () =>  {
+    forgotPassword.PageContain()
+  })
 
-    it('Pt-checkbx-is-shown', function () {
-        allPlayersPage.openPage();
-        allPlayersPage.goToPlayerPage(0);
-        playerPage.checkPTCheckboxIfUnchecked();
-        playerPage.clickUpdateBtn();
-        browser.pause(1000);
-        playerPage.allPlayersBtnClick();
-        allPlayersPage.validatePTCheckboxForPlayer(0, true);
-    });
+  it('Password-form-title-text', () =>  {
+    forgotPassword.TitleText()
+  })
 
-    it('Pt-checkbx-is-not-shown', function () {
-        allPlayersPage.openPage();
-        allPlayersPage.goToPlayerPage(0);
-        playerPage.uncheckPTCheckboxIfChecked();
-        playerPage.clickUpdateBtn();
-        browser.pause(1000);
-        playerPage.allPlayersBtnClick();
-        allPlayersPage.validatePTCheckboxForPlayer(0, false);
-    });
+  it('Password-form-contain-elements', () =>  {
+    forgotPassword.usernameFormContain()
+  })
+
+  it('Welcome-text', () =>  {
+    forgotPassword.WelcomeText()
+  })
+
+//   it('Explenation-text', () =>  {
+//     forgotPassword.explText()
+//   })
+
+  it('Username-text', () =>  {
+    forgotPassword.EmailText()
+  })
+
+  it('Cancel-Button-text', () =>  {
+    forgotPassword.backButtonText()
+  })
+
+  it('Continue-Button-text', () =>  {
+    forgotPassword.recoverButtonText()
+  })
+
+//   it('Forgot-username-url', () =>  {
+//     forgotPassword.forgotUrl()
+//   })
+
+//   it('Email-200', () =>  {
+//     forgotPassword.email200()
+//   })
+
+//   it('Email-1', () =>  {
+//     forgotPassword.email1()
+//   })
+
+//   it('Email-201', () =>  {
+//     forgotPassword.email201()
+//   })
+
+//   it('Email-0', () =>  {
+//     forgotPassword.email0()
+//   })
+  
+//   it('Forgot-password-redirect', () =>  {
+//     forgotPassword.forgotRedirect()
+//   })
+
+//   it('Back-button-redirect', () =>  {
+//     forgotPassword.backBtnRedirect()
+//   })
+
+//   it('Recover-button-redirect-confirmation-text', () =>  {
+//     forgotPassword.recoverBtnRedirect()
+//   })
+
 })

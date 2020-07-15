@@ -1,4 +1,4 @@
-
+import sel from '../selectors/base.sel'
 import { assert } from 'chai';
 
 class Base {
@@ -20,6 +20,11 @@ class Base {
         el.setValue(originValue);
         let currentValue = el.getValue();
         return originValue === currentValue
+    }
+
+    openForgotUsername(){
+        browser.url('/');
+            $(sel.forgotUsername).click();
     }
 
 }

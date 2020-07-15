@@ -1,52 +1,69 @@
-import login from '../pages/login.page';
-import allPlayersPage from '../pages/all-players.page';
-import playerPage from '../pages/player.page';
+import forgotUsername from '../pages/forgotUsername.page';
 
-describe('Player-page', function () {
-  describe('Paid-today', () => {
-    it('Page-displayed', function () {
-      allPlayersPage.openPage();
-      allPlayersPage.goToPlayerPage(0);
-    });
-
-    it('Paid-today-checkbox-is-displayed', function () {
-       playerPage.paidTodayChkb();
-    });
-
-    it('Paid-today-checkbox-can-be-checked', function () {
-       playerPage.paidTodayCanBeChecked();
-    });
-
-    it('If-checked-add-visit', function(){
-      playerPage.ifCheckedAddVisit();
-    });
-
-    it('If-unchecked-add-visit', function(){
-      playerPage.ifUncheckedAddVisit();
-    });
+describe('Forgot-username', function () {
+  
+  it('Page-contain-items', () =>  {
+    forgotUsername.PageContain()
   })
-    
-  describe('Input-fields', () => {
-    it('Page-displayed', function () {
-      allPlayersPage.openPage();
-      allPlayersPage.goToPlayerPage(0);
-    });
 
-    it('Error-Msg-appears-for-empty-first-name', function() {
-      playerPage.emptyFirstNameUpdateError()
-    }); 
+  it('Username-form-title-text', () =>  {
+    forgotUsername.TitleText()
+  })
 
-    it('Error-Msg-appears-for-empty-last-name', function() {
-      playerPage.emptyLastNameUpdateError()
-    });
+  it('Username-form-contain-elements', () =>  {
+    forgotUsername.usernameFormContain()
+  })
 
-    it('Error-Msg-appears-for-empty-email', function() {
-      playerPage.emptyEmailUpdateError()
-    }); 
+  it('Welcome-text', () =>  {
+    forgotUsername.WelcomeText()
+  })
 
-    it('Error-Msg-appears-for-empty-nickname', function() {
-      playerPage.emptyNicknameUpdateError()
-    }); 
+  it('Email-form-contain-elements', () =>  {
+    forgotUsername.FormContain()
+  })
+
+  it('Email-text', () =>  {
+    forgotUsername.EmailText()
+  })
+
+  it('Back-Button-text', () =>  {
+    forgotUsername.backButtonText()
+  })
+
+  it('Recover-Button-text', () =>  {
+    forgotUsername.recoverButtonText()
+  })
+
+  it('Forgot-username-url', () =>  {
+    forgotUsername.forgotUrl()
+  })
+
+  it('Email-200', () =>  {
+    forgotUsername.email200()
+  })
+
+  it('Email-1', () =>  {
+    forgotUsername.email1()
+  })
+
+  it('Email-201', () =>  {
+    forgotUsername.email201()
+  })
+
+  it('Email-0', () =>  {
+    forgotUsername.email0()
+  })
+  
+  it('Forgot-password-redirect', () =>  {
+    forgotUsername.forgotRedirect()
+  })
+
+  it('Back-button-redirect', () =>  {
+    forgotUsername.backBtnRedirect()
+  })
+
+  it('Recover-button-redirect-confirmation-text', () =>  {
+    forgotUsername.recoverBtnRedirect()
   })
 
 })

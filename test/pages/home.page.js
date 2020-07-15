@@ -10,7 +10,7 @@ class Home extends Base {
         this.openBase()
        let elDisplayed =  $(baseSel.footer).isDisplayed() 
        === $(baseSel.header).isDisplayed() 
-       === $(sel.loginForm).isDisplayed(); 
+       === $(baseSel.form).isDisplayed(); 
         assert.isTrue(elDisplayed)
       }
 
@@ -22,7 +22,7 @@ class Home extends Base {
       LoginContain(){
         let items = $$(sel.loginFormText).length 
         + $$(sel.loginFormScreener).length 
-        + $$(sel.loginForm).length;
+        + $$(baseSel.form).length;
         assert.equal(items, '6');   
       }
 

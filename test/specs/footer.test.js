@@ -1,4 +1,4 @@
-import footer from '../pages/footer';
+import footer from '../pages/footer.page';
 
 describe('Footer', function () {
 
