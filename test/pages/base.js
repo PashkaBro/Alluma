@@ -27,5 +27,10 @@ class Base {
             $(sel.forgotUsername).click();
     }
 
+    openForgotPassword(){
+        browser.url('/');
+            $(sel.forgotPassword).click();
+    }
+
 }
 export default Base;

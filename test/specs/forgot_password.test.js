@@ -2,68 +2,96 @@ import forgotPassword from '../pages/forgotPassword.page';
 
 describe('Forgot-password', function () {
   
+  it('Page-url', () =>  {
+    forgotPassword.pageUrl()
+  })
+  
   it('Page-contain-items', () =>  {
-    forgotPassword.PageContain()
+    forgotPassword.pageContain()
   })
 
   it('Password-form-title-text', () =>  {
-    forgotPassword.TitleText()
+    forgotPassword.titleText()
   })
 
   it('Password-form-contain-elements', () =>  {
-    forgotPassword.usernameFormContain()
+    forgotPassword.passwordFormContain()
   })
 
   it('Welcome-text', () =>  {
-    forgotPassword.WelcomeText()
+    forgotPassword.welcomeText()
   })
 
-//   it('Explenation-text', () =>  {
-//     forgotPassword.explText()
-//   })
+  it('Username-form-contain-elements', () =>  {
+    forgotPassword.usernameFormContain()
+  })
+
+  it('Explenation-text', () =>  {
+    forgotPassword.explText()
+  })
+
+  it('Forgot-username-url', () =>  {
+    forgotPassword.forgotUrl()
+  })
 
   it('Username-text', () =>  {
-    forgotPassword.EmailText()
+    forgotPassword.usernameText()
   })
 
-  it('Cancel-Button-text', () =>  {
+  it('Cancel-button-text', () =>  {
+    forgotPassword.cancelButtonText()
+  })
+
+  it('Continue-button-text', () =>  {
+    forgotPassword.continueButtonText()
+  })
+
+  it('Username-100', () =>  {
+    forgotPassword.username100()
+  })
+
+  it('Username-1', () =>  {
+    forgotPassword.username1()
+  })
+
+  it('Username-101', () =>  {
+    forgotPassword.username101()
+  })
+
+  it('Username-0', () =>  {
+    forgotPassword.username0()
+  })
+  
+  it('Forgot-Username-redirect', () =>  {
+    forgotPassword.forgotRedirect()
+  })
+
+  it('Cancel-button-redirect', () =>  {
+    forgotPassword.cancelBtnRedirect()
+  })
+
+  it('Confirmation-form-contain-elements', () =>  {
+    forgotPassword.confFormContain()
+  })
+
+  it('Confirmation-text', () =>  {
+    forgotPassword.confText()
+  })
+
+  it('Confirmation-explenation-text', () =>  {
+    forgotPassword.confExplText()
+  })
+
+  it('Resent-url-text', () =>  {
+    forgotPassword.resendUrlText()
+  })
+
+  it('Back-button-text', () =>  {
     forgotPassword.backButtonText()
   })
 
-  it('Continue-Button-text', () =>  {
-    forgotPassword.recoverButtonText()
+it('Back-button-redirect', () =>  {
+    forgotPassword.backBtnRedirect()
   })
-
-//   it('Forgot-username-url', () =>  {
-//     forgotPassword.forgotUrl()
-//   })
-
-//   it('Email-200', () =>  {
-//     forgotPassword.email200()
-//   })
-
-//   it('Email-1', () =>  {
-//     forgotPassword.email1()
-//   })
-
-//   it('Email-201', () =>  {
-//     forgotPassword.email201()
-//   })
-
-//   it('Email-0', () =>  {
-//     forgotPassword.email0()
-//   })
-  
-//   it('Forgot-password-redirect', () =>  {
-//     forgotPassword.forgotRedirect()
-//   })
-
-//   it('Back-button-redirect', () =>  {
-//     forgotPassword.backBtnRedirect()
-//   })
-
-//   it('Recover-button-redirect-confirmation-text', () =>  {
-//     forgotPassword.recoverBtnRedirect()
-//   })
 
 })
