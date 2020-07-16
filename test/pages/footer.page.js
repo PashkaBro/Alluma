@@ -11,7 +11,7 @@ class Footer extends Base {
       }
 
       bothFootersExist(){
-        assert.isTrue( $(sel.upperFooter).isDisplayed()===$(sel.lowerFooter).isDisplayed())
+        assert.isTrue( $(sel.upperFooter).isDisplayed()===$(sel.lowerFooter).isDisplayed());
       }
 
       tableColumns(){
@@ -80,45 +80,44 @@ class Footer extends Base {
       }
 
       emailRedirect(){
-       let href = $(sel.email).getAttribute('href')
+       let href = $(sel.email).getAttribute('href');
         assert.equal(href, exp.emailUrl);
       }
 
       facebookRedirect(){
         $$(sel.column3Links)[0].click();
-        let url = browser.getUrl()
+        let url = browser.getUrl();
         assert.equal(url, exp.facebookUrl);
       }
 
       twitterRedirect(){
-        this.openBase()
+        this.openBase();
         $$(sel.column3Links)[1].click();
-        let url = browser.getUrl()
+        let url = browser.getUrl();
         assert.equal(url, exp.twitterUrl);
       }
 
       linkedinRedirect(){
-        this.openBase()
+        this.openBase();
         $(sel.linkedinLinkForClick).click();
-        let url = browser.getUrl().substring(0, 25) // hardcode due to no existing user for Linkedin 
+        let url = browser.getUrl().substring(0, 25); // hardcode due to no existing user for Linkedin 
         assert.equal(url, exp.linkedinUrlNonUser.substring(0, 25));
       }
 
       logoRedirect(){
-        this.openBase()
+        this.openBase();
         $$(sel.lowerFooterLinks1)[0].click();
-        let url = browser.getUrl()
+        let url = browser.getUrl();
         assert.equal(url, exp.logoUrl);
       }
 
       copyrightRedirect(){
-        this.openBase()
+        this.openBase();
         $(sel.copyrightlink).click();
-        let url = browser.getUrl()
+        let url = browser.getUrl();
         assert.equal(url, exp.copyrightLink);
       }
 
-      
 }
 
 export default new Footer();

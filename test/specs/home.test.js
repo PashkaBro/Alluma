@@ -1,6 +1,6 @@
 import Home from '../pages/home.page';
 
-describe('Home page', function () {
+describe('Home_page', function () {
 
     it('Page-contain-header-footer-login-page', () =>  {
         Home.PageContain()
@@ -103,5 +103,4 @@ describe('Home page', function () {
         Home.ForgotPassword()
     })
 
-   
 })

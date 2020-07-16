@@ -2,93 +2,89 @@ import footer from '../pages/footer.page';
 
 describe('Footer', function () {
 
-    it('footer-is-displayed', () =>  {
+    it('Footer-is-displayed', () =>  {
       footer.openBase();
       footer.footerIsDisplayed();   
     })
 
-    it('footer-include-lower-upper-footer', () =>  {
+    it('Footer-include-lower-upper-footer', () =>  {
       footer.bothFootersExist();
     })
 
-    it('footer-table-include-3-columns', () => {
+    it('Footer-table-include-3-columns', () => {
       footer.tableColumns();
     })
 
-    it('footer-column1-name', () => {
+    it('Footer-column1-name', () => {
       footer.column1Name();
     })
 
-    it('footer-column2-name', () => {
+    it('Footer-column2-name', () => {
       footer.column2Name();  
     })
 
-    it('footer-column3-name"', () => {
+    it('Footer-column3-name"', () => {
       footer.column3Name();
     })
 
-    it('link1-text"', () => {
+    it('Link1-text"', () => {
       footer.link1Text();
     })
 
-    it('link2-text"', () => {
+    it('Link2-text"', () => {
       footer.link2Text();
     })
 
-    it('column2-has-phone-number-email-link-fax', () => {
+    it('Column2-has-phone-number-email-link-fax', () => {
       footer.column2Data();
     })
 
-    it('phone-number-text', () => {
+    it('Phone-number-text', () => {
       footer.phoneText();
     })
 
-    it('email-link-text', () => {
+    it('Email-link-text', () => {
       footer.emailText();
     })
 
-    it('fax-text', () => {
+    it('Fax-text', () => {
       footer.faxText();
     })
 
-    it('column3-has-3-links', () => {
+    it('Column3-has-3-links', () => {
       footer.column3links();
     })
 
-    it('lower-footer-include-logo-copyright-privacy-policy-non-discrimination-policy-terms-of-use', () => {
+    it('Lower-footer-include-items', () => {
       footer.lowerFooterData();    
     })
 
-    it('copyright-text', () => {
+    it('Copyright-text', () => {
       footer.copyrightText();  
     })
 
-    it('email-link-redirect', () => {
+    it('Email-link-redirect', () => {
       footer.emailRedirect();  
     })
 
-    it('facebook-link-redirect', () => {
+    it('Facebook-link-redirect', () => {
       footer.facebookRedirect();  
     })
 
-    it('twitter-link-redirect', () => {
+    it('Twitter-link-redirect', () => {
       footer.twitterRedirect();    
     })
 
-    it('linkedin-link-redirect', () => {
+    it('Linkedin-link-redirect', () => {
       footer.linkedinRedirect();    
     })
 
-    it('logo-redirect', () => {
+    it('Logo-redirect', () => {
       footer.logoRedirect();
     })
 
-    it('link-in-copyright-redirect', () => {
+    it('Link-in-copyright-redirect', () => {
       footer.copyrightRedirect();
     })
 
 })
-
-     
-
-

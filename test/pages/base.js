@@ -16,7 +16,7 @@ class Base {
     }
 
     inputFieldCompare(el, num){ // funct to check how many symb field can take
-        let originValue = this.fieldInput(num)
+        let originValue = this.fieldInput(num);
         el.setValue(originValue);
         let currentValue = el.getValue();
         return originValue === currentValue

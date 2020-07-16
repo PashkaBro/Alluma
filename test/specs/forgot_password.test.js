@@ -90,7 +90,7 @@ describe('Forgot-password', function () {
     forgotPassword.backButtonText()
   })
 
-it('Back-button-redirect', () =>  {
+  it('Back-button-redirect', () =>  {
     forgotPassword.backBtnRedirect()
   })
 

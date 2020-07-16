@@ -6,15 +6,16 @@ import baseSel from '../selectors/base.sel';
 
 class ForgotPassword extends Base {
 
-    pageContain(){
-       let elDisplayed =  $(baseSel.footer).isDisplayed() 
-       === $(baseSel.header).isDisplayed() 
-       === $(sel.passForm).isDisplayed(); 
-        assert.isTrue(elDisplayed)
+
+      pageContain(){
+        let elDisplayed =  $(baseSel.footer).isDisplayed() 
+        === $(baseSel.header).isDisplayed() 
+        === $(sel.passForm).isDisplayed(); 
+          assert.isTrue(elDisplayed);
       }
 
       pageUrl(){
-        this.openForgotPassword()
+        this.openForgotPassword();
         let url = browser.getUrl().substring(0, 71);
         assert.equal(url, exp.forgotUrl.substring(0, 71));
       }
@@ -26,8 +27,8 @@ class ForgotPassword extends Base {
 
       passwordFormContain(){
         let items = $(sel.welcomeText).isDisplayed()
-        === $(baseSel.form).isDisplayed()
-        assert.isTrue(items)
+        === $(baseSel.form).isDisplayed();
+        assert.isTrue(items);
       }
 
       welcomeText(){
@@ -51,7 +52,7 @@ class ForgotPassword extends Base {
       }
 
       forgotUrl(){
-       let text =  $(sel.forgotLink).getText()
+       let text =  $(sel.forgotLink).getText();
         assert.equal(text, exp.forgotUrlText);
       }
 
@@ -116,7 +117,7 @@ class ForgotPassword extends Base {
         let elem = $(sel.confText).isDisplayed()
         === $(sel.confExplText).isDisplayed()
         === $(sel.resendLinkText).isDisplayed()
-        === $(sel.cButton).isDisplayed()
+        === $(sel.cButton).isDisplayed();
         assert.isTrue(elem);
       }
 
@@ -142,7 +143,7 @@ class ForgotPassword extends Base {
 
       backBtnRedirect(){
         $(sel.cButton).click();
-        let link = browser.getUrl().substring(0, 71)
+        let link = browser.getUrl().substring(0, 71);
         assert.equal(link, exp.cButtonRedirect.substring(0, 71));
       }
       
