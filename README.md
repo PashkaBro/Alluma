@@ -1,4 +1,4 @@
-# WebDriver I/O v.5 from scratch
+# How to install WebDriver I/O v.5 and run firs test
 
 <a name="prerequisites"></a>
 ## 1. Prerequisites
@@ -61,7 +61,7 @@ Select the answers based on the following info:
 4. Test specs are located in `./test/specs/*.js`.
 5. Reporters we're going to use are `spec` and `allure`.
 6. Service needed is `selenium-standalone`.
-7. Base URL is `http://qa.intgames.org/`
+7. Base URL is `http://oxcdemo.alluma.org/`
 
 Wait till the end of the installation process.
 
@@ -203,3 +203,14 @@ import { assert } from 'chai';
 ````
 Please make sure you replaced it in all the test files. Now you can use all the methods described here:
 https://www.npmjs.com/package/chai
+
+<a name="run-all-tests"></a>
+## 12. Running the all tests:
+#### 12.1. To Run tests on Mac:
+````
+npm run tm
+````
+#### 12.2. To Run tests on Windows PC:
+````
+npm run test
+````
