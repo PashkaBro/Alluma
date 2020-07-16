@@ -5,7 +5,7 @@
   "main": "wdio.conf.js",
   "scripts": {
     "test": "npm run clean && npm run temp && wdio wdio.conf.js && npm run report",
-    "tm": "npm run clean && npm run temp-mac && wdio wdio.conf.js && npm run report-mak",
+    "tm": "npm run clean && npm run temp-mac && wdio wdio.conf.js && npm run report-mac",
     "clean": "rm -rf temp",
     "report-mac": "allure generate './temp/allure-results' --clean && allure open",
     "report": "allure generate '.\temp\\allure-results' --clean && allure open",
