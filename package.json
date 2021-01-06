@@ -32,7 +32,7 @@
     "@babel/preset-env": "^7.10.4",
     "@babel/register": "^7.10.4",
     "@wdio/cli": "^5.23.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "chai": "^4.2.0",
     "nodemailer": "^6.4.10",
     "webdriverio": "^5.23.0"
