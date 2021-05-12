@@ -34,7 +34,7 @@
     "@wdio/cli": "^5.23.0",
     "axios": "^0.19.2",
     "chai": "^4.2.0",
-    "nodemailer": "^6.4.10",
+    "nodemailer": "^6.4.16",
     "webdriverio": "^5.23.0"
   },
   "devDependencies": {
